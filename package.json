@@ -1,0 +1,15 @@
+{
+  "name": "dogparks",
+  "version": "1.0.0",
+  "description": "dog parks of nyc map built with mapbox GL-JS, HTML5, Javascript, CSS3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mapbox",
+    "dogparks"
+  ],
+  "author": "David Rhodes",
+  "license": "ISC"
+}
