@@ -2506,7 +2506,7 @@ const createPopUp = currentFeature => {
   let popup = new mapboxgl.Popup({
     closeOnClick: true,
     anchor: "top",
-    offset: [18, 50]
+    offset: [20, 50]
   })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
