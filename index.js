@@ -2414,7 +2414,7 @@ map.on("load", e => {
   if (foundHeaders[0]) {
     foundHeaders[0].addEventListener('click', e => {
       e.preventDefault();
-      map.zoomTo(10);
+      map.zoomTo(10.5);
     })
   }
 
