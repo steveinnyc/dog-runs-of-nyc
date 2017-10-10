@@ -1086,7 +1086,7 @@ var runs = {
       },
       properties: {
         Accessible: "N",
-        address: "55512th Ave",
+        address: "555 12th Ave",
         city: "New York",
         DogRuns_Type: "Run",
         name: "Hudson River Park Dog Run (North Chelsea)",
@@ -1615,7 +1615,7 @@ var runs = {
       },
       properties: {
         Accessible: "N",
-        address: "Queens Boulevard &65 Place",
+        address: "Queens Boulevard & 65 Place",
         city: "Woodside",
         DogRuns_Type: "Run",
         name: "Sherry Park Dog Run",
