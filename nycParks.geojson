@@ -2687,7 +2687,7 @@
         "city": "Far Rockaway",
         "DogRuns_Type": "Run",
         "name": "Rockaway Freeway Dog Park",
-        "Notes": "Rockaway Freeway & Beach84th Street",
+        "Notes": "Rockaway Freeway & Beach 84th Street",
         "Prop_ID": "Q219",
         "state": "NY",
         "postalCode": "11693"
@@ -2704,7 +2704,7 @@
       },
       "properties": {
         "Accessible": "N",
-        "address": "Vernon Blvd &41st Ave",
+        "address": "Vernon Blvd & 41st Ave",
         "city": "Long Island City",
         "DogRuns_Type": "Off-Leash",
         "name": "Queensbridge Park Off-Leash Area",

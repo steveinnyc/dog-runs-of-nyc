@@ -11,3 +11,7 @@ Thumbs.db
 node_modules
 
 secrets.js
+
+.vscode
+
+

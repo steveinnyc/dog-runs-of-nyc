@@ -1726,7 +1726,7 @@ var runs = {
       },
       properties: {
         Accessible: "N",
-        address: "Springfield Blvd &147th Ave",
+        address: "Springfield Blvd & 147th Ave",
         city: "Springfield Gardens",
         DogRuns_Type: "Off-Leash",
         name: "Springfield Park Off-Leash Area",
