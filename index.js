@@ -2375,7 +2375,6 @@ if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
 
 var map = new mapboxgl.Map({
   container: "map",
-  // style: "mapbox://styles/mapbox/outdoors-v10",
   style: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o",
   center: [-73.880179, 40.737409],
   zoom: 10.5,
@@ -2388,6 +2387,8 @@ var map = new mapboxgl.Map({
 const runList = runs.features;
 
 map.on("load", e => {
+
+  // (original icon approach, first block)
   // map.addSource("dogparks", {
   //   type: "geojson",// add vector source here instead
   //   data: runs // we can delete runs above when it works
@@ -2403,10 +2404,7 @@ map.on("load", e => {
   //   },
   //   'source-layer': 'nycparks-ad16j1'
   // });
-  map.addSource('boroughs', {
-    type: 'vector',
-    url: 'mapbox://rsbaumann.6n6xib60'
-  });
+
 
   buildLocationList(runs);
 
@@ -2452,7 +2450,10 @@ map.on("load", e => {
   })
 
 
-  // build dog marker icons in DOM (replaced with data set in MapStudio vector tiles)
+  // (original icon approach, second block)
+  // (replaced with data set in MapStudio vector tiles)
+
+  // build dog marker icons in DOM
   // runList.forEach((marker, i) => {
   //   // Create an img element for the marker
   //   var el = document.createElement("div");
@@ -2556,7 +2557,7 @@ const buildLocationList = data => {
       // 1. Fly to the point
       flyToRun(clickedListing);
 
-      // 3. Highlight listing in sidebar (and remove highlight for all other listings)
+      // 3. Highlight sidebar listing (and remove for others)
       var activeItem = document.getElementsByClassName("active");
 
       if (activeItem[0]) {
