@@ -463,7 +463,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.9992621, 40.6941993],
+        coordinates: [-73.988557, 40.704061],
         type: "Point"
       },
       properties: {
@@ -1987,7 +1987,7 @@ var runs = {
       },
       type: "Feature",
       properties: {
-        name: "Forte Greene Park Off-Leash Area",
+        name: "Fort Greene Park Off-Leash Area",
         DogRuns_Type: "Off-Leash",
         address: "Willoughby Ave & Washington Park",
         city: "Brooklyn",
