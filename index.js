@@ -2460,19 +2460,18 @@ map.on("load", e => {
   map.addControl(new mapboxgl.NavigationControl());
 
   // TODO: SHOW CURSOR FOR UI, NOT WORKING
-  /*  map.on('mousehover', e => {
-     var dogIconsUnderMouse = map.queryRenderedFeatures(e.point, {
-       layers: ["nycparks-ad16j1"]
-     })
-     // set curser to pointer TODO: set on mousehover
-     map.getCanvas().style.cursor = (dogIconsUnderMouse.length) ? 'pointer' : '';
-   }) */
+  map.on('mousemove', e => {
+    var dogsUnderMouse = map.queryRenderedFeatures(e.point, {
+      layers: ["nycparks-ad16j1"]
+    })
+    // set curser to pointer TODO: set on mousehover
+    map.getCanvas().style.cursor = (dogsUnderMouse.length) ? 'pointer' : '';
+  });
 
   map.on('click', e => {
     var dogIconsClicked = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
     })
-    console.log('dogIconsClicked: ', dogIconsClicked);
 
     // if no click on icon, forget it
     if (!dogIconsClicked.length) return;
@@ -2486,7 +2485,6 @@ map.on("load", e => {
     //
     var dogIcon = dogIconsClicked[0];
     var listing = document.getElementById("listing-" + dogIcon.properties.Prop_ID);
-    console.log('listing: ', listing);
     listing.classList.add("active");
     flyToRun(dogIcon);
     createPopUp(dogIcon);
