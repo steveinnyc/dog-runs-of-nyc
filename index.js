@@ -463,7 +463,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.988557, 40.704061],
+        coordinates: [-74.000059, 40.692750],
         type: "Point"
       },
       properties: {
@@ -471,7 +471,7 @@ var runs = {
         address: "334 Furman St",
         city: "Brooklyn",
         DogRuns_Type: "Run",
-        name: "Brooklyn Bridge Park Dog Run",
+        name: "Pier 6 Dog Run",
         Notes: "Pier 6",
         Prop_ID: "B431",
         state: "NY",
@@ -1993,20 +1993,20 @@ var runs = {
         city: "Brooklyn",
         state: "NY",
         Notes: "off-leash before 9am and after 9pm",
-        Prop_ID: "Q99007",
+        Prop_ID: "BBFG99",
       }
     },
     {
       "geometry": {
         "coordinates": [
           -73.98941983215197,
-          40.70409788273207
+          40.70409788273207,
         ],
         "type": "Point"
       },
       "type": "Feature",
       "properties": {
-        Prop_ID: "bb-99",
+        Prop_ID: "BB999",
         name: "Brooklyn Bridge Dog Run",
         address: "385 Plymouth St",
         city: "Brooklyn",
