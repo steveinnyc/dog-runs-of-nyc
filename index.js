@@ -780,7 +780,7 @@ var runs = {
       },
       properties: {
         Accessible: "N",
-        address: "67th Street and 7th Avenue",
+        address: "67th Street & 7th Avenue",
         city: "Brooklyn",
         DogRuns_Type: "Off-Leash",
         name: "Leif Ericson Park Off-Leash Area",
