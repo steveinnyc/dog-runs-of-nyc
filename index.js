@@ -1999,8 +1999,8 @@ var runs = {
     {
       "geometry": {
         "coordinates": [
-          -73.98941983215197,
-          40.70409788273207,
+          -73.988895,
+          40.703701
         ],
         "type": "Point"
       },
@@ -2027,7 +2027,7 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Off-Leash",
         name: "Dyckman Fields",
-        Notes: "",
+        Notes: "north of La Marina and docks",
         Prop_ID: "M042",
         state: "NY",
         postalCode: "10452"
@@ -2472,18 +2472,21 @@ map.on("load", e => {
     var dogIconsClicked = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
     })
+    console.log('dogIconsClicked: ', dogIconsClicked);
 
     // if no click on icon, forget it
     if (!dogIconsClicked.length) return;
 
+    // start with resetting active UI shading on listing
     var activeItem = document.getElementsByClassName("active");
     if (activeItem[0]) {
       activeItem[0].classList.remove("active");
     }
 
-
+    //
     var dogIcon = dogIconsClicked[0];
     var listing = document.getElementById("listing-" + dogIcon.properties.Prop_ID);
+    console.log('listing: ', listing);
     listing.classList.add("active");
     flyToRun(dogIcon);
     createPopUp(dogIcon);
