@@ -15,7 +15,8 @@ body {
 }
 
 h1 {
-  font-size: 22px;
+  font: 900 18px/28px "Cinzel", serif;
+  font-size: 28px;
   margin: 0;
   font-weight: 400;
   line-height: 20px;

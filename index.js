@@ -529,7 +529,7 @@ var runs = {
         Notes: "Leroy Street at the northeast corner of Pier 40",
         Prop_ID: "M",
         state: "NY",
-        Url: "http: //www.hudsonriverpark.org/explore/dogrunleroyst.html",
+        Url: "http://www.hudsonriverpark.org/explore/dogrunleroyst.html",
         postalCode: "10014"
       },
       type: "Feature"
@@ -620,7 +620,7 @@ var runs = {
         Notes: "Amsterdam Ave & Fort George Ave",
         Prop_ID: "M037",
         state: "NY",
-        Url: "http: //www.highbridgek9club.org/",
+        Url: "http://www.highbridgek9club.org/",
         postalCode: "10040"
       },
       type: "Feature"
@@ -690,9 +690,10 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Run",
         name: "Riverside Park Dog Run Central",
-        Notes:
+        Url:
         "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
         Prop_ID: "M071b",
+        Notes: "",
         state: "NY",
         postalCode: "10024"
       },
@@ -709,8 +710,9 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Run",
         name: "Riverside Park Dog Run South",
-        Notes:
+        Url:
         "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+        Notes: "",
         Prop_ID: "M071a",
         state: "NY",
         postalCode: "10023"
@@ -765,7 +767,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Brower Park",
         Notes:
-        "St. Mark's Ave., Park Pl. bet. Brooklyn Ave. and Kingston Ave. Except for playgrounds and other areas where dogs are expressly prohibited via signage, all areas of the park are off-leash during designated hours.",
+        "At St. Mark's Ave., Park Pl. bet. Brooklyn Ave. and Kingston Ave. Except for playgrounds and other areas where dogs are expressly prohibited via signage, all areas of the park are off-leash during designated hours.",
         Prop_ID: "B012",
         state: "NY",
         postalCode: "11216"
@@ -783,7 +785,7 @@ var runs = {
         city: "Brooklyn",
         DogRuns_Type: "Off-Leash",
         name: "Leif Ericson Park Off-Leash Area",
-        Notes: "66th St",
+        Notes: "",
         Prop_ID: "B052",
         state: "NY",
         postalCode: "11220"
@@ -1036,9 +1038,10 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Run",
         name: "Riverside Park Dog Run North",
-        Notes:
+        Url:
         "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
         Prop_ID: "M071c",
+        Notes: "",
         state: "NY",
         postalCode: "10025"
       },
@@ -2354,7 +2357,8 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Run",
         name: "Inwood Hill Park Dog Run: Homer's Run",
-        Notes: "http: //www.inwoof.com/",
+        Url: "http://www.inwoof.com/",
+        Notes: '',
         Prop_ID: "M042",
         state: "NY",
         postalCode: "10452"
@@ -2459,12 +2463,11 @@ map.on("load", e => {
 
   map.addControl(new mapboxgl.NavigationControl());
 
-  // TODO: SHOW CURSOR FOR UI, NOT WORKING
+  // set curser to pointer on mousehover
   map.on('mousemove', e => {
     var dogsUnderMouse = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
     })
-    // set curser to pointer TODO: set on mousehover
     map.getCanvas().style.cursor = (dogsUnderMouse.length) ? 'pointer' : '';
   });
 
@@ -2545,6 +2548,8 @@ const createPopUp = currentFeature => {
   // Checks if there is already a popup on the map to remove it
   if (popUps[0]) popUps[0].remove();
 
+  let notesEl = currentFeature.properties.Notes.length ? "<h4>" + currentFeature.properties.Notes + "</h4>" : "";
+
   let popup = new mapboxgl.Popup({
     closeOnClick: true,
     anchor: "top",
@@ -2558,7 +2563,7 @@ const createPopUp = currentFeature => {
     currentFeature.properties.address +
     ", " +
     currentFeature.properties.city +
-    "</h4></div>"
+    "</h4>" + notesEl + "</div>"
     )
     .addTo(map);
 };
