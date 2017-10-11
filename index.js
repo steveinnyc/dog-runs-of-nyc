@@ -710,8 +710,7 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Run",
         name: "Riverside Park Dog Run South",
-        Url:
-        "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+        Url: "http://nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
         Notes: "",
         Prop_ID: "M071a",
         state: "NY",
