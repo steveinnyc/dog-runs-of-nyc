@@ -252,7 +252,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Pelham Bay Park Off-Leash Area",
         Notes:
-        "The dog run at Pelham Bay Park is close to Watt Avenue and Middletown Road.  Both streets merge at the entrance to the parking lot on Middletown Road. The dog run is about 100 yards east of that point.",
+        "About 100 yards east Watt Avenue and Middletown Road",
         Prop_ID: "X039",
         state: "NY",
         Url:
@@ -681,7 +681,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.97988959999999, 0.79061919999999],
+        coordinates: [-73.97988959999999, 40.79061919999999],
         type: "Point"
       },
       properties: {
