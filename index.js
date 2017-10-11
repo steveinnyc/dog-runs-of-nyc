@@ -1113,7 +1113,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Fort Tryon Park Dog Run",
         Notes:
-        "Enter from Margaret Corbin Circle Eastern stairs, Broadway &196th, or Bennett Ave & Broadway",
+        "Enter from Margaret Corbin Circle Eastern stairs, Broadway & 196th, or Bennett Ave & Broadway",
         Prop_ID: "M029",
         state: "NY",
         Url: "http: //www.ftdog.org/",
@@ -1178,7 +1178,8 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.940532, 40.8453744],
+        coordinates: [-73.94113281482572,
+          40.84613691056902],
         type: "Point"
       },
       properties: {
