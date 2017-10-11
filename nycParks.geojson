@@ -700,6 +700,22 @@
     {
       "geometry": {
         "coordinates": [
+          -73.97484626838693,
+          40.691517801358344
+        ],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "Forte Greene Park Off-Leash Area",
+        "address": "Willoughby Ave & Washing Park",
+        "city": "Brooklyn",
+        "notes": "off-leash before 9am and after 9pm"
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [
           -73.92513029999999,
           40.856006
         ],

@@ -1979,6 +1979,44 @@ var runs = {
     },
     {
       geometry: {
+        coordinates: [
+          -73.97484626838693,
+          40.691517801358344
+        ],
+        type: "Point"
+      },
+      type: "Feature",
+      properties: {
+        name: "Forte Greene Park Off-Leash Area",
+        DogRuns_Type: "Off-Leash",
+        address: "Willoughby Ave & Washington Park",
+        city: "Brooklyn",
+        state: "NY",
+        Notes: "off-leash before 9am and after 9pm",
+        Prop_ID: "Q99007",
+      }
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -73.98941983215197,
+          40.70409788273207
+        ],
+        "type": "Point"
+      },
+      "type": "Feature",
+      "properties": {
+        Prop_ID: "bb-99",
+        name: "Brooklyn Bridge Dog Run",
+        address: "385 Plymouth St",
+        city: "Brooklyn",
+        state: "NY",
+        DogRuns_Type: "Off-Leash",
+        Notes: ""
+      }
+    },
+    {
+      geometry: {
         coordinates: [-73.92876224130391,
           40.868984133254116],
         type: "Point"
