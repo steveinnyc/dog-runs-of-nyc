@@ -2211,7 +2211,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Central Park Off-Leash Area",
         Notes:
-        "Though there are no enclosed dog runs, there are23 particularly dog-friendly areas scattered throughout the Park.",
+        "Though there are no enclosed dog runs, there are 23 particularly dog-friendly areas scattered throughout the Park.",
         Prop_ID: "M010",
         state: "NY",
         postalCode: "10023"
