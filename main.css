@@ -22,6 +22,14 @@ h1 {
   padding: 20px 2px;
 }
 
+h2 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 300;
+  line-height: 16px;
+  padding: 18px 2px;
+}
+
 a {
   color: #404040;
   text-decoration: none;
@@ -32,17 +40,18 @@ a:hover {
 }
 
 .sidebar {
+  background: #E7E0E0;
   position: absolute;
   width: 33.3333%;
   height: 100%;
   top: 0;
   left: 0;
   overflow: hidden;
-  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  border-right: 2px solid rgba(0, 0, 0, 0.25);
 }
 
 .pad2 {
-  padding: 20px;
+  padding: 0px;
 }
 
 .map {
@@ -55,7 +64,7 @@ a:hover {
 }
 
 .heading {
-  background: #fff;
+  background: #C4C5D0;
   border-bottom: 1px solid #eee;
   height: 60px;
   line-height: 60px;

@@ -59,7 +59,8 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.905483, 40.863215],
+        coordinates: [-73.905232,
+          40.863532],
         type: "Point"
       },
       properties: {
@@ -2420,13 +2421,13 @@ map.on("load", e => {
   map.addControl(new mapboxgl.NavigationControl());
 
   // TODO: SHOW CURSOR FOR UI, NOT WORKING
-  map.on('mousehover', e => {
-    var dogIconsUnderMouse = map.queryRenderedFeatures(e.point, {
-      layers: ["nycparks-ad16j1"]
-    })
-    // set curser to pointer TODO: set on mousehover
-    map.getCanvas().style.cursor = (dogIconsUnderMouse.length) ? 'pointer' : '';
-  })
+  /*  map.on('mousehover', e => {
+     var dogIconsUnderMouse = map.queryRenderedFeatures(e.point, {
+       layers: ["nycparks-ad16j1"]
+     })
+     // set curser to pointer TODO: set on mousehover
+     map.getCanvas().style.cursor = (dogIconsUnderMouse.length) ? 'pointer' : '';
+   }) */
 
   map.on('click', e => {
     var dogIconsClicked = map.queryRenderedFeatures(e.point, {
@@ -2507,7 +2508,7 @@ const createPopUp = currentFeature => {
   let popup = new mapboxgl.Popup({
     closeOnClick: true,
     anchor: "top",
-    offset: [20, 50]
+    offset: [0, 20]
   })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
