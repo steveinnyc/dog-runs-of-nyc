@@ -1786,24 +1786,6 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-74.03409189999999, 40.6108083],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "101 Street Shore Pkwy",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "John Paul Jones Park Off-Leash Area",
-        Notes: "Located at 4th Avenue and 101st Street",
-        Prop_ID: "B035",
-        state: "NY",
-        postalCode: "11209"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
         coordinates: [-74.0356001, 40.6397175],
         type: "Point"
       },
@@ -2081,7 +2063,8 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-74.0348607, 40.6113471],
+        coordinates: [-74.038722380981,
+          40.615516962996686],
         type: "Point"
       },
       properties: {
