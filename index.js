@@ -1,5 +1,11 @@
 "use strict";
 
+// raw data source: https://data.cityofnewyork.us/Recreation/Directory-of-Dog-Runs-and-Off-Leash-Areas/ipbu-mtcs/data
+
+// converted to geoJSON using Google GeoCoding API and Mapbox Studio
+// https://developers.google.com/maps/documentation/geocoding/start
+// https://www.mapbox.com/mapbox-studio/
+
 var runs = {
   type: "FeatureCollection",
   features: [
@@ -1614,7 +1620,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.8996139, 40.7409503],
+        coordinates: [-73.89889416798754, 40.741291412683694],
         type: "Point"
       },
       properties: {
@@ -2385,7 +2391,6 @@ var runs = {
   ]
 };
 
-
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYnViYmFzZGFkIiwiYSI6ImNqODRzOHNhNjA0NjMycXVkZ2o4Z3ZkaXoifQ.QP47B3zvEuiEqYcSJDqoYA";
 
@@ -2413,24 +2418,6 @@ const runList = runs.features;
 
 map.on("load", e => {
 
-  // (original icon approach, first block)
-  // map.addSource("dogparks", {
-  //   type: "geojson",// add vector source here instead
-  //   data: runs // we can delete runs above when it works
-  // });
-
-  // add vector source here instead
-  // map.addLayer({
-  //   id: 'dogIcons',
-  //   type: "symbol",
-  //   source: {
-  //     type: 'vector',
-  //     url: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o"
-  //   },
-  //   'source-layer': 'nycparks-ad16j1'
-  // });
-
-
   buildLocationList(runs);
 
   const foundHeaders = document.getElementsByClassName('heading');
@@ -2440,7 +2427,6 @@ map.on("load", e => {
       map.zoomTo(10.5);
     })
   }
-
 
   map.addControl(new mapboxgl.NavigationControl());
 
@@ -2473,48 +2459,6 @@ map.on("load", e => {
     flyToRun(dogIcon);
     createPopUp(dogIcon);
   })
-
-
-  // (original icon approach, second block)
-  // (replaced with data set in MapStudio vector tiles)
-
-  // build dog marker icons in DOM
-  // runList.forEach((marker, i) => {
-  //   // Create an img element for the marker
-  //   var el = document.createElement("div");
-  //   el.id = "marker-" + i;
-  //   el.className = "marker";
-
-
-  //   el.addEventListener("click", e => {
-  //     var activeItem = document.getElementsByClassName("active");
-  //     // 1. Fly to the point
-  //     flyToRun(marker);
-
-  //     // 2. Close all other popups and display popup for clicked run
-  //     createPopUp(marker);
-
-  //     // 3. Highlight listing in sidebar (and remove highlight for all other listings)
-  //     e.preventDefault();
-  //     e.stopPropagation();
-
-  //     if (activeItem[0]) {
-  //       activeItem[0].classList.remove("active");
-  //     }
-
-
-  //     var listing = document.getElementById("listing-" + i);
-  //     listing.classList.add("active");
-  //   });
-
-  //   // Add markers to the map at all points
-  //   new mapboxgl.Marker(el, {
-  //     anchor: "top"
-  //   })
-  //     .setLngLat(marker.geometry.coordinates)
-  //     .addTo(map);
-  // });
-
 });
 
 const flyToRun = currentFeature => {
@@ -2586,7 +2530,6 @@ const buildLocationList = data => {
 
       // 3. Highlight sidebar listing (and remove for others)
       var activeItem = document.getElementsByClassName("active");
-
       if (activeItem[0]) {
         activeItem[0].classList.remove("active");
       }
