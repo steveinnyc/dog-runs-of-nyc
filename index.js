@@ -59,8 +59,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.905232,
-          40.863532],
+        coordinates: [-73.905232, 40.863532],
         type: "Point"
       },
       properties: {
@@ -142,7 +141,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Canarsie Park Off-Leash Area",
         Notes:
-        "All areas off-leash excluding the playground, ballfields, and Natural Areas.",
+          "All areas off-leash excluding the playground, ballfields, and Natural Areas.",
         Prop_ID: "B018",
         state: "NY",
         postalCode: "11236"
@@ -161,7 +160,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Hylan Park Off-Leash Area",
         Notes:
-        "All areas of the park are off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
+          "All areas of the park are off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
         Prop_ID: "X010",
         state: "NY",
         postalCode: "10457"
@@ -251,12 +250,11 @@ var runs = {
         city: "Bronx",
         DogRuns_Type: "Off-Leash",
         name: "Pelham Bay Park Off-Leash Area",
-        Notes:
-        "Located about 100 yards east Watt Avenue and Middletown Road",
+        Notes: "Located about 100 yards east Watt Avenue and Middletown Road",
         Prop_ID: "X039",
         state: "NY",
         Url:
-        "http://nycgovparks.org/parks/X039/map/pelhambay_dogonleasharea.pdf",
+          "http://nycgovparks.org/parks/X039/map/pelhambay_dogonleasharea.pdf",
         postalCode: "10465"
       },
       type: "Feature"
@@ -308,7 +306,8 @@ var runs = {
         city: "Brooklyn",
         DogRuns_Type: "Off-Leash",
         name: "Brooklyn War Memorial Off-Leash Area",
-        Notes: "Located at Cadman Plaza Park, Cadman Plaza West & East & Prospect Street ",
+        Notes:
+          "Located at Cadman Plaza Park, Cadman Plaza West & East & Prospect Street ",
         Prop_ID: "B113A",
         state: "NY",
         postalCode: "11201"
@@ -382,7 +381,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Franz Sigel Park Dog Run",
         Notes:
-        "Located at center of the park, just north of the ballfields which would line up with around 155th Street.",
+          "Located at center of the park, just north of the ballfields which would line up with around 155th Street.",
         Prop_ID: "X047",
         state: "NY",
         postalCode: "10451"
@@ -454,7 +453,8 @@ var runs = {
         city: "Bronx",
         DogRuns_Type: "Off-Leash",
         name: "Riverdale Park Off-Leash Area",
-        Notes: "Located at Palisade Avenue from West 232 Street to West 254 Street",
+        Notes:
+          "Located at Palisade Avenue from West 232 Street to West 254 Street",
         Prop_ID: "X142",
         state: "NY",
         postalCode: "10463"
@@ -463,7 +463,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-74.000059, 40.692750],
+        coordinates: [-74.000059, 40.69275],
         type: "Point"
       },
       properties: {
@@ -691,7 +691,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Riverside Park Dog Run Central",
         Url:
-        "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+          "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
         Prop_ID: "M071b",
         Notes: "",
         state: "NY",
@@ -710,7 +710,8 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Run",
         name: "Riverside Park Dog Run South",
-        Url: "http://nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+        Url:
+          "http://nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
         Notes: "",
         Prop_ID: "M071a",
         state: "NY",
@@ -766,7 +767,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Brower Park",
         Notes:
-        "Located at at St. Mark's Ave., Park Pl. bet. Brooklyn Ave. and Kingston Ave. All areas off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
+          "Located at at St. Mark's Ave., Park Pl. bet. Brooklyn Ave. and Kingston Ave. All areas off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
         Prop_ID: "B012",
         state: "NY",
         postalCode: "11216"
@@ -802,7 +803,8 @@ var runs = {
         city: "Brooklyn",
         DogRuns_Type: "Off-Leash",
         name: "McKinley Park Off-Leash Area",
-        Notes: "Located at Fort Hamilton Parkway, 7th Avenue, 73rd Street to 75th Street",
+        Notes:
+          "Located at Fort Hamilton Parkway, 7th Avenue, 73rd Street to 75th Street",
         Prop_ID: "B060",
         state: "NY",
         postalCode: "11228"
@@ -892,7 +894,8 @@ var runs = {
         city: "Forest Hills",
         DogRuns_Type: "Run",
         name: "Underbridge Playground Dog Run",
-        Notes: "Located at 64th Avenue/64th Road on Grand Central Parkway service road",
+        Notes:
+          "Located at 64th Avenue/64th Road on Grand Central Parkway service road",
         Prop_ID: "Q451",
         state: "NY",
         postalCode: "11375"
@@ -983,7 +986,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Marine Park Dog Run",
         Notes:
-        "All areas off-leash excluding the playgrounds, ballfields, and Natural Areas.",
+          "All areas off-leash excluding the playgrounds, ballfields, and Natural Areas.",
         Prop_ID: "B057",
         state: "NY",
         postalCode: "11234"
@@ -1019,7 +1022,8 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Run",
         name: "De Witt Clinton Park Dog Run (2 runs)",
-        Notes: "Located at West 52nd Street & West 54th Street, between 10th &1 1th avenues",
+        Notes:
+          "Located at West 52nd Street & West 54th Street, between 10th &1 1th avenues",
         Prop_ID: "M022",
         state: "NY",
         postalCode: "10019"
@@ -1038,7 +1042,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Riverside Park Dog Run North",
         Url:
-        "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+          "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
         Prop_ID: "M071c",
         Notes: "",
         state: "NY",
@@ -1057,7 +1061,8 @@ var runs = {
         city: "Whitestone",
         DogRuns_Type: "Run",
         name: "Little Bay Park Dog Run",
-        Notes: "Located at north side of the Cross Island Parkway & Utopia Parkway",
+        Notes:
+          "Located at north side of the Cross Island Parkway & Utopia Parkway",
         Prop_ID: "Q010A",
         state: "NY",
         postalCode: "11357"
@@ -1075,7 +1080,8 @@ var runs = {
         city: "Far Rockaway",
         DogRuns_Type: "Off-Leash",
         name: "Rockaway Community Park Off-Leash Area",
-        Notes: "Located at Almeda Avenue between Beach 51st Street and Beach 54th Street",
+        Notes:
+          "Located at Almeda Avenue between Beach 51st Street and Beach 54th Street",
         Prop_ID: "Q371",
         state: "NY",
         postalCode: "11691"
@@ -1113,7 +1119,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Fort Tryon Park Dog Run",
         Notes:
-        "Enter from Margaret Corbin Circle Eastern stairs, Broadway & 196th, or Bennett Ave & Broadway",
+          "Enter from Margaret Corbin Circle Eastern stairs, Broadway & 196th, or Bennett Ave & Broadway",
         Prop_ID: "M029",
         state: "NY",
         Url: "http: //www.ftdog.org/",
@@ -1169,7 +1175,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Crescent Beach Park Off-Leash Area",
         Notes:
-        "Located at meadow area leading to beach, Tennyson Drive & Glover Avenue",
+          "Located at meadow area leading to beach, Tennyson Drive & Glover Avenue",
         Prop_ID: "R135",
         state: "NY",
         postalCode: "10312"
@@ -1178,8 +1184,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.94113281482572,
-          40.84613691056902],
+        coordinates: [-73.94113281482572, 40.84613691056902],
         type: "Point"
       },
       properties: {
@@ -1350,7 +1355,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Prospect Park Off-Leash Area",
         Notes:
-        "At Middle & Upper Long Meadow (excludes ballfield area in the Lower Long Meadow), Nethermead, Peninsula",
+          "At Middle & Upper Long Meadow (excludes ballfield area in the Lower Long Meadow), Nethermead, Peninsula",
         Prop_ID: "B073",
         state: "NY",
         postalCode: "11225"
@@ -1386,7 +1391,8 @@ var runs = {
         city: "Staten Island",
         DogRuns_Type: "Run",
         name: "Bloomingdale Park Dog Run",
-        Notes: "Located at Maguire Avenue behind athletic fields closer to Romona Avenue ",
+        Notes:
+          "Located at Maguire Avenue behind athletic fields closer to Romona Avenue ",
         Prop_ID: "R106",
         state: "NY",
         postalCode: "10309"
@@ -1423,7 +1429,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Carl Schurz Park Dog Run",
         Notes:
-        "Located at East End Avenue to East River from Gracie Square (East 84th Street) to89th Street",
+          "Located at East End Avenue to East River from Gracie Square (East 84th Street) to89th Street",
         Prop_ID: "M081",
         state: "NY",
         postalCode: "10028"
@@ -1477,7 +1483,8 @@ var runs = {
         city: "New York",
         DogRuns_Type: "Run",
         name: "Peter Detmold Park Dog Run",
-        Notes: "Located at West of FDR Drive, between East 49th & East 51st streets",
+        Notes:
+          "Located at West of FDR Drive, between East 49th & East 51st streets",
         Prop_ID: "M108N",
         state: "NY",
         postalCode: "10022"
@@ -1532,7 +1539,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Tremont Park Off-Leash Area",
         Notes:
-        "All areas of the park are off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
+          "All areas of the park are off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
         Prop_ID: "X010A",
         state: "NY",
         postalCode: "10457"
@@ -1605,7 +1612,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Corlears Hook Park Dog Run",
         Notes:
-        "Located at Cherry Street and Jackson Street (on the north side of the park building)",
+          "Located at Cherry Street and Jackson Street (on the north side of the park building)",
         Prop_ID: "M017",
         state: "NY",
         postalCode: "10002"
@@ -1642,7 +1649,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Adam Yauch Park Dog Run",
         Notes:
-        "Located at Columbia Place & state Street. named in memory of Beastie Boys' founding member.",
+          "Located at Columbia Place & state Street. named in memory of Beastie Boys' founding member.",
         Prop_ID: "B223DA",
         state: "NY",
         postalCode: "11201"
@@ -1679,7 +1686,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Washington Square Park Dog Run",
         Notes:
-        "Located at 5th Avenue, Waverly Place, West4th Street, between McDougal & Thompson streets, south side of thepark (behind building)",
+          "Located at 5th Avenue, Waverly Place, West4th Street, between McDougal & Thompson streets, south side of thepark (behind building)",
         Prop_ID: "M098",
         state: "NY",
         postalCode: "10012"
@@ -1716,7 +1723,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Clove Lakes Park Off-Leash Area",
         Notes:
-        "Located at Brookside Avenue between Alpine Court & Kingsley Avenue (lawn area)",
+          "Located at Brookside Avenue between Alpine Court & Kingsley Avenue (lawn area)",
         Prop_ID: "R005",
         state: "NY",
         postalCode: "10301"
@@ -1753,7 +1760,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Yellowstone Park Off-Leash Area",
         Notes:
-        "Located at 68 Road & Yellowstone Boulevard; Off-leash hours are 6am to 9am only",
+          "Located at 68 Road & Yellowstone Boulevard; Off-leash hours are 6am to 9am only",
         Prop_ID: "Q425",
         state: "NY",
         postalCode: "11375"
@@ -1880,7 +1887,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Sunset Park Off-Leash Area",
         Notes:
-        "Off-leash at Sunset Park Oval lawn area only, center of park. Located at 44th Street, 41st Street, 6th Avenue",
+          "Off-leash at Sunset Park Oval lawn area only, center of park. Located at 44th Street, 41st Street, 6th Avenue",
         Prop_ID: "B087",
         state: "NY",
         postalCode: "11232"
@@ -1898,7 +1905,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Coffey Park Off-Leash Area",
         Notes:
-        "Located at King Street, Richards Street, and Verona Street at Dwight and Pioneer Streets",
+          "Located at King Street, Richards Street, and Verona Street at Dwight and Pioneer Streets",
         Prop_ID: "B077",
         state: "NY",
         postalCode: "11231"
@@ -1936,7 +1943,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Allison Park Off-Leash Area",
         Notes:
-        "Located at field at the end of the trail bordered by Prospect Avenue, Sailors Snug Harbor Cemetery, and the pond.",
+          "Located at field at the end of the trail bordered by Prospect Avenue, Sailors Snug Harbor Cemetery, and the pond.",
         Prop_ID: "R052",
         state: "NY",
         postalCode: "10301"
@@ -1973,7 +1980,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Randalls Island Park Off-Leash Area",
         Notes:
-        "Off-leash hours for the island are before 9am and after 9pm except for areas where dogs are expressly prohibited via signage.",
+          "Off-leash hours for the island are before 9am and after 9pm except for areas where dogs are expressly prohibited via signage.",
         Prop_ID: "M104",
         state: "NY",
         postalCode: "10035"
@@ -1982,10 +1989,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [
-          -73.97484626838693,
-          40.691517801358344
-        ],
+        coordinates: [-73.97484626838693, 40.691517801358344],
         type: "Point"
       },
       type: "Feature",
@@ -1996,19 +2000,16 @@ var runs = {
         city: "Brooklyn",
         state: "NY",
         Notes: "Off-leash before 9am and after 9pm",
-        Prop_ID: "BBFG99",
+        Prop_ID: "BBFG99"
       }
     },
     {
-      "geometry": {
-        "coordinates": [
-          -73.988895,
-          40.703701
-        ],
-        "type": "Point"
+      geometry: {
+        coordinates: [-73.988895, 40.703701],
+        type: "Point"
       },
-      "type": "Feature",
-      "properties": {
+      type: "Feature",
+      properties: {
         Prop_ID: "BB999",
         name: "Brooklyn Bridge Dog Run",
         address: "385 Plymouth St",
@@ -2020,8 +2021,7 @@ var runs = {
     },
     {
       geometry: {
-        coordinates: [-73.92876224130391,
-          40.868984133254116],
+        coordinates: [-73.92876224130391, 40.868984133254116],
         type: "Point"
       },
       properties: {
@@ -2157,7 +2157,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "St. James Park Off-Leash Area",
         Notes:
-        "Located at 92nd & Jerome Avenue. St. James Park closes at 9pm and opens at 7am. Therefore, the off-leash policy only applies between 7am and 9am",
+          "Located at 92nd & Jerome Avenue. St. James Park closes at 9pm and opens at 7am. Therefore, the off-leash policy only applies between 7am and 9am",
         Prop_ID: "X044",
         state: "NY",
         postalCode: "10468"
@@ -2212,7 +2212,7 @@ var runs = {
         DogRuns_Type: "Off-Leash",
         name: "Central Park Off-Leash Area",
         Notes:
-        "Though there are no enclosed dog runs, there are 23 particularly dog-friendly areas scattered throughout the Park.",
+          "Though there are no enclosed dog runs, there are 23 particularly dog-friendly areas scattered throughout the Park.",
         Prop_ID: "M010",
         state: "NY",
         postalCode: "10023"
@@ -2266,7 +2266,8 @@ var runs = {
         city: "Brooklyn",
         DogRuns_Type: "Off-Leash",
         name: "Mount Prospect Park Off-Leash Area",
-        Notes: "Located at Eastern Parkway between Washington and Underhill avenues",
+        Notes:
+          "Located at Eastern Parkway between Washington and Underhill avenues",
         Prop_ID: "B159",
         state: "NY",
         postalCode: "11238"
@@ -2339,7 +2340,7 @@ var runs = {
         DogRuns_Type: "Run",
         name: "Inwood Hill Park Dog Run: Homer's Run",
         Url: "http://www.inwoof.com/",
-        Notes: '',
+        Notes: "",
         Prop_ID: "M042",
         state: "NY",
         postalCode: "10452"
@@ -2385,13 +2386,11 @@ var runs = {
   ]
 };
 
-
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiYnViYmFzZGFkIiwiYSI6ImNqODRzOHNhNjA0NjMycXVkZ2o4Z3ZkaXoifQ.QP47B3zvEuiEqYcSJDqoYA";
+mapboxgl.accessToken = "[YOUR_TOKEN]";
 
 // older browser fix as remove is newer method
 if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
-  Element.prototype.remove = function () {
+  Element.prototype.remove = function() {
     if (this.parentNode) {
       this.parentNode.removeChild(this);
     }
@@ -2406,56 +2405,36 @@ var map = new mapboxgl.Map({
   maxZoom: 18,
   buffer: 256,
   scrollZoom: false,
-  'source-layer': 'nycparks-ad16j1'
+  "source-layer": "nycparks-ad16j1"
 });
 
 const runList = runs.features;
 
 map.on("load", e => {
-
-  // (original icon approach, first block)
-  // map.addSource("dogparks", {
-  //   type: "geojson",// add vector source here instead
-  //   data: runs // we can delete runs above when it works
-  // });
-
-  // add vector source here instead
-  // map.addLayer({
-  //   id: 'dogIcons',
-  //   type: "symbol",
-  //   source: {
-  //     type: 'vector',
-  //     url: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o"
-  //   },
-  //   'source-layer': 'nycparks-ad16j1'
-  // });
-
-
   buildLocationList(runs);
 
-  const foundHeaders = document.getElementsByClassName('heading');
+  const foundHeaders = document.getElementsByClassName("heading");
   if (foundHeaders[0]) {
-    foundHeaders[0].addEventListener('click', e => {
+    foundHeaders[0].addEventListener("click", e => {
       e.preventDefault();
       map.zoomTo(10.5);
-    })
+    });
   }
-
 
   map.addControl(new mapboxgl.NavigationControl());
 
   // set curser to pointer on mousehover
-  map.on('mousemove', e => {
+  map.on("mousemove", e => {
     var dogsUnderMouse = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
-    })
-    map.getCanvas().style.cursor = (dogsUnderMouse.length) ? 'pointer' : '';
+    });
+    map.getCanvas().style.cursor = dogsUnderMouse.length ? "pointer" : "";
   });
 
-  map.on('click', e => {
+  map.on("click", e => {
     var dogIconsClicked = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
-    })
+    });
 
     // if no click on icon, forget it
     if (!dogIconsClicked.length) return;
@@ -2468,53 +2447,13 @@ map.on("load", e => {
 
     //
     var dogIcon = dogIconsClicked[0];
-    var listing = document.getElementById("listing-" + dogIcon.properties.Prop_ID);
+    var listing = document.getElementById(
+      "listing-" + dogIcon.properties.Prop_ID
+    );
     listing.classList.add("active");
     flyToRun(dogIcon);
     createPopUp(dogIcon);
-  })
-
-
-  // (original icon approach, second block)
-  // (replaced with data set in MapStudio vector tiles)
-
-  // build dog marker icons in DOM
-  // runList.forEach((marker, i) => {
-  //   // Create an img element for the marker
-  //   var el = document.createElement("div");
-  //   el.id = "marker-" + i;
-  //   el.className = "marker";
-
-
-  //   el.addEventListener("click", e => {
-  //     var activeItem = document.getElementsByClassName("active");
-  //     // 1. Fly to the point
-  //     flyToRun(marker);
-
-  //     // 2. Close all other popups and display popup for clicked run
-  //     createPopUp(marker);
-
-  //     // 3. Highlight listing in sidebar (and remove highlight for all other listings)
-  //     e.preventDefault();
-  //     e.stopPropagation();
-
-  //     if (activeItem[0]) {
-  //       activeItem[0].classList.remove("active");
-  //     }
-
-
-  //     var listing = document.getElementById("listing-" + i);
-  //     listing.classList.add("active");
-  //   });
-
-  //   // Add markers to the map at all points
-  //   new mapboxgl.Marker(el, {
-  //     anchor: "top"
-  //   })
-  //     .setLngLat(marker.geometry.coordinates)
-  //     .addTo(map);
-  // });
-
+  });
 });
 
 const flyToRun = currentFeature => {
@@ -2529,7 +2468,9 @@ const createPopUp = currentFeature => {
   // Checks if there is already a popup on the map to remove it
   if (popUps[0]) popUps[0].remove();
 
-  let notesEl = currentFeature.properties.Notes.length ? "<h4>" + currentFeature.properties.Notes + "</h4>" : "";
+  let notesEl = currentFeature.properties.Notes.length
+    ? "<h4>" + currentFeature.properties.Notes + "</h4>"
+    : "";
 
   let popup = new mapboxgl.Popup({
     closeOnClick: true,
@@ -2538,13 +2479,15 @@ const createPopUp = currentFeature => {
   })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
-    '<div id="popup" class="mapboxgl-popup"><h3>' +
-    currentFeature.properties.name +
-    "</h3><h4>" +
-    currentFeature.properties.address +
-    ", " +
-    currentFeature.properties.city +
-    "</h4>" + notesEl + "</div>"
+      '<div id="popup" class="mapboxgl-popup"><h3>' +
+        currentFeature.properties.name +
+        "</h3><h4>" +
+        currentFeature.properties.address +
+        ", " +
+        currentFeature.properties.city +
+        "</h4>" +
+        notesEl +
+        "</div>"
     )
     .addTo(map);
 };
@@ -2586,7 +2529,6 @@ const buildLocationList = data => {
 
       // 3. Highlight sidebar listing (and remove for others)
       var activeItem = document.getElementsByClassName("active");
-
       if (activeItem[0]) {
         activeItem[0].classList.remove("active");
       }
