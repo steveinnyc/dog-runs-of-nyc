@@ -2470,8 +2470,6 @@ const createPopUp = currentFeature => {
     currentFeature.properties.name +
     "</h3><h4>" +
     currentFeature.properties.address +
-    ", " +
-    currentFeature.properties.city +
     "</h4>" + notesEl + "</div>"
     )
     .addTo(map);
