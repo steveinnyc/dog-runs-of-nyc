@@ -2,9 +2,9 @@
 *Because Your Dog Needs to Run*
 ![Screenshot](https://user-images.githubusercontent.com/3064557/31480210-7fbccd8c-aeea-11e7-8bea-3fa579917715.png)
 
-NYC Open Data has always maintained a list of 134 dog runs in the city, but there's never been a map. Maybe because the address detail is generall a cross street or location description instead of a hard-numbered street address.
+NYC Open Data has always maintained a list of 134 dog runs in the city, but there's never been a map. Maybe because the address detail is generally a cross street or location description instead of a hard-numbered street address.
 
-Much of the work was cleaning the address data so it could be munged by the Google GeoCoding API, for the latitude and longitude coordinates required for any mapping.
+Much of the work was cleaning the address data so it could be munged by the Google GeoCoding API to get the latitude and longitude coordinates required for mapping.
 
 Uploading the GeoJSON file to Mapbox Studio, I was then able to map the dog icon to each point, and even adjust the data typos and point positions manually. Studio also allows you to adjust icon scale to zoom-level.
 
@@ -22,7 +22,7 @@ https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489
 
 Just clone the repo, assign your own mapbox API key to the variable in index.js and open home.html in a browser. Manipulate the code, or paint your own map and data set in Mapbox Studio, where other cartographers build and share their own map templates.
 
-## Built With
+### Built With
 
 * [Mapbox GL-JS](https://www.mapbox.com/mapbox-gl-js/api/) - Cartography framework
 * [Mapbox Studio](https://www.mapbox.com/mapbox-studio/) - GeoJSON shaping and map styling
@@ -32,18 +32,17 @@ Just clone the repo, assign your own mapbox API key to the variable in index.js 
 * [PHP]
 
 
-## Authors
+### Authors
 
 * **David Rhodes** - *Initial work* - [dfrho](https://github.com/dfrho)
 
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+### Acknowledgments
 
 * Thanks to NYC OPEN DATA
-* Thanks to Mapbox
+* Thank you mapbox
 * Thank you dog lovers of NYC who use and help maintain the many great dog runs in our city.
-# dog-parks-of-nyc
