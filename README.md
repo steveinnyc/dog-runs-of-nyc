@@ -1,5 +1,9 @@
 # Dog Parks of New York
 *Because Your Dog Needs to Run*
+
+Sample application:
+https://dog-parks-of-nyc.herokuapp.com/
+
 ![Screenshot](https://user-images.githubusercontent.com/3064557/31480210-7fbccd8c-aeea-11e7-8bea-3fa579917715.png)
 
 NYC Open Data has always maintained a list of 134 dog runs in the city, but there's never been a map. Maybe because the address detail is generally a cross street or location description instead of a hard-numbered street address.
