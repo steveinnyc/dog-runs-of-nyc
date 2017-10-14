@@ -1069,8 +1069,8 @@ var runs = {
       },
       geometry: {
         coordinates: [
-          -73.930765,
-          40.860657
+          -73.931463,
+          40.861852
         ],
         type: "Point"
       },
@@ -2597,8 +2597,8 @@ var runs = {
       },
       geometry: {
         coordinates: [
-          -73.920897,
-          40.869893
+          -73.921707,
+          40.871139
         ],
         type: "Point"
       },
@@ -2890,7 +2890,7 @@ map.on("load", e => {
       activeItem[0].classList.remove("active");
     }
 
-    //
+    // TODO: We can make switch statement a function and call it again here to assign the borocode to the listing id selected below
     var dogIcon = dogIconsClicked[0];
     var listing = document.getElementById("listing-" + dogIcon.properties.Prop_ID);
     listing.classList.add("active");
@@ -2969,7 +2969,7 @@ const buildLocationList = data => {
     let listings = document.getElementById("listings");
     let listing = listings.appendChild(document.createElement("div"));
     listing.className = "item";
-    listing.id = "listing-" + props.Prop_ID;
+    listing.id = "listing-" + props.Prop_ID + boroSelector;
 
     // Create a new link with the class 'title' for each run
     // and fill it with the run address
@@ -3004,5 +3004,13 @@ const buildLocationList = data => {
     });
 
     counter++;
+  }
+
+  // TODO: filter  by boro
+  const filterLocationList = (boroCode) => {
+    let listings = document.getElementById("listings").filter(listing => {
+      // only return listings whose id contains the input boroCode
+      return listing.id.indexOf(boroCode) > -1;
+    });
   }
 };
