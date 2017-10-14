@@ -1733,8 +1733,8 @@ var runs = {
       },
       geometry: {
         coordinates: [
-          -73.913223,
-          40.859586
+          -73.921707,
+          40.871139
         ],
         type: "Point"
       },
