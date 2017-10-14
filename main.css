@@ -80,8 +80,20 @@ a:hover {
   cursor: pointer;
 }
 
+.boro {
+  background: rgb(183, 231, 176);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
 .listings {
   height: 100%;
+  /* height: auto; */
   overflow: auto;
   padding-bottom: 60px;
 }
