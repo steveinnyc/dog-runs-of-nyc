@@ -1963,7 +1963,7 @@ var runs = {
       type: "Feature",
       properties: {
         Notes: "St. Mark's Ave., Park Pl. bet. Brooklyn Ave. and Kingston Ave. Except for playgrounds and other areas where dogs are expressly prohibited via signage, all areas of the park are off-leash during designated hours.",
-        boro: "Manhattan",
+        boro: "Brooklyn",
         name: "Brower Park",
         state: "NY",
         address: "725 St Marks Ave",
@@ -3027,7 +3027,6 @@ function prepNavPanel() {
 
     buttonEl.onclick = id !== 'all' ? function (e) {
       e.preventDefault();
-      clearPopup();
       filterLocationList(id);
       getBoroView(id);
       map.flyTo({
@@ -3035,13 +3034,14 @@ function prepNavPanel() {
         zoom: boroView.zoom
       });
       map.setFilter('nycparks-ad16j1', ['==', 'boro', boroView.boro])
+      clearPopup();
     } :
       function (e) {
         e.preventDefault();
-        clearPopup();
         resetLocationList();
         map.flyTo({ center: [-73.880179, 40.737409], zoom: 10.5 });
         map.setFilter('nycparks-ad16j1', ['has', 'boro'])
+        clearPopup();
       }
   });
 };
