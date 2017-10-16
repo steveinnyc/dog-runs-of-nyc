@@ -1,59 +1,3 @@
-/* Reset â™¥ Adapted from http://meyerweb.com/eric/tools/css/reset/
-------------------------------------------------------- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  font-size:100%;
-  font:inherit;
-  vertical-align:baseline;
-  }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display:block;
-  }
-body { line-height:1; }
-ol, ul { list-style:none;  }
-blockquote, q { quotes:none; }
-blockquote:before, blockquote:after,
-q:before, q:after { content:''; content:none; }
-/* tables still need 'cellspacing="0"' in the markup */
-table { border-collapse: collapse; border-spacing:0; }
-/* remember to define focus styles. Hee Haw */
-:focus { outline:0; }
-
-
-*, *:after, *:before {
-  -webkit-box-sizing:border-box;
-     -moz-box-sizing:border-box;
-          box-sizing:border-box;
-  }
-
-
-/* Special button reset */
-[type=submit],
-button,
-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-  font:15px/20px 'Open Sans', sans-serif;
-}
-
-/* end reset */
-
 
 
 /* Inline Elements: Defaults
@@ -206,16 +150,29 @@ a.quiet.dark { color:white; }
 .dark a.quiet:hover,
 a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
 
-.subway-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: #C4C5D0;
-  width: 33.33333% vw;
-  padding: 10px 0px;
-}
+/* Buttons */
+.button {
+  background-color:#3887be;
+  text-align:center;
+  color:#fff;
+  display:inline-block;
+  margin:0px;
+  padding:10px;
+  position:relative;
+  border:none;
+  cursor:pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  /* Protects button metrics in .prose context */
+  font-family:'Open Sans Bold', sans-serif;
+  line-height:20px;
+  font-size:12px;
+  -webkit-appearance:none;
 
-
+  /* The button element needs to be forced this */
+  -webkit-font-smoothing:antialiased;
+  }
 
 .button.short {
   height: 30px;
@@ -246,6 +203,11 @@ a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
   background-color: #3887be;
   box-shadow: 0px 0px 0px 2px transparent inset;
 }
+
+.button:hover,
+.button.active {
+  color:#fff;
+  }
 
 .dark .button,
 .dark .button:hover,
@@ -1315,7 +1277,7 @@ table.fixed {
 .prose figure,
 .prose div.highlight {
   display:block;
-  margin-bottom:8px;
+  margin-bottom:20px;
   word-wrap:break-word;
   }
 .prose h2 {
@@ -3019,6 +2981,7 @@ Alternate exists for:
 .pad0x { padding-right:5px; padding-left:5px; }
 
 .pad1    { padding:10px; }
+.pad2    { padding:20px; }
 .pad4    { padding:40px; }
 
 .pad1x { padding-left: 10px; padding-right: 10px;}
@@ -3431,14 +3394,6 @@ img.inline, .inline           { display:inline-block; }
 .z10  { z-index:10; }
 .z100 { z-index:100; }
 .round                  { border-radius:3px; }
-.subway                 { border-radius:50%; }
-.selected {
-  width: 30% vw;
-  border-radius: 10%;
-}
-.inactive {
-  display: none;
-}
 .round-top              { border-radius:3px 3px 0 0; }
 .round-right            { border-radius:0 3px 3px 0; }
 .round-bottom           { border-radius:0 0 3px 3px; }
@@ -3596,7 +3551,7 @@ img.inline, .inline           { display:inline-block; }
   .pad2                         { padding:10px; }
   .pad2y                        { padding-top:10px; padding-bottom:10px; }
   .pad2x                        { padding-right:10px; padding-left:10px; }
-  .title                        { margin-bottom:2px; }
+  .title                        { margin-bottom:10px; }
   .space-bottom2, .space-bottom { margin-bottom:10px; }
   .space-bottom4                { margin-bottom:20px; }
   .space-bottom8                { margin-bottom:40px;}
@@ -3720,297 +3675,3 @@ img.inline, .inline           { display:inline-block; }
   /* TODO Depreciate */
   .noprint { display:none; }
   }
-
-
-body {
-  color: #404040;
-  font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", Sans-serif;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-h1 {
-  font: 700 18px/32px "Fjalla One", sans-serif;
-  font-size: 36px;
-  margin: 0;
-  font-weight: 400;
-  /* line-height: 5px; */
-  padding: 20px 2px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 18px;
-  margin: 0;
-  font-weight: 300;
-  line-height: 16px;
-  padding: 18px 2px;
-}
-
-h4 {
-  font-size: 16px;
-  margin: 0;
-  font-weight: 300;
-  line-height: 18px;
-  padding: 5px 2px;
-}
-
-a {
-  color: #404040;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #101010;
-}
-
-.sidebar {
-  background: #E7E0E0;
-  position: absolute;
-  width: 33.3333%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  border-right: 2px solid rgba(0, 0, 0, 0.25);
-}
-
-.pad2 {
-  padding: 0px;
-}
-
-.map {
-  position: absolute;
-  left: 33.3333%;
-  width: 66.6666%;
-  top: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
-.heading {
-  background: #C4C5D0;
-  /* border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-  border-right: 1px solid rgba(0, 0, 0, 0.25); */
-  height: 60px;
-  line-height: 60px;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-.boro {
-  background: rgb(183, 231, 176);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-  border-right: 1px solid rgba(0, 0, 0, 0.25);
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-.listings {
-  height: 100%;
-  /* height: auto; */
-  overflow: auto;
-  padding-bottom: 60px;
-}
-
-.listings .item {
-  /* display: block; */
-  border-bottom: 1px solid rgb(121, 117, 117);
-  padding: 10px;
-  text-decoration: none;
-}
-
-.listings .item:last-child {
-  border-bottom: none;
-}
-
-.listings .item .title {
-  display: block;
-  color: #005efa;
-  font-weight: 700;
-}
-
-.listings .item .title small {
-  font-weight: 400;
-}
-
-.listings .item.active .title,
-.listings .item .title:hover {
-  color: #005efa;
-}
-
-.listings .item.active {
-  background-color: #f8f8f8;
-}
-
-::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
-  border-left: 0;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar-track {
-  background: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #091e99;
-  border-radius: 0;
-}
-
-.clearfix {
-  display: block;
-}
-
-.clearfix::after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-.mapboxgl-popup {
-  padding-bottom: 50px;
-  opacity: 0.9;
-  box-shadow: 5px 5px 5px #0000001a;
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.mapboxgl-popup-close-button {
-  display: none;
-}
-
-.mapboxgl-popup-content {
-  font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", Sans-serif;
-  padding: 0;
-  width: 300px;
-}
-
-.mapboxgl-popup-content-wrapper {
-  padding: 1%;
-}
-
-.mapboxgl-popup-content h3 {
-  background: #005efa;
-  color: #fff;
-  margin: 0;
-  display: block;
-  padding: 10px;
-  border-radius: 3px 3px 0 0;
-  font-weight: 700;
-  margin-top: -15px;
-}
-
-.mapboxgl-popup-content h4 {
-  background: #fff;
-  margin: 0;
-  display: block;
-  padding: 10px;
-  font-weight: 400;
-}
-
-.mapboxgl-popup-content div {
-  padding: 10px;
-}
-
-.mapboxgl-container .leaflet-marker-icon {
-  cursor: pointer;
-}
-
-.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
-  margin-top: 15px;
-}
-
-.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
-  border-bottom-color: #005efa;
-}
-
-.marker {
-  border: none;
-  cursor: pointer;
-  height: 43px;
-  width: 45px;
-  background-image: url("http://res.cloudinary.com/dm89xfnl4/image/upload/v1507604762/face-of-a-dog-with-sleepy-eyes_rlbxuq.png");
-  background-color: transparent;
-}
-
-/* Buttons */
-.button {
-  background-color:#3887be;
-  text-align:center;
-  vertical-align: middle;
-  color:#fff;
-  padding:8px;
-  position:relative;
-  border:none;
-  cursor:pointer;
-  white-space:nowrap;
-  width: 54px;
-  height: 54px;
-  /* text-overflow:ellipsis; */
-  /* Protects button metrics in .prose context */
-  font-family:'Helvetica', sans-serif;
-  font-weight: 900;
-  line-height:42px;
-  font-size:20px;
-  /* text-shadow: 1px 1px 1px rgb(22, 22, 22); */
-  -webkit-appearance:none;
-  -webkit-box-shadow: 2px 2px 2px 2px rgb(59, 59, 59);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    2px 2px 2px 2px rgb(59,59,59);  /* Firefox 3.5 - 3.6 */
-  box-shadow:         2px 2px 2px 2px rgb(59,59,59);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-
-  /* The button element needs to be forced this */
-  -webkit-font-smoothing:antialiased;
-  }
-
-  /* official hex colors for NYC Subway subway lines and Staten Island Ferry */
-  #mh {
-    background-color:#00933c;
-  }
-
-    #bk {
-    background-color:#996633;
-  }
-
-    #bx {
-    background-color:#2850ad;
-  }
-
-    #qs {
-    background-color:#b933ad;
-  }
-
-    #si {
-    background-color:#FF7E00;
-  }
-
-    #all {
-    background-color: #646264;
-  }
-
-.button:hover,
-.button.active {
-  color:#fff;
-  }
-
-
-
-

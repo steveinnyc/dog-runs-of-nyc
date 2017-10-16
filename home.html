@@ -10,7 +10,6 @@
   <meta content="yes" name="apple-touch-fullscreen" />
   <meta content="telephone=no,email=no" name="format-detection" />
   <title>Dog Parks of New York</title>
-  <!-- Place favicon.ico in the root directory -->
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Install font -->
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
@@ -18,13 +17,37 @@
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://use.fontawesome.com/55e0cc96a5.js"></script>
 </head>
 
 <body>
   <div class='sidebar'>
-    <div class='heading'>
+    <div class='heading' title='show all boroughs'>
       <h1>Dog Runs of New York</h1>
     </div>
+    <div id='boros' class='subway-container'>
+      <!--
+        -->
+      <a href='#' title='Manhattan' class='button subway' id='mh'>MH</a>
+      <!--
+        -->
+      <a href='#' title='Brooklyn' class='button subway' id='bk'>BK</a>
+      <!--
+        -->
+      <a href='#' title='Queens' class='button subway' id='qs'>QS</a>
+      <!--
+        -->
+      <a href='#' title='Bronx' class='button subway' id='xb'>BX</a>
+      <!--
+        -->
+      <a href='#' title='Staten Island' class='button subway' id='si'>SI</a>
+      <!--
+        -->
+      <a href='#' title='All Boroughs' class='button subway' id='all'>ALL</a>
+
+      <span id='boro-label'></span>
+    </div>
+
     <div id='listings' class='listings'>
     </div>
   </div>
