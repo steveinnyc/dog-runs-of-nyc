@@ -2917,7 +2917,7 @@ const createPopUp = currentFeature => {
 
   // TODO: check interactive: true
   // let linkEl = currentFeature.properties.Url ? "<a target=\"_blank\" href=" + "\"" + currentFeature.properties.Url + "\"" + "><i class=\"fa fa-external-link fa-lg\" aria-hidden=\"true\"></i></a>" : ""
-  // console.log('linkEl: ', linkEl);
+  //
 
   let linkEl = "";
 
@@ -2969,30 +2969,35 @@ function getBoroView(boroID) {
   switch (boroID) {
     case 'mh':
       boroView = {
+        boro: 'Manhattan',
         coordinates: [-73.9712, 40.7831],
         zoom: 10.5
       }
       break;
     case 'si':
       boroView = {
+        boro: 'Staten Island',
         coordinates: [-74.1502, 40.5795],
         zoom: 10.7
       }
       break;
     case 'xb':
       boroView = {
+        boro: 'Bronx',
         coordinates: [-73.8648, 40.8448],
         zoom: 10.6
       }
       break;
     case 'qs':
       boroView = {
+        boro: 'Queens',
         coordinates: [-73.7949, 40.7282],
         zoom: 10.6
       }
       break;
     case 'bk':
       boroView = {
+        boro: 'Brooklyn',
         coordinates: [-73.9442, 40.6782],
         zoom: 10.6
       }
@@ -3009,7 +3014,7 @@ function prepNavPanel() {
   boroIDs.forEach(function (boroID) {
     var buttonEl = document.getElementById(boroID)
     var id = buttonEl.id
-    console.log('id: ', id);
+
     buttonEl.onclick = id !== 'all' ? function (e) {
       e.preventDefault();
       filterLocationList(id);
@@ -3018,11 +3023,13 @@ function prepNavPanel() {
         center: boroView.coordinates,
         zoom: boroView.zoom
       });
+      map.setFilter('nycparks-ad16j1', ['==', 'boro', boroView.boro])
     } :
       function (e) {
         e.preventDefault();
         resetLocationList();
         map.flyTo({ center: [-73.880179, 40.737409], zoom: 10.5 });
+        map.setFilter('nycparks-ad16j1', ['has', 'boro'])
       }
   });
 };
