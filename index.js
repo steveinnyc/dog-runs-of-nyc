@@ -3007,6 +3007,16 @@ function getBoroView(boroID) {
   }
 }
 
+function clearPopup() {
+  try {
+    if (popup !== 'undefined') {
+      popup.remove();
+    }
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
 
 function prepNavPanel() {
   let boroIDs = ['mh', 'bk', 'qs', 'xb', 'si', 'all']
@@ -3017,6 +3027,7 @@ function prepNavPanel() {
 
     buttonEl.onclick = id !== 'all' ? function (e) {
       e.preventDefault();
+      clearPopup();
       filterLocationList(id);
       getBoroView(id);
       map.flyTo({
@@ -3027,6 +3038,7 @@ function prepNavPanel() {
     } :
       function (e) {
         e.preventDefault();
+        clearPopup();
         resetLocationList();
         map.flyTo({ center: [-73.880179, 40.737409], zoom: 10.5 });
         map.setFilter('nycparks-ad16j1', ['has', 'boro'])
