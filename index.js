@@ -15,7 +15,7 @@ var runs = {
         boro: "Staten Island",
         name: "Father Macris Park Off-Leash Area",
         state: "NY",
-        address: "Lamberts Lane & Fahy Avenue",
+        address: "Lamberts Lane & Fahy Aveanue",
         DogRuns_Type: "Off-Leash",
         Accessible: "N",
         Prop_ID: "S075A",
@@ -404,28 +404,6 @@ var runs = {
         type: "Point"
       },
       id: "24b646a48509bf910d0f2adfb95e0693"
-    },
-    {
-      type: "Feature",
-      properties: {
-        Notes: "",
-        boro: "Long Island",
-        name: "Queensbridge Park Off-Leash Area",
-        state: "NY",
-        address: "Vernon Blvd & 41st Ave",
-        DogRuns_Type: "Off-Leash",
-        Accessible: "N",
-        Prop_ID: "Q104",
-        postalCode: "11101"
-      },
-      geometry: {
-        coordinates: [
-          -73.947299,
-          40.756439
-        ],
-        type: "Point"
-      },
-      id: "25407d4fdacdb62e49c9105baddb9084"
     },
     {
       type: "Feature",
@@ -1649,7 +1627,7 @@ var runs = {
       type: "Feature",
       properties: {
         Notes: "",
-        boro: "Long Island",
+        boro: "Queens",
         name: "Queensbridge Park Off-Leash Area",
         state: "NY",
         address: "Vernon Blvd & 41st Ave",
@@ -1962,8 +1940,8 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Notes: "St. Mark's Ave., Park Pl. bet. Brooklyn Ave. and Kingston Ave. Except for playgrounds and other areas where dogs are expressly prohibited via signage, all areas of the park are off-leash during designated hours.",
-        boro: "Brooklyn",
+        Notes: "Located at St. Mark's Ave, Park Place between Brooklyn Ave and Kingston Ave. Off-leash areas include all of the park except for playgrounds and other areas where dogs are expressly prohibited via signage.",
+        boro: "Manhattan",
         name: "Brower Park",
         state: "NY",
         address: "725 St Marks Ave",
