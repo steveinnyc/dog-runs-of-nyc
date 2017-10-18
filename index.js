@@ -2881,7 +2881,10 @@ map.on("load", e => {
 const flyToRun = currentFeature => {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    zoom: 14
+    speed: 1.2,
+    minZoom: 12,
+    curve: 1.1,
+    zoom: 15
   });
 };
 
@@ -2932,8 +2935,6 @@ function filterLocationList(boroCode) {
 }
 
 function resetLocationList() {
-  // let bCodeFirstChar = boroCode.slice(0, 1).toUpperCase();
-
   let listings = document.getElementsByClassName("item")
 
   for (var listing of listings) {
@@ -2948,36 +2949,46 @@ function getBoroView(boroID) {
     case 'mh':
       boroView = {
         boro: 'Manhattan',
-        coordinates: [-73.9712, 40.7831],
-        zoom: 10.5
+        coordinates: [-73.952403, 40.793146],
+        zoom: 10.89,
+        pitch: 6,
+        bearing: 0
       }
       break;
     case 'si':
       boroView = {
         boro: 'Staten Island',
-        coordinates: [-74.1502, 40.5795],
-        zoom: 10.7
+        coordinates: [-74.142089, 40.574220],
+        zoom: 11.25,
+        pitch: 6,
+        bearing: 0
       }
       break;
     case 'xb':
       boroView = {
         boro: 'Bronx',
-        coordinates: [-73.8648, 40.8448],
-        zoom: 10.6
+        coordinates: [-73.852973, 40.842577],
+        zoom: 11.25,
+        pitch: 6,
+        bearing: 0
       }
       break;
     case 'qs':
       boroView = {
         boro: 'Queens',
-        coordinates: [-73.7949, 40.7282],
-        zoom: 10.6
+        coordinates: [-73.816968, 40.685367],
+        zoom: 10.63,
+        pitch: 6,
+        bearing: 0
       }
       break;
     case 'bk':
       boroView = {
         boro: 'Brooklyn',
-        coordinates: [-73.9442, 40.6782],
-        zoom: 10.6
+        coordinates: [-73.883618, 40.654864],
+        zoom: 10.9,
+        pitch: 6,
+        bearing: 0
       }
       break;
     default:
@@ -2987,7 +2998,7 @@ function getBoroView(boroID) {
 
 function clearPopup() {
   try {
-    if (popup !== 'undefined') {
+    if (popup) {
       popup.remove();
     }
   } catch (e) {
@@ -3007,12 +3018,12 @@ function prepNavPanel() {
       e.preventDefault();
       filterLocationList(id);
       getBoroView(id);
+      clearPopup();
       map.flyTo({
         center: boroView.coordinates,
         zoom: boroView.zoom
       });
       map.setFilter('nycparks-ad16j1', ['==', 'boro', boroView.boro])
-      clearPopup();
     } :
       function (e) {
         e.preventDefault();
