@@ -2819,20 +2819,51 @@ if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
   };
 }
 
+var boroView = {};
+getBoroView('all');
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o",
-  center: [-73.880179, 40.737409],
-  zoom: 10.5,
+  center: boroView.coordinates,
+  zoom: boroView.zoom,
   maxZoom: 18,
-  buffer: 256,
-  scrollZoom: false,
+  buffer: 56,
+  // scrollZoom: false,
   'source-layer': 'nycparks-ad16j1'
 });
 
 const runList = runs.features;
 
+var colorReai = [
+  [1, '#263656'],
+  [2, '#314E7F'],
+  [3, '#59797C'],
+  [4, '#754B8E'],
+  [5, '#D49A6A'],
+];
+
 map.on("load", e => {
+
+  map.addSource('boroughs', {
+    type: 'vector',
+    url: 'mapbox://rsbaumann.6n6xib60'
+  });
+
+  // COUNTY SHADING
+  map.addLayer({
+    'id': 'countyFill',
+    'type': 'fill',
+    'source': 'boroughs',
+    'source-layer': 'nyc-bouroughs-8e9odb',
+    'paint': {
+      'fill-color': {
+        property: 'BoroCode',
+        type: 'interval',
+        stops: colorReai
+      },
+      'fill-opacity': .25,
+    }
+  }, 'water');
 
   buildLocationList(runs);
   prepNavPanel();
@@ -2842,7 +2873,8 @@ map.on("load", e => {
     foundHeaders[0].addEventListener('click', e => {
       e.preventDefault();
       resetLocationList();
-      map.flyTo({ center: [-73.880179, 40.737409], zoom: 10.5 });
+      getBoroView('all');
+      map.flyTo({ center: boroView.coordinates, zoom: boroView.zoom });
     })
   }
 
@@ -2881,8 +2913,8 @@ map.on("load", e => {
 const flyToRun = currentFeature => {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    speed: 1.2,
-    minZoom: 12,
+    speed: 1.3,
+    minZoom: 13,
     curve: 1.1,
     zoom: 15
   });
@@ -2942,8 +2974,7 @@ function resetLocationList() {
   }
 }
 
-var boroView = {};
-
+// TODO: make flyTo part of getBoroView, DRY!
 function getBoroView(boroID) {
   switch (boroID) {
     case 'mh':
@@ -2985,8 +3016,17 @@ function getBoroView(boroID) {
     case 'bk':
       boroView = {
         boro: 'Brooklyn',
-        coordinates: [-73.883618, 40.654864],
+        coordinates: [-73.963618, 40.654864],
         zoom: 10.9,
+        pitch: 6,
+        bearing: 0
+      }
+      break;
+    case 'all':
+      boroView = {
+        boro: 'All',
+        coordinates: [-73.996, 40.71],
+        zoom: 9.76,
         pitch: 6,
         bearing: 0
       }
@@ -3028,7 +3068,8 @@ function prepNavPanel() {
       function (e) {
         e.preventDefault();
         resetLocationList();
-        map.flyTo({ center: [-73.880179, 40.737409], zoom: 10.5 });
+        getBoroView('all');
+        map.flyTo({ center: boroView.coordinates, zoom: boroView.zoom });
         map.setFilter('nycparks-ad16j1', ['has', 'boro'])
         clearPopup();
       }
