@@ -3092,8 +3092,7 @@ const buildLocationList = data => {
 
     // Create a new link with the class 'title' for each run
     // and fill it with the run address
-    let link = listing.appendChild(document.createElement("a"));
-    link.href = "#";
+    let link = listing.appendChild(document.createElement("span"));
     link.className = "title";
     link.dataPosition = counter;
     link.innerHTML = props.name;
@@ -3104,7 +3103,7 @@ const buildLocationList = data => {
     let details = listing.appendChild(document.createElement("div"));
     details.innerHTML = props.address + ", " + props.boro;
 
-    link.addEventListener("click", e => {
+    listing.addEventListener("click", e => {
       e.preventDefault();
       // Update the currentFeature to the run associated with the clicked link
       var clickedListing = runList[link.dataPosition];

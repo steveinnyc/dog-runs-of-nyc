@@ -3827,6 +3827,7 @@ a:hover {
   border-bottom: 1px solid rgb(121, 117, 117);
   padding: 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .listings .item:last-child {
