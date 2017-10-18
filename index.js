@@ -2914,7 +2914,6 @@ const flyToRun = currentFeature => {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
     speed: 1.3,
-    minZoom: 13,
     curve: 1.1,
     zoom: 15
   });
