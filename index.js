@@ -2892,26 +2892,25 @@ map.on("load", e => {
       layers: ["nycparks-ad16j1"]
     })
 
-    // if no click on icon, forget it
     if (!dogIconsClicked.length) return;
 
-    // start with resetting active UI shading on listing
+    // reset active UI shading on sidebar listing
     var activeItem = document.getElementsByClassName("active");
     if (activeItem[0]) {
       activeItem[0].classList.remove("active");
     }
-
     var location = dogIconsClicked[0];
     var listing = document.getElementById("listing-" + location.properties.Prop_ID);
-
     listing.classList.add("active");
+
+    // camera flies to location and opens popup
     flyToRun(location);
     createPopUp(location);
 
   })
 });
 
-const flyToRun = currentFeature => {
+function flyToRun(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
     speed: 1.3,
@@ -2920,7 +2919,7 @@ const flyToRun = currentFeature => {
   });
 };
 
-const createPopUp = currentFeature => {
+function createPopUp(currentFeature) {
   let popUps = document.getElementsByClassName("mapboxgl-popup");
   // Checks if there is already a popup on the map to remove it
   if (popUps[0]) popUps[0].remove();
@@ -3075,7 +3074,7 @@ function prepNavPanel() {
   });
 };
 
-const buildLocationList = data => {
+function buildLocationList(data) {
   const runList = data.features;
   let counter = 0;
   // Iterate through the list of runs
