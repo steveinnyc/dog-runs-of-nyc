@@ -10,24 +10,18 @@ NYC Open Data has always maintained a list of dog runs in the city, but there's 
 
 Much of the work was cleaning the address data so it could be munged by the Google GeoCoding API to get the latitude and longitude coordinates required for mapping.
 
-Uploading the GeoJSON file to Mapbox Studio, I was then able to map the dog icon to each point, and even adjust the data typos and point positions manually. Studio also allows you to adjust icon scale to zoom-level.
+Uploading the GeoJSON file to Mapbox Studio, I adjusted the data typos and point positions manually. Studio also allows you to adjust icon scale to zoom-level for smoother transitions, and download the geoJSON file which I hard coded as a JS object to speed the sidebar listings render.
 
 The single page app's design is loosely modeled on mapbox's Sweetgreen Store Locator tutorial, which gives you all the API knowledge needed for popups, flying to locations, and a refresher on vanilla Javascript DOM manipulation.
 
-## Great Developer, and User Experience
-Mapbox was a great choice given the robust API and superior developer experience. I found documentation for everything I needed to do, or pointers on how to do it in JS.
-
 ### Deploying a static JS/HTML5/CSS3 site on Heroku (in PHP)
-
 No brainer deployment thanks to wh1tney's guide on deploying a static website to heroku...with PHP.
 https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489
 
 ### Installing
-
 Just clone the repo, assign your own mapbox API key to the variable in index.js and open home.html in a browser. Manipulate the code, or paint your own map and data set in Mapbox Studio, where other cartographers build and share their own map templates.
 
 ### Built With
-
 * [Mapbox GL-JS](https://www.mapbox.com/mapbox-gl-js/api/) - Cartography framework
 * [Mapbox Studio](https://www.mapbox.com/mapbox-studio/) - GeoJSON shaping and map styling
 * [Javascript]- DOM manipulation
@@ -49,4 +43,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Thanks to NYC OPEN DATA
 * Thank you mapbox
-* Thank you dog lovers of NYC who use and help maintain the many great dog runs in our city.

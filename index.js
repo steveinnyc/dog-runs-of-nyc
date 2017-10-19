@@ -1,2476 +1,2996 @@
 "use strict";
 
+// raw data source: https://data.boroofnewyork.us/Recreation/Directory-of-Dog-Runs-and-Off-Leash-Areas/ipbu-mtcs/data
+
 var runs = {
-  type: "FeatureCollection",
   features: [
     {
-      geometry: {
-        coordinates: [-73.9037535, 40.8769714],
-        type: "Point"
-      },
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "3025 Bailey Ave",
-        city: "Bronx",
+        Notes: "Lawn area beyond ballfield",
+        boro: "Staten Island",
+        name: "Father Macris Park Off-Leash Area",
+        state: "NY",
+        address: "Lamberts Lane & Fahy Aveanue",
         DogRuns_Type: "Off-Leash",
-        name: "Siren Slope Park Off-Leash Area",
-        Notes: "Located at Bailey Avenue and West 230 Street",
-        Prop_ID: "X150G",
-        state: "NY",
-        postalCode: "10463"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9254411, 40.8331268],
-        type: "Point"
-      },
-      properties: {
         Accessible: "N",
-        address: "1055 Jerome Ave",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Mullaly Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X034",
-        state: "NY",
-        postalCode: "10452"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9390208, 40.7160683],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Olive Street & Maspeth Avenue",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "Cooper Park Dog Run",
-        Notes: "",
-        Prop_ID: "B025",
-        state: "NY",
-        postalCode: "11211"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.905232, 40.863532],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "West Fordham Rd & Dr Martin Luther King Jr Blvd",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Devoe Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X013",
-        state: "NY",
-        postalCode: "10468"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8970068, 40.8978911],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Broadway & 252 Street",
-        city: "Bronx",
-        DogRuns_Type: "Run",
-        name: "Van Cortlandt Park Dog Run",
-        Notes: "",
-        Prop_ID: "X092",
-        state: "NY",
-        postalCode: "10468"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8977573, 40.8365409],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "1596-1672 Crotona Ave",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Crotona Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X010",
-        state: "NY",
-        postalCode: "10457"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8812239, 40.8100473],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Drake Park S & Hunts Point Ave",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Joseph Rodham Drake Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X015",
-        state: "NY",
-        postalCode: "10474"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.89273229999999, 40.6317749],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Seaview Ave & East 93 St",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Canarsie Park Off-Leash Area",
-        Notes:
-          "All areas off-leash excluding the playground, ballfields, and Natural Areas.",
-        Prop_ID: "B018",
-        state: "NY",
-        postalCode: "11236"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8977573, 40.8365409],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "1596-1672 Crotona Ave",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Hylan Park Off-Leash Area",
-        Notes:
-          "All areas of the park are off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
-        Prop_ID: "X010",
-        state: "NY",
-        postalCode: "10457"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.92056, 40.88026199999999],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "2570 Independence Ave",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Henry Hudson Park Off-Leash Area",
-        Notes: "Located at Kappock St & Independence Ave",
-        Prop_ID: "X080",
-        state: "NY",
-        postalCode: "10463"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9132238, 40.8595867],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Sedgwick Avenue & Hall of Fame Terrace",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "University Woods Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X051",
-        state: "NY",
-        postalCode: "10468"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0206153, 40.6181103],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "900-998 86th St",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "Dyker Beach Park Dog Run",
-        Notes: "Located at 7th Avenue & 86th Street",
-        Prop_ID: "B028",
-        state: "NY",
-        postalCode: "11228"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9730191, 40.5760571],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Sea Breeze Avenue & West 5th Street",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Asser Levy Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "B080",
-        state: "NY",
-        postalCode: "11224"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8210182, 40.8505689],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Watt Ave & Middletown Road",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Pelham Bay Park Off-Leash Area",
-        Notes: "Located about 100 yards east Watt Avenue and Middletown Road",
-        Prop_ID: "X039",
-        state: "NY",
-        Url:
-          "http://nycgovparks.org/parks/X039/map/pelhambay_dogonleasharea.pdf",
-        postalCode: "10465"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.911816, 40.8957829],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "West 232nd Street & Independence Avenue",
-        city: "Bronx",
-        DogRuns_Type: "Run",
-        name: "Seton Park Dog Run",
-        Notes: "",
-        Prop_ID: "X201",
-        state: "NY",
-        postalCode: "10463"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.90745799999999, 40.8993954],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Riverdale Avenue at Henry Hudson Parkway",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Frank S. Hackett Park Dog Run",
-        Notes: "",
-        Prop_ID: "X110A",
-        state: "NY",
-        postalCode: ""
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9908643, 40.7000793],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "195 Cadman Plaza West",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Brooklyn War Memorial Off-Leash Area",
-        Notes:
-          "Located at Cadman Plaza Park, Cadman Plaza West & East & Prospect Street ",
-        Prop_ID: "B113A",
-        state: "NY",
-        postalCode: "11201"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.90798269999999, 40.8372102],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Clay Ave & E 170 St",
-        city: "Bronx",
-        Country: "United states",
-        DogRuns_Type: "Off-Leash",
-        name: "Claremont Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X008",
-        state: "NY",
-        postalCode: "10457"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9165713, 40.8869086],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Douglas Avenue & West 235 Street",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Wallenberg Forest Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X259",
-        state: "NY",
-        postalCode: "10463"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9209755, 40.8795233],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Palisade Avenue & Independence Avenue",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Spuyten Duyvil Shorefront Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X091",
-        state: "NY",
-        postalCode: "10463"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.920799, 40.878349],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Walton Ave & Grand Concourse",
-        city: "Bronx",
-        DogRuns_Type: "Run",
-        name: "Franz Sigel Park Dog Run",
-        Notes:
-          "Located at center of the park, just north of the ballfields which would line up with around 155th Street.",
-        Prop_ID: "X047",
-        state: "NY",
-        postalCode: "10451"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8913823, 40.6523754],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Glenwood Rd & Louisiana Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Breukelen Park Off-Leash Area",
-        Notes: "All areas off-leash excluding the playground and ballfields",
-        Prop_ID: "B247",
-        state: "NY",
-        postalCode: "12207"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9011007, 40.8479713],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Valentine Ave & E Tremont Ave",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Richman (Echo) Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "X017",
-        state: "NY",
-        postalCode: "10457"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8785843, 40.8766444],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "3225 Reservoir Oval East",
-        city: "Bronx",
-        DogRuns_Type: "Run",
-        name: "Williamsbridge Oval Dog Run",
-        Notes: "",
-        Prop_ID: "X104",
-        state: "NY",
-        postalCode: "10467"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9197214, 40.8840989],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "254 Palisade Ave",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "Riverdale Park Off-Leash Area",
-        Notes:
-          "Located at Palisade Avenue from West 232 Street to West 254 Street",
-        Prop_ID: "X142",
-        state: "NY",
-        postalCode: "10463"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.000059, 40.69275],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "334 Furman St",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "Pier 6 Dog Run",
-        Notes: "",
-        Prop_ID: "B431",
-        state: "NY",
-        postalCode: "11201"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.93161119999999, 40.6797975],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "70 Chauncey St",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Fulton Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "B038",
-        state: "NY",
-        postalCode: "11223"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9524204, 40.7187989],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Bayard St & Union Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "McCarren Park Dog Run",
-        Notes: "",
-        Prop_ID: "B058",
-        state: "NY",
-        postalCode: "11211"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.012699, 40.7295628],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "353 West St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Leroy Street Dog Park",
-        Notes: "Located at Leroy Street at the northeast corner of Pier 40",
-        Prop_ID: "M",
-        state: "NY",
-        Url: "http://www.hudsonriverpark.org/explore/dogrunleroyst.html",
-        postalCode: "10014"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.1622581, 40.6046212],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "1 Eton Place",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Willowbrook Park Off-Leash Area",
-        Notes: "Located at Archery Range Field",
-        Prop_ID: "R030",
-        state: "NY",
+        Prop_ID: "S075A",
         postalCode: "10314"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-74.0916949, 40.6259216],
+        coordinates: [
+          -74.163584,
+          40.615995
+        ],
         type: "Point"
       },
+      id: "0088e8d2b67def2214e89fb53ec10bc6"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "700 Victory Blvd",
-        city: "Staten Island",
-        DogRuns_Type: "Run",
-        name: "Silver Lake Park Dog Run",
-        Notes: "",
-        Prop_ID: "R022",
+        Notes: "Eastern Parkway between Washington and Underhill avenues",
+        boro: "Brooklyn",
+        name: "Mount Prospect Park Off-Leash Area",
         state: "NY",
-        postalCode: "10301"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8507422, 40.7918726],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "119th St & Poppenhusen Ave",
-        city: "College Point",
+        address: "Eastern Parkway & Mary Pinkett Ave",
         DogRuns_Type: "Off-Leash",
-        name: "MacNeil Park Off-Leash Area",
-        Notes: "Off-leash is mainly zone #1",
-        Prop_ID: "Q009",
-        state: "NY",
-        postalCode: "11356"
+        Accessible: "N",
+        Prop_ID: "B159",
+        postalCode: "11238"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.9081131, 40.7461827],
+        coordinates: [
+          -73.962521,
+          40.671387
+        ],
         type: "Point"
       },
-      properties: {
-        Accessible: "N",
-        address: "Woodside Ave & 56th St",
-        city: "Woodside",
-        DogRuns_Type: "Run",
-        name: "Windmuller Park Dog Run (Doughboy Plaza)",
-        Notes: "",
-        Prop_ID: "Q031A",
-        state: "NY",
-        postalCode: "11377"
-      },
-      type: "Feature"
+      id: "00c5e9c3c1e0e18859f6ad0c91cfb3c3"
     },
     {
-      geometry: {
-        coordinates: [-73.92513029999999, 40.856006],
-        type: "Point"
-      },
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "2682-2698 Amsterdam Ave",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Highbridge Park Dog Run",
-        Notes: "Located at Amsterdam Ave & Fort George Ave",
-        Prop_ID: "M037",
+        Notes: "Off-leash hours for the island are before 9: 00am and after 9pm except for areas where dogs are expressly prohibited via signage.",
+        boro: "Manhattan",
+        name: "Randalls Island Park Off-Leash Area",
         state: "NY",
-        Url: "http://www.highbridgek9club.org/",
-        postalCode: "10040"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.943596, 40.7232661],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "138 Driggs Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "McGolrick Park Dog Run",
-        Notes: "Located at North Henry Street & Driggs Avenue",
-        Prop_ID: "B114",
-        state: "NY",
-        postalCode: "11222"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.91646999999999, 40.7846183],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Shore Blvd & 20th Rd",
-        city: "Queens",
+        address: "20 Randalls Island Park",
         DogRuns_Type: "Off-Leash",
-        name: "Ralph DeMarco Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q004A",
-        state: "NY",
-        postalCode: "11105"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.87644399999999, 40.7215613],
-        type: "Point"
-      },
-      properties: {
         Accessible: "N",
-        address: "Juniper Blvd N & 80th St",
-        city: "Middle Village",
-        DogRuns_Type: "Off-Leash",
-        name: "Juniper Valley Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q102",
-        state: "NY",
-        postalCode: "11379"
+        Prop_ID: "M104",
+        postalCode: "10035"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.97988959999999, 40.79061919999999],
+        coordinates: [
+          -73.922723,
+          40.796032
+        ],
         type: "Point"
       },
-      properties: {
-        Accessible: "N",
-        address: "Riverside Drive & West 87th St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Riverside Park Dog Run Central",
-        Url:
-          "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
-        Prop_ID: "M071b",
-        Notes: "",
-        state: "NY",
-        postalCode: "10024"
-      },
-      type: "Feature"
+      id: "04041608d532334fa5798b4c681bdb45"
     },
     {
-      geometry: {
-        coordinates: [-73.9857008, 40.78032109999999],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Riverside Drive & West 72nd St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Riverside Park Dog Run South",
-        Url:
-          "http://nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
-        Notes: "",
-        Prop_ID: "M071a",
-        state: "NY",
-        postalCode: "10023"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.00086189999999, 40.7088079],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Dover Street & Water Street",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Fish Bridge Park Dog Run",
-        Notes: "",
-        Prop_ID: "M291",
-        state: "NY",
-        postalCode: "10038"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9402928, 40.76553579999999],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Vernon Blvd. & 34th Ave",
-        city: "Queens",
-        DogRuns_Type: "Off-Leash",
-        name: "Rainey Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q048",
-        state: "NY",
-        postalCode: "11106"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.948571, 40.6753677],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "725 St Marks Ave",
-        city: "New York",
-        DogRuns_Type: "Off-Leash",
-        name: "Brower Park",
-        Notes:
-          "Located at at St. Mark's Ave., Park Pl. bet. Brooklyn Ave. and Kingston Ave. All areas off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
-        Prop_ID: "B012",
-        state: "NY",
-        postalCode: "11216"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0164348, 40.6330809],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "67th Street & 7th Avenue",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Leif Ericson Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "B052",
-        state: "NY",
-        postalCode: "11220"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0186367, 40.6270753],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "7th Ave & 75th St",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "McKinley Park Off-Leash Area",
-        Notes:
-          "Located at Fort Hamilton Parkway, 7th Avenue, 73rd Street to 75th Street",
-        Prop_ID: "B060",
-        state: "NY",
-        postalCode: "11228"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9717106, 40.7820454],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Central Park West & West 81st Street",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Theodore Roosevelt Park Dog Run",
-        Notes: "",
-        Prop_ID: "M053",
-        state: "NY",
-        postalCode: "10024"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.92560069999999, 40.668465],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Eastern Parkway & Buffalo Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Lincoln Terrace Park Off-Leash Area",
-        Notes: "Located at East New York Avenue",
-        Prop_ID: "B054",
-        state: "NY",
-        postalCode: "11213"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.97426999999999, 40.7354944],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "East 112th Street & FDR Drive",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Thomas Jefferson Park Dog Run",
-        Notes: "",
-        Prop_ID: "M047",
-        state: "NY",
-        postalCode: "10029"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9124939, 40.8093423],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Cypress Ave & East 143rd St",
-        city: "Bronx",
-        DogRuns_Type: "Run",
-        name: "St. Mary's Dog Run",
-        Notes: "",
-        Prop_ID: "X045",
-        state: "NY",
-        postalCode: "10455"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8451089, 40.734277],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "64th Ave & Grand Central Parkway",
-        city: "Forest Hills",
-        DogRuns_Type: "Run",
-        name: "Underbridge Playground Dog Run",
-        Notes:
-          "Located at 64th Avenue/64th Road on Grand Central Parkway service road",
-        Prop_ID: "Q451",
-        state: "NY",
-        postalCode: "11375"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9478369, 40.7466699],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "21st St & 45th Road",
-        city: "Long Island City",
-        DogRuns_Type: "Run",
-        name: "John F Murray Playground Dog Run",
-        Notes: "Located at southeastern side of the park",
-        Prop_ID: "Q141",
-        state: "NY",
-        postalCode: "11101"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0805351, 40.5903838],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Nugent Ave & Quintard St",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Ocean Breeze Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "R149",
-        state: "NY",
-        postalCode: "10309"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.95686959999999, 40.7602215],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Bobby Wagner Walk & E 63rd Street",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Andrew Haswell Green Dog Park",
-        Notes: "Located at Pedestrian Bridge",
-        Prop_ID: "M108Q1",
-        state: "NY",
-        postalCode: "10065"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9895852, 40.7415481],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "5th Avenue & East 23rd St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Madison Square Park Dog Run",
-        Notes: "",
-        Prop_ID: "M052",
-        state: "NY",
-        postalCode: "10010"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.937529, 40.6085605],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Fillmore Ave & Marine Parkway",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Marine Park Dog Run",
-        Notes:
-          "All areas off-leash excluding the playgrounds, ballfields, and Natural Areas.",
-        Prop_ID: "B057",
-        state: "NY",
-        postalCode: "11234"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9094013, 40.88137770000001],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Riverdale Ave & W 231 St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Ewen Park Dog Run",
-        Notes: "",
-        Prop_ID: "X019",
-        state: "NY",
-        postalCode: "10468"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9932741, 40.7677526],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "11th Ave & 53rd St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "De Witt Clinton Park Dog Run (2 runs)",
-        Notes:
-          "Located at West 52nd Street & West 54th Street, between 10th &1 1th avenues",
-        Prop_ID: "M022",
-        state: "NY",
-        postalCode: "10019"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9705556, 40.8016022],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Riverside Drive & West 105th St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Riverside Park Dog Run North",
-        Url:
-          "http: //nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
-        Prop_ID: "M071c",
-        Notes: "",
-        state: "NY",
-        postalCode: "10025"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.79484339999999, 40.7865319],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Cross Island Pkwy & Utopia Parkway",
-        city: "Whitestone",
-        DogRuns_Type: "Run",
-        name: "Little Bay Park Dog Run",
-        Notes:
-          "Located at north side of the Cross Island Parkway & Utopia Parkway",
-        Prop_ID: "Q010A",
-        state: "NY",
-        postalCode: "11357"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.7847982, 40.5977168],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Almeda Ave & Beach 54th St",
-        city: "Far Rockaway",
-        DogRuns_Type: "Off-Leash",
-        name: "Rockaway Community Park Off-Leash Area",
-        Notes:
-          "Located at Almeda Avenue between Beach 51st Street and Beach 54th Street",
-        Prop_ID: "Q371",
-        state: "NY",
-        postalCode: "11691"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.00155699999999, 40.7640257],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "555 12th Ave",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Hudson River Park Dog Run (North Chelsea)",
-        Notes: "Pier 84 at West 44th Street",
-        Prop_ID: "M",
-        state: "NY",
-        Url: "http: //www.hudsonriverpark.org/explore/dogrunpier84.html",
-        postalCode: "10036"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9307651, 40.8606572],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "West 196th St & Broadway",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Fort Tryon Park Dog Run",
-        Notes:
-          "Enter from Margaret Corbin Circle Eastern stairs, Broadway & 196th, or Bennett Ave & Broadway",
-        Prop_ID: "M029",
-        state: "NY",
-        Url: "http: //www.ftdog.org/",
-        postalCode: "10040"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.1281958, 40.5565933],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Buffalo St & Hylan Boulevard",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Amundsen Trail Off-Leash Area",
-        Notes: "",
-        Prop_ID: "R065",
-        state: "NY",
-        postalCode: "10306"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.18823569999999, 40.520195],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "420 Cornelia Ave",
-        city: "Staten Island",
-        DogRuns_Type: "Run",
-        name: "Wolfe's Pond Park Dog Run",
-        Notes: "Located to left of Cornelia Avenue",
-        Prop_ID: "R031",
-        state: "NY",
-        postalCode: "10312"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.1482626, 40.5355062],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "366 Tennyson Dr",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Crescent Beach Park Off-Leash Area",
-        Notes:
-          "Located at meadow area leading to beach, Tennyson Drive & Glover Avenue",
-        Prop_ID: "R135",
-        state: "NY",
-        postalCode: "10312"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.94113281482572, 40.84613691056902],
-        type: "Point"
-      },
+      type: "Feature",
       properties: {
         Accessible: "N",
         address: "Fort Washington & West 173rd Street",
-        city: "New York",
+        boro: "Manhattan",
         DogRuns_Type: "Run",
         name: "J. Hood Wright Park Dog Run",
         Prop_ID: "M099",
         state: "NY",
         postalCode: "10033"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.7693391, 40.7719415],
+        coordinates: [
+          -73.941132,
+          40.846136
+        ],
         type: "Point"
       },
+      id: "075b108429bf8d7a245f34b69c348c87"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "214th Place & 34th Ave",
-        city: "Bayside",
+        Notes: "Bailey Avenue and West 230 Street",
+        boro: "Bronx",
+        name: "Siren Slope Park Off-Leash Area",
+        state: "NY",
+        address: "3025 Bailey Ave",
         DogRuns_Type: "Off-Leash",
-        name: "Crocheron Park Off-Leash Area",
+        Accessible: "N",
+        Prop_ID: "X150G",
+        postalCode: "10463"
+      },
+      geometry: {
+        coordinates: [
+          -73.903753,
+          40.876971
+        ],
+        type: "Point"
+      },
+      id: "091fbff98a243f0ff7e4e80e3f6d70a7"
+    },
+    {
+      type: "Feature",
+      properties: {
         Notes: "",
-        Prop_ID: "Q012",
+        boro: "Brooklyn",
+        name: "McCarren Park Dog Run",
         state: "NY",
-        postalCode: "11361"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.1431655, 40.5554689],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "190 Timber Ridge Dr",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Evergreen Park Off-Leash Area",
-        Notes: "Located at Evergreen Street",
-        Prop_ID: "R121",
-        state: "NY",
-        postalCode: "10308"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.94651569999999, 40.6898317],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "670 Lafayette Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Herbert Von King Park Off-Leash Area",
-        Notes: "Located at Marcy Avenue & Lafayette Avenue",
-        Prop_ID: "B088",
-        state: "NY",
-        postalCode: "11216"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9697163, 40.7488077],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "East 42nd St & 1st Ave",
-        city: "New York",
+        address: "Bayard St & Union Ave",
         DogRuns_Type: "Run",
-        name: "Robert Moses Park Dog Run",
-        Notes: "",
-        Prop_ID: "M158",
-        state: "NY",
-        postalCode: "10016"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.922991, 40.776813],
-        type: "Point"
-      },
-      properties: {
         Accessible: "N",
-        address: "19 19th St",
-        city: "Queens",
-        DogRuns_Type: "Off-Leash",
-        name: "Astoria Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q004",
-        state: "NY",
-        postalCode: "11105"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.1970714, 40.51260389999999],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Seguine Avenue & Johnston Terrace",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Lemon Creek Park Off-Leash Area",
-        Notes: "Located just below playground",
-        Prop_ID: "R079",
-        state: "NY",
-        postalCode: "10309"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8885823, 40.762858],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "25th Ave & 80th St",
-        city: "East Elmhurst",
-        DogRuns_Type: "Off-Leash",
-        name: "La Guardia Landing Lights Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q393D",
-        state: "NY",
-        postalCode: "11370"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.99246529999999, 40.711753],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Pike St & Monroe St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Coleman Oval Park Dog Run",
-        Notes: "",
-        Prop_ID: "M019",
-        state: "NY",
-        postalCode: "10022"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.97351309999999, 40.678638],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Flatbush Avenue & Prospect Park West",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Prospect Park Off-Leash Area",
-        Notes:
-          "At Middle & Upper Long Meadow (excludes ballfield area in the Lower Long Meadow), Nethermead, Peninsula",
-        Prop_ID: "B073",
-        state: "NY",
-        postalCode: "11225"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.95725809999999, 40.806928],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Morningside Avenue & West 118th St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Morningside Park Dog Run",
-        Notes: "",
-        Prop_ID: "M056",
-        state: "NY",
-        postalCode: "10026"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.2116715, 40.5352541],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Ramona Ave & Maguire Ave",
-        city: "Staten Island",
-        DogRuns_Type: "Run",
-        name: "Bloomingdale Park Dog Run",
-        Notes:
-          "Located at Maguire Avenue behind athletic fields closer to Romona Avenue ",
-        Prop_ID: "R106",
-        state: "NY",
-        postalCode: "10309"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9323263, 40.7464921],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "43rd Street & Skillman Avenue",
-        city: "Long Island City",
-        DogRuns_Type: "Run",
-        name: "Torsney/Lou Lodati Playground Dog Run",
-        Notes: "",
-        Prop_ID: "Q340",
-        state: "NY",
-        postalCode: "11104"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9447823, 40.7749468],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "East 86th Street & East End Ave",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Carl Schurz Park Dog Run",
-        Notes:
-          "Located at East End Avenue to East River from Gracie Square (East 84th Street) to89th Street",
-        Prop_ID: "M081",
-        state: "NY",
-        postalCode: "10028"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.94259509999999, 40.5768226],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Ocean Ave & Mackenzie St",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "Manhattan Beach Dog Run",
-        Notes: "Located at Ocean Ave & Mackenzie St",
-        Prop_ID: "B251",
-        state: "NY",
-        postalCode: "11235"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9430016, 40.802546],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Madison Ave & East 120th St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Marcus Garvey Park Dog Run",
-        Notes: "",
-        Prop_ID: "M058",
-        state: "NY",
-        postalCode: "10027"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.96409, 40.753123],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "454 E 51st St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Peter Detmold Park Dog Run",
-        Notes:
-          "Located at West of FDR Drive, between East 49th & East 51st streets",
-        Prop_ID: "M108N",
-        state: "NY",
-        postalCode: "10022"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.77554789999999, 40.7259597],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "193rd St & Radnor Road",
-        city: "Fresh Meadows",
-        DogRuns_Type: "Run",
-        name: "Cunningham Park Dog Run",
-        Notes: "",
-        Prop_ID: "Q021",
-        state: "NY",
-        postalCode: "11366"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.95143449999999, 40.714311],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "462 Union Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Macri Square Park Off-Leash Area",
-        Notes: "Located at Union Turnpike & Metropolitan Avenue",
-        Prop_ID: "B223S",
-        state: "NY",
+        Prop_ID: "B058",
         postalCode: "11211"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.8952338, 40.8452505],
+        coordinates: [
+          -73.95242,
+          40.718798
+        ],
         type: "Point"
       },
+      id: "0d92aca033790b5c647ee2ca154e5e00"
+    },
+    {
+      type: "Feature",
       properties: {
+        Notes: "North Henry Street & Driggs Avenue",
+        boro: "Brooklyn",
+        name: "McGolrick Park Dog Run",
+        state: "NY",
+        address: "138 Driggs Ave",
+        DogRuns_Type: "Run",
         Accessible: "N",
-        address: "E 175 St to E Tremont Ave",
-        city: "Bronx",
+        Prop_ID: "B114",
+        postalCode: "11222"
+      },
+      geometry: {
+        coordinates: [
+          -73.943596,
+          40.723266
+        ],
+        type: "Point"
+      },
+      id: "0f27b5870822fed253c915c47618dada"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "7th Avenue & 86th Street",
+        boro: "Brooklyn",
+        name: "Dyker Beach Park Dog Run",
+        state: "NY",
+        address: "900-998 86th St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "B028",
+        postalCode: "11228"
+      },
+      geometry: {
+        coordinates: [
+          -74.020615,
+          40.61811
+        ],
+        type: "Point"
+      },
+      id: "100549d88ff95c6467504496ef4810a2"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Fort Hamilton Parkway, 7th Avenue, 73rd Street to 75th Street",
+        boro: "Brooklyn",
+        name: "McKinley Park Off-Leash Area",
+        state: "NY",
+        address: "7th Ave & 75th St",
         DogRuns_Type: "Off-Leash",
-        name: "Tremont Park Off-Leash Area",
-        Notes:
-          "All areas of the park are off-leash during designated hours except for playgrounds and other areas where dogs are expressly prohibited via signage.",
-        Prop_ID: "X010A",
-        state: "NY",
-        postalCode: "10457"
+        Accessible: "N",
+        Prop_ID: "B060",
+        postalCode: "11228"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.7674366, 40.5987623],
+        coordinates: [
+          -74.018636,
+          40.627075
+        ],
         type: "Point"
       },
+      id: "123cfc3347bb494b7aa9bca9ec42c2b5"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "701 Bay & 32nd St",
-        city: "Far Rockaway",
+        Notes: "",
+        boro: "Bronx",
+        name: "Joseph Rodham Drake Park Off-Leash Area",
+        state: "NY",
+        address: "Drake Park S & Hunts Point Ave",
         DogRuns_Type: "Off-Leash",
-        name: "Bayswater Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q007",
-        state: "NY",
-        postalCode: "11691"
+        Accessible: "N",
+        Prop_ID: "X015",
+        postalCode: "10474"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.9837797, 40.6721909],
+        coordinates: [
+          -73.881223,
+          40.810047
+        ],
         type: "Point"
       },
+      id: "14324427d0f31de6471c5f295645ef5a"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "4th St & 5th Ave",
-        city: "Brooklyn",
+        Notes: "The closest entrance is on Seaman Avenue at Isham Street, and you'll find the run just behind the flag pole. You can reach Inwood Hill Park by Subway via the A train to 207th St, or the 1 train to 207th St, and walk west.",
+        boro: "Manhattan",
+        name: "Inwood Hill Park Dog Run: Homer's Run",
+        Url: "http://www.inwoof.com/",
+        state: "NY",
+        address: "Seaman Avenue & Isham Street",
         DogRuns_Type: "Run",
-        name: "J.J. Byrne Dog Park",
-        Notes: "",
-        Prop_ID: "B111",
-        state: "NY",
-        postalCode: "11215"
+        Accessible: "N",
+        Prop_ID: "M042",
+        postalCode: "10452"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.9912281, 40.7358984],
+        coordinates: [
+          -73.921707,
+          40.871139
+        ],
         type: "Point"
       },
-      properties: {
-        Accessible: "N",
-        address: "15th Street & Union Square West",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Union Square Dog Run",
-        Notes: "",
-        Prop_ID: "M089",
-        state: "NY",
-        postalCode: "10003"
-      },
-      type: "Feature"
+      id: "149478e1201a8c7aafe14a8133077a91"
     },
     {
-      geometry: {
-        coordinates: [-73.979287, 40.7117999],
-        type: "Point"
-      },
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "397 FDR Drive",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Corlears Hook Park Dog Run",
-        Notes:
-          "Located at Cherry Street and Jackson Street (on the north side of the park building)",
-        Prop_ID: "M017",
+        Notes: "Located along Shore Road, 4th Avenue to 69th Street ",
+        boro: "Brooklyn",
+        name: "Shore Road Park Off-Leash Area",
         state: "NY",
-        postalCode: "10002"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.89889416798754, 40.741291412683694],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Queens Boulevard & 65 Place",
-        city: "Woodside",
-        DogRuns_Type: "Run",
-        name: "Sherry Park Dog Run",
-        Notes: "",
-        Prop_ID: "Q341C",
-        state: "NY",
-        postalCode: "11377"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9986, 40.692299],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "27 State St",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "Adam Yauch Park Dog Run",
-        Notes:
-          "Located at Columbia Place & state Street. named in memory of Beastie Boys' founding member.",
-        Prop_ID: "B223DA",
-        state: "NY",
-        postalCode: "11201"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9432897, 40.8260804],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "St Nicholas Ave & St. Nicholas Terrace",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "St. Nicholas Park Dog Run",
-        Notes: "",
-        Prop_ID: "M077",
-        state: "NY",
-        postalCode: "10030"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9995337, 40.7311498],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "59 Washington Square West",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Washington Square Park Dog Run",
-        Notes:
-          "Located at 5th Avenue, Waverly Place, West4th Street, between McDougal & Thompson streets, south side of thepark (behind building)",
-        Prop_ID: "M098",
-        state: "NY",
-        postalCode: "10012"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8776776, 40.7430594],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Judge Street & Whitney Avenue",
-        city: "Elmhurst",
-        DogRuns_Type: "Run",
-        name: "Veteran's Grove Dog Run",
-        Notes: "Located at south side of park",
-        Prop_ID: "Q013",
-        state: "NY",
-        postalCode: "11373"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.1055512, 40.6179186],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "1150 Clove Road",
-        city: "New York",
+        address: "Shore Road & 4th Ave",
         DogRuns_Type: "Off-Leash",
-        name: "Clove Lakes Park Off-Leash Area",
-        Notes:
-          "Located at Brookside Avenue between Alpine Court & Kingsley Avenue (lawn area)",
-        Prop_ID: "R005",
-        state: "NY",
-        postalCode: "10301"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.7612272, 40.6594589],
-        type: "Point"
-      },
-      properties: {
         Accessible: "N",
-        address: "Springfield Blvd & 147th Ave",
-        city: "Springfield Gardens",
-        DogRuns_Type: "Off-Leash",
-        name: "Springfield Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q107",
-        state: "NY",
-        postalCode: "11413"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.84793940000002, 40.7267379],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "106-2168th Ave",
-        city: "Forest Hills",
-        DogRuns_Type: "Off-Leash",
-        name: "Yellowstone Park Off-Leash Area",
-        Notes:
-          "Located at 68 Road & Yellowstone Boulevard; Off-leash hours are 6am to 9am only",
-        Prop_ID: "Q425",
-        state: "NY",
-        postalCode: "11375"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.967338, 40.716803],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "1 Grand Street",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Grand Ferry Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "B401",
-        state: "NY",
-        postalCode: "11221"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.03409189999999, 40.6108083],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "101 Street Shore Pkwy",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "John Paul Jones Park Off-Leash Area",
-        Notes: "Located at 4th Avenue and 101st Street",
-        Prop_ID: "B035",
-        state: "NY",
+        Prop_ID: "B082",
         postalCode: "11209"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-74.0356001, 40.6397175],
+        coordinates: [
+          -74.038722,
+          40.615516
+        ],
         type: "Point"
       },
+      id: "1ac5022e14c4c9c80d871bb9a15baf97"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "68th Street & Shore Road",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "Owls Head Park Dog Run",
-        Notes: "",
-        Prop_ID: "B066",
+        Notes: "All areas excluding the playground and ballfields",
+        boro: "Brooklyn",
+        name: "Breukelen Park Off-Leash Area",
         state: "NY",
-        postalCode: "11220"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0029478, 40.6813256],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Hicks St & Woodhull St",
-        city: "Brooklyn",
-        DogRuns_Type: "Run",
-        name: "DiMattina Park Dog Run",
-        Notes: "",
-        Prop_ID: "B223B",
-        state: "NY",
-        postalCode: "11231"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0604254, 40.6063527],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Bay St & N Rd",
-        city: "Staten Island",
+        address: "Glenwood Rd & Louisiana Ave",
         DogRuns_Type: "Off-Leash",
-        name: "Arthur Von Briesen Park Off-Leash Area",
-        Notes: "Located at lawn area, mid-park right side",
-        Prop_ID: "R059",
-        state: "NY",
-        postalCode: "10305"
+        Accessible: "N",
+        Prop_ID: "B247",
+        postalCode: "12207"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.9597866, 40.7430942],
+        coordinates: [
+          -73.891382,
+          40.652375
+        ],
         type: "Point"
       },
+      id: "1c5a57828f634b852c5d21bdb5bf8fd1"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "51st Ave & Center Blvd",
-        city: "Long Island City",
+        Notes: "Run is to left of Cornelia Avenue",
+        boro: "Staten Island",
+        name: "Wolfe's Pond Park Dog Run",
+        state: "NY",
+        address: "420 Cornelia Ave",
         DogRuns_Type: "Run",
-        name: "Hunter's Point South Park Dog Run",
-        Notes: "",
-        Prop_ID: "Q471",
-        state: "NY",
-        postalCode: "11101"
+        Accessible: "N",
+        Prop_ID: "S031",
+        postalCode: "10312"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-74.00183299999999, 40.646368],
+        coordinates: [
+          -74.188235,
+          40.520195
+        ],
         type: "Point"
       },
+      id: "1f19fd432f950af956c191c717c9ea6a"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "7th Ave & 43rd St",
-        city: "Brooklyn",
+        Notes: "Located at Brookside Avenue between Alpine Court & Kingsley Avenue (lawn area)",
+        boro: "Staten Island",
+        name: "Clove Lakes Park Off-Leash Area",
+        state: "NY",
+        address: "1150 Clove Road",
         DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S005",
+        postalCode: "10301"
+      },
+      geometry: {
+        coordinates: [
+          -74.105551,
+          40.617918
+        ],
+        type: "Point"
+      },
+      id: "1fc6b351b373393e6bc3bdae49f5441c"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "East End Avenue to East River from Gracie Square (East84th Street) to89th Street",
+        boro: "Manhattan",
+        name: "Carl Schurz Park Dog Run",
+        state: "NY",
+        address: "East 86th Street & East End Ave",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M081",
+        postalCode: "10028"
+      },
+      geometry: {
+        coordinates: [
+          -73.944782,
+          40.774946
+        ],
+        type: "Point"
+      },
+      id: "20e8644ae580ea2bfc67169d0c5eadeb"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "Flushing",
+        name: "Flushing Meadows Corona Park Off-Leash Area",
+        state: "NY",
+        address: "Meridian Rd & Pacific Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q099",
+        postalCode: "11355"
+      },
+      geometry: {
+        coordinates: [
+          -73.840452,
+          40.743223
+        ],
+        type: "Point"
+      },
+      id: "2456e3318bb3a71d8a3776e58e5f6ab5"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at 4th Avenue and 101st Street",
+        boro: "Brooklyn",
+        name: "John Paul Jones Park Off-Leash Area",
+        state: "NY",
+        address: "101 Street Shore Pkwy",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B035",
+        postalCode: "11209"
+      },
+      geometry: {
+        coordinates: [
+          -74.034091,
+          40.610808
+        ],
+        type: "Point"
+      },
+      id: "24b646a48509bf910d0f2adfb95e0693"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Ocean Ave & Mackenzie St",
+        boro: "Brooklyn",
+        name: "Manhattan Beach Dog Run",
+        state: "NY",
+        address: "Ocean Ave & Mackenzie St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "B251",
+        postalCode: "11235"
+      },
+      geometry: {
+        coordinates: [
+          -73.942595,
+          40.576822
+        ],
+        type: "Point"
+      },
+      id: "29ebbb872108420a606965c169ba0aca"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "All areas excluding the playgrounds, ballfields, and Natural Areas.",
+        boro: "Brooklyn",
+        name: "Marine Park Dog Run",
+        state: "NY",
+        address: "Fillmore Ave & Marine Parkway",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B057",
+        postalCode: "11234"
+      },
+      geometry: {
+        coordinates: [
+          -73.937529,
+          40.60856
+        ],
+        type: "Point"
+      },
+      id: "2d697c57cded17055e8d24c4a676820b"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "J.J. Byrne Dog Park",
+        state: "NY",
+        address: "4th St & 5th Ave",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "B111",
+        postalCode: "11215"
+      },
+      geometry: {
+        coordinates: [
+          -73.983779,
+          40.67219
+        ],
+        type: "Point"
+      },
+      id: "309b2ebfd95c0a6d00aa856c13935457"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Off-leash area at Sunset Park Oval lawn area only, center of park 44th St, 41st St,  6th Ave",
+        boro: "Brooklyn",
         name: "Sunset Park Off-Leash Area",
-        Notes:
-          "Off-leash at Sunset Park Oval lawn area only, center of park. Located at 44th Street, 41st Street, 6th Avenue",
-        Prop_ID: "B087",
         state: "NY",
+        address: "7th Ave & 43rd St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B087",
         postalCode: "11232"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-74.008505, 40.677636],
+        coordinates: [
+          -74.001832,
+          40.646368
+        ],
         type: "Point"
       },
+      id: "318cda10035f2f051a6d378fdb92b675"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Tompkins Square Dog Run",
+        state: "NY",
+        address: "Avenue B & East 9th St",
+        DogRuns_Type: "Run",
+        Accessible: "Y",
+        Prop_ID: "M088",
+        postalCode: "10009"
+      },
+      geometry: {
+        coordinates: [
+          -73.980329,
+          40.726288
+        ],
+        type: "Point"
+      },
+      id: "37625e8d429bbfb5feb07dc18ba1e6cd"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Robert Moses Park Dog Run",
+        state: "NY",
+        address: "East 42nd St & 1st Ave",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M158",
+        postalCode: "10016"
+      },
+      geometry: {
+        coordinates: [
+          -73.969716,
+          40.748807
+        ],
+        type: "Point"
+      },
+      id: "3affc1dfc6428a0c6234a6e68d967b4c"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Wallenberg Forest Park Off-Leash Area",
+        state: "NY",
+        address: "Douglas Avenue and West 235 Street",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X259",
+        postalCode: "10463"
+      },
+      geometry: {
+        coordinates: [
+          -73.916571,
+          40.886908
+        ],
+        type: "Point"
+      },
+      id: "3c994af3b3af8480ec569d28767c8c65"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "Woodside",
+        name: "Sherry Park Dog Run",
+        state: "NY",
+        address: "Queens Boulevard & 65 Place",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q341C",
+        postalCode: "11377"
+      },
+      geometry: {
+        coordinates: [
+          -73.898894,
+          40.741291
+        ],
+        type: "Point"
+      },
+      id: "3d7e569896019b35c47de52030fe00e6"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Alley Pond Park Off-Leash Area",
+        state: "NY",
+        address: "Grand Central Parkway & Kingsbury Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q001",
+        postalCode: "11364"
+      },
+      geometry: {
+        coordinates: [
+          -73.740807,
+          40.738591
+        ],
+        type: "Point"
+      },
+      id: "3ddb1e2ea464415bbf9217cb7ba7ba5b"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Van Cortlandt Park Dog Run",
+        state: "NY",
+        address: "Broadway and 252 Street",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "X092",
+        postalCode: "10468"
+      },
+      geometry: {
+        coordinates: [
+          -73.897006,
+          40.897891
+        ],
+        type: "Point"
+      },
+      id: "3de89dc8cdfd344a388a37754f75a765"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Maguire Avenue behind athvaric fields closer to Romona Avenue ",
+        boro: "Staten Island",
+        name: "Bloomingdale Park Dog Run",
+        state: "NY",
+        address: "Ramona Ave & Maguire Ave",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "S106",
+        postalCode: "10309"
+      },
+      geometry: {
+        coordinates: [
+          -74.211671,
+          40.535254
+        ],
+        type: "Point"
+      },
+      id: "3e2aad4f8844d5bcd551b7ac23ee896a"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Hunter's Point South Park Dog Run",
+        state: "NY",
+        address: "51st Ave & Center Blvd",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q471",
+        postalCode: "11101"
+      },
+      geometry: {
+        coordinates: [
+          -73.959786,
+          40.743094
+        ],
+        type: "Point"
+      },
+      id: "3e50624ee68194900be9d931a2c18163"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at 5th Avenue, Waverly Place, West 4th Street, between McDougal & Thompson streets, south side of park (behind building)",
+        boro: "Brooklyn",
+        name: "Marcus Garvey Park Dog Run",
+        state: "NY",
+        address: "462 Union Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B223S",
+        postalCode: "11211"
+      },
+      geometry: {
+        coordinates: [
+          -73.951434,
+          40.714311
+        ],
+        type: "Point"
+      },
+      id: "3f3287a3b139c1a936a9a4df5cb6bd45"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "at Evergreen Street",
+        boro: "Staten Island",
+        name: "Evergreen Park Off-Leash Area",
+        state: "NY",
+        address: "190 Timber Ridge Dr",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S121",
+        postalCode: "10308"
+      },
+      geometry: {
+        coordinates: [
+          -74.143165,
+          40.555468
+        ],
+        type: "Point"
+      },
+      id: "3f815b08dcfad5d7a1d6dd8ef099194d"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Theodore Roosevelt Park Dog Run",
+        state: "NY",
+        address: "Central Park West & West 81st Street",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M053",
+        postalCode: "10024"
+      },
+      geometry: {
+        coordinates: [
+          -73.97171,
+          40.782045
+        ],
+        type: "Point"
+      },
+      id: "3f948bf7c1d0486b686cf76a3cdb3570"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Madison Square Park Dog Run",
+        state: "NY",
+        address: "5th Avenue & East 23rd St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M052",
+        postalCode: "10010"
+      },
+      geometry: {
+        coordinates: [
+          -73.989585,
+          40.741548
+        ],
+        type: "Point"
+      },
+      id: "425d1b7ba6623ced6f348b7d40f3654b"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at 92nd & Jerome Avenue. St. James closes at 9pm and opens at 7am. Therefore, the off-leash policy only applies between 7am and 9am.",
+        boro: "Bronx",
+        name: "St. James Park Off-Leash Area",
+        state: "NY",
+        address: "2550 Jerome Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X044",
+        postalCode: "10468"
+      },
+      geometry: {
+        coordinates: [
+          -73.897835,
+          40.865215
+        ],
+        type: "Point"
+      },
+      id: "426329ca7f54991b95feb2ddb3fe37be"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "East Elmhurst",
+        name: "La Guardia Landing Lights Off-Leash Area",
+        state: "NY",
+        address: "25th Ave & 80th St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q393D",
+        postalCode: "11370"
+      },
+      geometry: {
+        coordinates: [
+          -73.888582,
+          40.762858
+        ],
+        type: "Point"
+      },
+      id: "452c2f5d4828d58f898d4ee936277f6b"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Kappock St & Independence Ave",
+        boro: "Bronx",
+        name: "Henry Hudson Park Off-Leash Area",
+        state: "NY",
+        address: "2570 Independence Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X080",
+        postalCode: "10463"
+      },
+      geometry: {
+        coordinates: [
+          -73.92056,
+          40.880261
+        ],
+        type: "Point"
+      },
+      id: "45dc5ba64ec0f7c55142889bf694d1ac"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "St. Nicholas Park Dog Run",
+        state: "NY",
+        address: "St Nicholas Ave & St. Nicholas Terrace",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M077",
+        postalCode: "10030"
+      },
+      geometry: {
+        coordinates: [
+          -73.949082,
+          40.81714
+        ],
+        type: "Point"
+      },
+      id: "478320f236dd3cdac4b7f1b3b06125b9"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Rainey Park Off-Leash Area",
+        state: "NY",
+        address: "Vernon Blvd. & 34th Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q048",
+        postalCode: "11106"
+      },
+      geometry: {
+        coordinates: [
+          -73.940292,
+          40.765535
+        ],
+        type: "Point"
+      },
+      id: "492fe8707613e2451b7d4275e4a7719e"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Richman (Echo) Park Off-Leash Area",
+        state: "NY",
+        address: "Valentine Ave & E Tremont Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X017",
+        postalCode: "10457"
+      },
+      geometry: {
+        coordinates: [
+          -73.9011,
+          40.847971
+        ],
+        type: "Point"
+      },
+      id: "4a985a43a031aaf5caf4199b35b9dbb9"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "Grand Ferry Park Off-Leash Area",
+        state: "NY",
+        address: "1 Grand Street",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B401",
+        postalCode: "11221"
+      },
+      geometry: {
+        coordinates: [
+          -73.967338,
+          40.716803
+        ],
+        type: "Point"
+      },
+      id: "4a993d3111cc390c47e07fe08f9426af"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at Palisade Avenue from West 232 Street to West 254 Street",
+        boro: "Bronx",
+        name: "Riverdale Park Off-Leash Area",
+        state: "NY",
+        address: "254 Palisade Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X142",
+        postalCode: "10463"
+      },
+      geometry: {
+        coordinates: [
+          -73.919721,
+          40.884098
+        ],
+        type: "Point"
+      },
+      id: "4bcb8901c3bb07bb8450cf96c492645f"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "southeastern side of the park",
+        boro: "Queens",
+        name: "John F Murray Playground Dog Run",
+        state: "NY",
+        address: "21st St & 45th Road",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q141",
+        postalCode: "11101"
+      },
+      geometry: {
+        coordinates: [
+          -73.947836,
+          40.746669
+        ],
+        type: "Point"
+      },
+      id: "508a35d72091d362d232d8133d627aea"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Mullaly Park Off-Leash Area",
+        state: "NY",
+        address: "1055 Jerome Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X034",
+        postalCode: "10452"
+      },
+      geometry: {
+        coordinates: [
+          -73.925441,
+          40.833126
+        ],
+        type: "Point"
+      },
+      id: "5ac9199a0e4bb0b9df4eb82e97df7d7f"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "Cooper Park Dog Run",
+        state: "NY",
+        address: "Olive Street and Maspeth Avenue",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "B025",
+        postalCode: "11211"
+      },
+      geometry: {
+        coordinates: [
+          -73.93902,
+          40.716068
+        ],
+        type: "Point"
+      },
+      id: "5b90c96b7d26eff4d5b9641330c9efbf"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at Amsterdam Ave & Fort George Ave",
+        boro: "Brooklyn",
+        name: "Brooklyn War Memorial Off-Leash Area",
+        state: "NY",
+        address: "195 Cadman Plaza West",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B113A",
+        postalCode: "11201"
+      },
+      geometry: {
+        coordinates: [
+          -73.990864,
+          40.700079
+        ],
+        type: "Point"
+      },
+      id: "5d6658d09b2e3196d3118b9a505bc618"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Fish Bridge Park Dog Run",
+        state: "NY",
+        address: "Dover Street & Water Street",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M291",
+        postalCode: "10038"
+      },
+      geometry: {
+        coordinates: [
+          -74.000861,
+          40.708807
+        ],
+        type: "Point"
+      },
+      id: "5f6b013fba853bdae224e4aa22e47f81"
+    },
+    {
+      type: "Feature",
       properties: {
         address: "85 Richards St",
-        city: "Brooklyn",
+        boro: "Brooklyn",
         DogRuns_Type: "Off-Leash",
         name: "Coffey Park Off-Leash Area",
-        Notes:
-          "Located at King Street, Richards Street, and Verona Street at Dwight and Pioneer Streets",
+        Notes: "Riverside Drive & West 105th St",
         Prop_ID: "B077",
         state: "NY",
         postalCode: "11231"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-74.0074286, 40.7481803],
+        coordinates: [
+          -74.008505,
+          40.677636
+        ],
         type: "Point"
       },
+      id: "60772b6714dfc97ca4fe40be377fe6c5"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "11th Ave & 22nd Street",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Chelsea Waterside Park Dog Run",
-        Notes: "Administered by the Hudson River Park Trust",
-        Prop_ID: "M",
+        Notes: "Tennyson Drive & Glover Avenue. Located at meadow area leading to beach",
+        boro: "Staten Island",
+        name: "Crescent Beach Park Off-Leash Area",
         state: "NY",
-        Url: "http: //www.hudsonriverpark.org/explore/dogruncw.html",
+        address: "366 Tennyson Dr",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S135",
+        postalCode: "10312"
+      },
+      geometry: {
+        coordinates: [
+          -74.148262,
+          40.535506
+        ],
+        type: "Point"
+      },
+      id: "63a5380cc1e91706622d678d379ffded"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Except for playgrounds and other areas where dogs are expressly prohibited via signage,all areas of the park are off-leash during designated hours.",
+        boro: "Bronx",
+        name: "Tremont Park Off-Leash Area",
+        state: "NY",
+        address: "E 175 St to E Tremont Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X010A",
+        postalCode: "10457"
+      },
+      geometry: {
+        coordinates: [
+          -73.895233,
+          40.84525
+        ],
+        type: "Point"
+      },
+      id: "644e399a83eeb1d8800c9df2c5ff2035"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Astoria Park Off-Leash Area",
+        state: "NY",
+        address: "19 19th St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q004",
+        postalCode: "11105"
+      },
+      geometry: {
+        coordinates: [
+          -73.922991,
+          40.776813
+        ],
+        type: "Point"
+      },
+      id: "65b00b7b3bcf9a6e99b63c80baff3a3c"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at Amsterdam Ave & Fort George Ave",
+        boro: "Manhattan",
+        name: "Highbridge Park Dog Run",
+        Url: "http://www.highbridgek9club.org/",
+        state: "NY",
+        address: "2682-2698 Amsterdam Ave",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M037",
+        postalCode: "10040"
+      },
+      geometry: {
+        coordinates: [
+          -73.92513,
+          40.856006
+        ],
+        type: "Point"
+      },
+      id: "699adfb8309089afb1fac4b674c993eb"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "Leif Ericson Park Off-Leash Area",
+        state: "NY",
+        address: "67th St & 7th Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B052",
+        postalCode: "11220"
+      },
+      geometry: {
+        coordinates: [
+          -74.016434,
+          40.63308
+        ],
+        type: "Point"
+      },
+      id: "6a6098f1cc4d784486403a6cecb42611"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at bottom of Seguine Avenue just below playground",
+        boro: "Staten Island",
+        name: "Lemon Creek Park Off-Leash Area",
+        state: "NY",
+        address: "Seguine Ave & Johnston Terrace",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S079",
+        postalCode: "10309"
+      },
+      geometry: {
+        coordinates: [
+          -74.197071,
+          40.512603
+        ],
+        type: "Point"
+      },
+      id: "705c7aeb9d00001fcea4ba454976d61e"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Spuyten Duyvil Shorefront Park Off-Leash Area",
+        state: "NY",
+        address: "Palisade Ave & Independence Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X091",
+        postalCode: "10463"
+      },
+      geometry: {
+        coordinates: [
+          -73.920975,
+          40.879523
+        ],
+        type: "Point"
+      },
+      id: "7b89d9249b7bef8ecaf589420a291481"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "DiMattina Park Dog Run",
+        state: "NY",
+        address: "Hicks St & Woodhull St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "B223B",
+        postalCode: "11231"
+      },
+      geometry: {
+        coordinates: [
+          -74.002947,
+          40.681325
+        ],
+        type: "Point"
+      },
+      id: "7d040d21301ccdd9a99ad0f5e7e6ede6"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Torsney/Lou Lodati Playground Dog Run",
+        state: "NY",
+        address: "43rd Street & Skillman Avenue",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q340",
+        postalCode: "11104"
+      },
+      geometry: {
+        coordinates: [
+          -73.92164,
+          40.747288
+        ],
+        type: "Point"
+      },
+      id: "7dc982c0985cb9a2b9c79b425fbabf6f"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "Bayside",
+        name: "Crocheron Park Off-Leash Area",
+        state: "NY",
+        address: "214th Place & 35th Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q012",
+        postalCode: "11361"
+      },
+      geometry: {
+        coordinates: [
+          -73.769339,
+          40.771941
+        ],
+        type: "Point"
+      },
+      id: "8186e80068040a6fc78d401c7bf11e84"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "Asser Levy Park Off-Leash Area",
+        state: "NY",
+        address: "Sea Breeze Avenue and West 5th Street",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B080",
+        postalCode: "11224"
+      },
+      geometry: {
+        coordinates: [
+          -73.973019,
+          40.576057
+        ],
+        type: "Point"
+      },
+      id: "855f19d4cebd254fa42528d47e31a7ce"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Center of the park, just north of the ballfields which would line up with around 155th Street.",
+        boro: "Bronx",
+        name: "Franz Sigel Park Dog Run",
+        state: "NY",
+        address: "Walton Ave & Grand Concourse",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "X047",
+        postalCode: "10451"
+      },
+      geometry: {
+        coordinates: [
+          -73.920799,
+          40.878349
+        ],
+        type: "Point"
+      },
+      id: "8ad04d6f63bcff8497da078ab5e7dd11"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Though there are no enclosed dog runs, there are 23 particularly dog-friendly areas scattered throughout the Park.",
+        boro: "Manhattan",
+        name: "Central Park Off-Leash Area",
+        state: "NY",
+        address: "63rd St & Central Park West",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "M010",
+        postalCode: "10023"
+      },
+      geometry: {
+        coordinates: [
+          -73.980117,
+          40.77054
+        ],
+        type: "Point"
+      },
+      id: "8da22d035565e2af9ee022c32f3c28f8"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Administered by the Hudson River Park Trust",
+        boro: "Manhattan",
+        name: "Chelsea Waterside Park Dog Run",
+        Url: "http://www.hudsonriverpark.org/explore/dogruncw.html",
+        state: "NY",
+        address: "11th Ave & 22nd St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M",
         postalCode: "10011"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-74.1013815, 40.6384563],
+        coordinates: [
+          -74.007428,
+          40.74818
+        ],
         type: "Point"
       },
+      id: "8fbf03dbe59e9af48271cecaba864cec"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "406 Prospect Ave",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Allison Park Off-Leash Area",
-        Notes:
-          "Located at field at the end of the trail bordered by Prospect Avenue, Sailors Snug Harbor Cemetery, and the pond.",
-        Prop_ID: "R052",
+        Notes: "",
+        boro: "Queens",
+        city: "Middle Village",
+        name: "Juniper Valley Park Off-Leash Area",
         state: "NY",
+        address: "Juniper Blvd N & 80th St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q102",
+        postalCode: "11379"
+      },
+      geometry: {
+        coordinates: [
+          -73.876443,
+          40.721561
+        ],
+        type: "Point"
+      },
+      id: "900947eecba34234693c9d7a44061b40"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Coleman Oval Park Dog Run",
+        state: "NY",
+        address: "Pike St & Monroe St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M019",
+        postalCode: "10022"
+      },
+      geometry: {
+        coordinates: [
+          -73.992465,
+          40.711753
+        ],
+        type: "Point"
+      },
+      id: "909039033c1ded1ee72bc1ef9920eacd"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "Prospect Park Dog Beach",
+        state: "NY",
+        address: "95 Prospect Park West",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B083",
+        postalCode: "11215"
+      },
+      geometry: {
+        coordinates: [
+          -73.972039,
+          40.662492
+        ],
+        type: "Point"
+      },
+      id: "911553abad024b0ceb435cfc72f5c0b5"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located on lawn area, mid-park right side",
+        boro: "Staten Island",
+        name: "Arthur Von Briesen Park Off-Leash Area",
+        state: "NY",
+        address: "Bay St & School Rd",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S059",
+        postalCode: "10305"
+      },
+      geometry: {
+        coordinates: [
+          -74.060425,
+          40.606352
+        ],
+        type: "Point"
+      },
+      id: "96fe7a4297c1a2f04135265a10a54f12"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "south side of park",
+        boro: "Queens",
+        city: "Elmhurst",
+        name: "Veteran's Grove Dog Run",
+        state: "NY",
+        address: "Judge Street & Whitney Ave",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q013",
+        postalCode: "11373"
+      },
+      geometry: {
+        coordinates: [
+          -73.877677,
+          40.743059
+        ],
+        type: "Point"
+      },
+      id: "999f212bb8a473854eb6e362be027f05"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Dyckman Fields",
+        state: "NY",
+        address: "Dyckman Street & Hudson River",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "M042",
+        postalCode: "10452"
+      },
+      geometry: {
+        coordinates: [
+          -73.931486,
+          40.870724
+        ],
+        type: "Point"
+      },
+      id: "9bc70fdbecf4db27f8da98cd9faca694"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "Owls Head Park Dog Run",
+        state: "NY",
+        address: "68th Street & Shore Rd",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "B066",
+        postalCode: "11220"
+      },
+      geometry: {
+        coordinates: [
+          -74.0356,
+          40.639717
+        ],
+        type: "Point"
+      },
+      id: "9c0003aa4de2ce483cb680b2cf786e1e"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "64th Avenue/64th Road on Grand Central Parkway service road",
+        boro: "Queens",
+        city: "Forest Hills",
+        name: "Underbridge Playground Dog Run",
+        state: "NY",
+        address: "64th Ave & Grand Central Parkway",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q451",
+        postalCode: "11375"
+      },
+      geometry: {
+        coordinates: [
+          -73.845108,
+          40.734277
+        ],
+        type: "Point"
+      },
+      id: "9c02739a2793b01d5970d32585ab1d19"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "University Woods Park Off-Leash Area",
+        state: "NY",
+        address: "Sedgwick Avenue and Hall of Fame Terrace",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X051",
+        postalCode: "10468"
+      },
+      geometry: {
+        coordinates: [
+          -73.914097,
+          40.859553
+        ],
+        type: "Point"
+      },
+      id: "9fc710124f082b7fb3b44e487221a976"
+    },
+    {
+      type: "Feature",
+      properties: {
+        boro: "Bronx",
+        name: "Hylan Park Off-Leash Area",
+        Url: "http://nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+        state: "NY",
+        address: "1596-1672 Crotona Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X010",
+        postalCode: "10457"
+      },
+      geometry: {
+        coordinates: [
+          -73.897757,
+          40.83654
+        ],
+        type: "Point"
+      },
+      id: "a1a3f11f96948921a026a570e4c5e5bc"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Riverside Park Dog Run South",
+        Url: "http://nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+        state: "NY",
+        address: "Riverside Drive & West 72nd St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M071a",
+        postalCode: "10023"
+      },
+      geometry: {
+        coordinates: [
+          -73.9857,
+          40.780321
+        ],
+        type: "Point"
+      },
+      id: "a36770e289904cac3a8b0468f8123b49"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Queensbridge Park Off-Leash Area",
+        state: "NY",
+        address: "Vernon Blvd & 41st Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q104",
+        postalCode: "11101"
+      },
+      geometry: {
+        coordinates: [
+          -73.947299,
+          40.756439
+        ],
+        type: "Point"
+      },
+      id: "a75efb0c14d08afd498efcd4757a3cfb"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "On sand after Labor Day and before Memorial Day",
+        boro: "Staten Island",
+        name: "South Beach Park Off-Leash Area",
+        state: "NY",
+        address: "Pearsall St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S046",
+        postalCode: "10305"
+      },
+      geometry: {
+        coordinates: [
+          -74.074005,
+          40.590002
+        ],
+        type: "Point"
+      },
+      id: "a965d20019c9de1167cb81d636cf7592"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "North side of the Cross Island Parkway & Utopia Parkway",
+        boro: "Queens",
+        city: "Whitestone",
+        name: "Little Bay Park Dog Run",
+        state: "NY",
+        address: "Cross Island Pkwy & Utopia Parkway",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q010A",
+        postalCode: "11357"
+      },
+      geometry: {
+        coordinates: [
+          -73.794843,
+          40.786531
+        ],
+        type: "Point"
+      },
+      id: "a9d7777f8534e0b348873edc7fd70ec9"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "Far Rockaway",
+        name: "Bayswater Park Off-Leash Area",
+        state: "NY",
+        address: "701 Bay32nd St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q007",
+        postalCode: "11691"
+      },
+      geometry: {
+        coordinates: [
+          -73.767436,
+          40.598762
+        ],
+        type: "Point"
+      },
+      id: "aa459b0bd32aeb2eac8b6d9f630fc885"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Ralph DeMarco Park Off-Leash Area",
+        state: "NY",
+        address: "Shore Blvd & 20th Rd",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q004A",
+        postalCode: "11105"
+      },
+      geometry: {
+        coordinates: [
+          -73.916469,
+          40.784618
+        ],
+        type: "Point"
+      },
+      id: "aa89755f42a3aa2a2c7e4e9cc1984af0"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Brooklyn",
+        name: "Fulton Park Off-Leash Area",
+        state: "NY",
+        address: "70 Chauncey St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B038",
+        postalCode: "11223"
+      },
+      geometry: {
+        coordinates: [
+          -73.931611,
+          40.679797
+        ],
+        type: "Point"
+      },
+      id: "ac3761ec5a0ee36c47018ccefec0891c"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Field at the end of the trail bordered by Prospect Avenue, Sailors Snug Harbor Cemetery, and the pond.",
+        boro: "Staten Island",
+        name: "Allison Park Off-Leash Area",
+        state: "NY",
+        address: "406 Prospect Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S052",
         postalCode: "10301"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.79841259999999, 40.67883810000001],
+        coordinates: [
+          -74.101381,
+          40.638456
+        ],
         type: "Point"
       },
+      id: "ad2e392f8de9e76381b51c4b53639eda"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "Lakeview Lane & Foch Boulevard",
-        city: "Jamaica",
-        DogRuns_Type: "Off-Leash",
-        name: "Baisley Pond Park Off-Leash Area",
         Notes: "",
-        Prop_ID: "Q005",
+        boro: "Brooklyn",
+        name: "Lincoln Terrace Park Off-Leash Area",
         state: "NY",
+        address: "Eastern Parkway & Buffalo Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B054",
+        postalCode: "11213"
+      },
+      geometry: {
+        coordinates: [
+          -73.9256,
+          40.668465
+        ],
+        type: "Point"
+      },
+      id: "ae86fa48fd3f086d568ed38bc6b4a85b"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "Jamaica",
+        name: "Baisley Pond Park Off-Leash Area",
+        state: "NY",
+        address: "Lakeview Lane & Foch Boulevard",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q005",
         postalCode: "11434"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.9227238, 40.7960326],
+        coordinates: [
+          -73.798412,
+          40.678838
+        ],
         type: "Point"
       },
+      id: "b1109be17ab8d088a2759e832781732e"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "20 Randalls Island Park",
-        city: "New York",
-        DogRuns_Type: "Off-Leash",
-        name: "Randalls Island Park Off-Leash Area",
-        Notes:
-          "Off-leash hours for the island are before 9am and after 9pm except for areas where dogs are expressly prohibited via signage.",
-        Prop_ID: "M104",
+        Notes: "",
+        boro: "Staten Island",
+        name: "Silver Lake Park Dog Run",
         state: "NY",
-        postalCode: "10035"
+        address: "700 Victory Blvd",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "S022",
+        postalCode: "10301"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.97484626838693, 40.691517801358344],
+        coordinates: [
+          -74.091694,
+          40.625921
+        ],
         type: "Point"
       },
+      id: "b3c64aa4fa7a23a5f5a3ea267e3836a6"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at lawn area beyond ballfield",
+        boro: "Staten Island",
+        name: "Father Macris Park Off-Leash Area",
+        state: "NY",
+        address: "Lamberts Lane & Fahy Avenue",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S075A",
+        postalCode: "10314"
+      },
+      geometry: {
+        coordinates: [
+          -74.163584,
+          40.615995
+        ],
+        type: "Point"
+      },
+      id: "b4a079f8b996020f1d6b9a7c7691f875"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "68 Road & Yellowstone Boulevard; Hours: 6am to 9am only",
+        boro: "Queens",
+        city: "Forest Hills",
+        name: "Yellowstone Park Off-Leash Area",
+        state: "NY",
+        address: "106-2168th Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q425",
+        postalCode: "11375"
+      },
+      geometry: {
+        coordinates: [
+          -73.847939,
+          40.726737
+        ],
+        type: "Point"
+      },
+      id: "b4b563b6d5803fe3fdea6f50fccacd72"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "Springfield Gardens",
+        name: "Springfield Park Off-Leash Area",
+        state: "NY",
+        address: "Springfield Blvd & 147th Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q107",
+        postalCode: "11413"
+      },
+      geometry: {
+        coordinates: [
+          -73.761227,
+          40.659458
+        ],
+        type: "Point"
+      },
+      id: "b54c65a323074d4c35a8b1c525f35ee9"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Rockaway Freeway & Beach84th Street",
+        boro: "Queens",
+        city: "Far Rockaway",
+        name: "Rockaway Freeway Dog Park",
+        state: "NY",
+        address: "83-02 Beach Channel Dr",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q219",
+        postalCode: "11693"
+      },
+      geometry: {
+        coordinates: [
+          -73.809641,
+          40.590184
+        ],
+        type: "Point"
+      },
+      id: "b556dd69ec300a1b0fbb143135093f9b"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at St. Mark's Ave, Park Place between Brooklyn Ave and Kingston Ave. Off-leash areas include all of the park except for playgrounds and other areas where dogs are expressly prohibited via signage.",
+        boro: "Manhattan",
+        name: "Brower Park",
+        state: "NY",
+        address: "725 St Marks Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B012",
+        postalCode: "11216"
+      },
+      geometry: {
+        coordinates: [
+          -73.943185,
+          40.673479
+        ],
+        type: "Point"
+      },
+      id: "b6f274f0fc5d81f705fe07fb70991480"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at Pier 84 at West 44th St",
+        boro: "Manhattan",
+        name: "Hudson River Park Dog Run (North Chelsea)",
+        Url: "http://www.hudsonriverpark.org/explore/dogrunpier84.html",
+        state: "NY",
+        address: "555 12th Ave",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M",
+        postalCode: "10036"
+      },
+      geometry: {
+        coordinates: [
+          -74.001556,
+          40.764025
+        ],
+        type: "Point"
+      },
+      id: "b8971813801204deccc341a8077b2404"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Ewen Park Dog Run",
+        state: "NY",
+        address: "Riverdale Ave & W 231 St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "X019",
+        postalCode: "10468"
+      },
+      geometry: {
+        coordinates: [
+          -73.909401,
+          40.881377
+        ],
+        type: "Point"
+      },
+      id: "ba64c34293cf54e7d95ac3e69ab3277e"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Andrew Haswell Green Dog Park",
+        state: "NY",
+        address: "Bobby Wagner Walk & E 63rd Street Pedestrian Bridge",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M108Q1",
+        postalCode: "10065"
+      },
+      geometry: {
+        coordinates: [
+          -73.956869,
+          40.760221
+        ],
+        type: "Point"
+      },
+      id: "ba8046a46170005c39cbad8a6bfe9e71"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Devoe Park Off-Leash Area",
+        state: "NY",
+        address: "192nd & Jerome Avenue",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X013",
+        postalCode: "10468"
+      },
+      geometry: {
+        coordinates: [
+          -73.905232,
+          40.863532
+        ],
+        type: "Point"
+      },
+      id: "bb1978c00924d612516be0f7895f22f0"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Riverside Park Dog Run North",
+        Url: "http://nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+        state: "NY",
+        address: "Riverside Drive & West 105th St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M071c",
+        postalCode: "10025"
+      },
+      geometry: {
+        coordinates: [
+          -73.970555,
+          40.801602
+        ],
+        type: "Point"
+      },
+      id: "bbaee3614ace4f8abc441d707701d3d8"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "The dog run at Pelham Bay Park is close to Watt Avenue and Middvarown Road.  Both streets merge at the entrance to the parking lot on Middvarown Road. The dog run is about 100 yards east of that point.",
+        boro: "Bronx",
+        name: "Pelham Bay Park Off-Leash Area",
+        Url: "http://nycgovparks.org/parks/X039/map/pelhambay_dogonleasharea.pdf",
+        state: "NY",
+        address: "Watt Ave & Middvarown Rd",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X039",
+        postalCode: "10465"
+      },
+      geometry: {
+        coordinates: [
+          -73.821018,
+          40.850568
+        ],
+        type: "Point"
+      },
+      id: "bbbcb4febde382ea512756f277ffe46e"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Williamsbridge Oval Dog Run",
+        state: "NY",
+        address: "3225 Reservoir Oval East",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "X104",
+        postalCode: "10467"
+      },
+      geometry: {
+        coordinates: [
+          -73.878584,
+          40.876644
+        ],
+        type: "Point"
+      },
+      id: "c073171ec59f5f222100882d3104f06e"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Enter from Margaret Corbin Circle Eastern stairs, Broadway &196th, or Bennett Ave & Broadway",
+        boro: "Manhattan",
+        name: "Fort Tryon Park Dog Run",
+        Url: "http://www.ftdog.org/",
+        state: "NY",
+        address: "West 196th St & Broadway",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M029",
+        postalCode: "10040"
+      },
+      geometry: {
+        coordinates: [
+          -73.931463,
+          40.861852
+        ],
+        type: "Point"
+      },
+      id: "c0a5faf8f7d642126dc9e564574bcf0f"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at 5th Avenue, Waverly Place, West4th Street, between McDougal & Thompson streets, south side of thepark (behind building)",
+        boro: "Manhattan",
+        name: "Washington Square Park Dog Run",
+        state: "NY",
+        address: "59 Washington Square West",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M098",
+        postalCode: "10012"
+      },
+      geometry: {
+        coordinates: [
+          -73.999533,
+          40.731149
+        ],
+        type: "Point"
+      },
+      id: "c1529f1d90a364d9ccee5e6861a49264"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Almeda Avenue between Beach51st Street and Beach54th Street",
+        boro: "Queens",
+        city: "Far Rockaway",
+        name: "Rockaway Community Park Off-Leash Area",
+        state: "NY",
+        address: "Almeda Ave & Beach 54th St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q371",
+        postalCode: "11691"
+      },
+      geometry: {
+        coordinates: [
+          -73.784798,
+          40.597716
+        ],
+        type: "Point"
+      },
+      id: "c2621e2ac31178b026a383ece923f59c"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Pier 6",
+        boro: "Brooklyn",
+        name: "Pier 6 Dog Run",
+        state: "NY",
+        address: "334 Furman St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "B431",
+        postalCode: "11201"
+      },
+      geometry: {
+        coordinates: [
+          -73.999262,
+          40.694199
+        ],
+        type: "Point"
+      },
+      id: "c2a172864f98ba9e2672b037529a0e38"
+    },
+    {
+      type: "Feature",
+      properties: {
+        name: "Brooklyn Bridge Dog Run",
+        address: "385 Plymouth St",
+        boro: "Brooklyn",
+        state: "NY",
+        DogRuns_Type: "Off-Leash",
+        Notes: "Located under the Manhattan Bridge. Go Figure.",
+        Prop_ID: "BB999",
+        postalCode: 11201
+      },
+      geometry: {
+        coordinates: [
+          -73.98941,
+          40.704035
+        ],
+        type: "Point"
+      },
+      id: "c2fa21470cb8e4d2bef0c4ca60a4c0de"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "All areas off-lease excluding the playground, ballfields, and Natural Areas.",
+        boro: "Brooklyn",
+        name: "Canarsie Park Off-Leash Area",
+        state: "NY",
+        address: "Seaview Ave & East 93 St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B018",
+        postalCode: "11236"
+      },
+      geometry: {
+        coordinates: [
+          -73.892732,
+          40.631774
+        ],
+        type: "Point"
+      },
+      id: "c4749ddb7b5d0ca1216e3deb94e06ffc"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "St. Mary's Dog Run",
+        state: "NY",
+        address: "Cypress Ave & East143rd St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "X045",
+        postalCode: "10455"
+      },
+      geometry: {
+        coordinates: [
+          -73.912493,
+          40.809342
+        ],
+        type: "Point"
+      },
+      id: "c4d54f4d9de24f7f4008ab6b48ecfaf0"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Frank S. Hackett Park Dog Run",
+        state: "NY",
+        address: "Riverdale Avenue at Henry Hudson Parkway",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "X110A",
+        postalCode: ""
+      },
+      geometry: {
+        coordinates: [
+          -73.907457,
+          40.899395
+        ],
+        type: "Point"
+      },
+      id: "c54bff9f84fdbcc2285b078eabcca485"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "West of FDR Drive, between East49th & East51st streets",
+        boro: "Manhattan",
+        name: "Peter Detmold Park Dog Run",
+        state: "NY",
+        address: "454 E51st St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M108N",
+        postalCode: "10022"
+      },
+      geometry: {
+        coordinates: [
+          -73.96409,
+          40.753123
+        ],
+        type: "Point"
+      },
+      id: "ce58aaf950859f65c3348086ddffcfe4"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at Marcy Avenue & Lafayette Avenue",
+        boro: "Brooklyn",
+        name: "Herbert Von King Park Off-Leash Area",
+        state: "NY",
+        address: "670 Lafayette Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B088",
+        postalCode: "11216"
+      },
+      geometry: {
+        coordinates: [
+          -73.946515,
+          40.689831
+        ],
+        type: "Point"
+      },
+      id: "cf15ccfe7b946cf51e9857a56446a067"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at Leroy Street at the northeast corner of Pier40",
+        boro: "Manhattan",
+        name: "Leroy Street Dog Park",
+        Url: "http://www.hudsonriverpark.org/explore/dogrunleroyst.html",
+        state: "Riverside Drive & West 72nd St",
+        address: "353 West St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M",
+        postalCode: "10014"
+      },
+      geometry: {
+        coordinates: [
+          -74.012699,
+          40.729562
+        ],
+        type: "Point"
+      },
+      id: "cf20f19f84ee4b0c83e8c4f2013f24cf"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Ft. Washington Park Dog Run",
+        state: "NY",
+        address: "165th Street & Riverside Drive",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M028",
+        postalCode: "10032"
+      },
+      geometry: {
+        coordinates: [
+          -73.944695,
+          40.841052
+        ],
+        type: "Point"
+      },
+      id: "d0047f40188667f37129f2c978f9a3df"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Staten Island",
+        name: "Ocean Breeze Park Off-Leash Area",
+        state: "NY",
+        address: "Nugent Ave & Quintard St",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S149",
+        postalCode: "10309"
+      },
+      geometry: {
+        coordinates: [
+          -74.080535,
+          40.590383
+        ],
+        type: "Point"
+      },
+      id: "d7cb81e13c93ec00a2e955d991a762d0"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Riverside Park Dog Run Central",
+        Url: "http://nycgovparks.org/sub_your_park/vt_riverside_park/images/dog_owners_guide_riverside_park.pdf",
+        state: "NY",
+        address: "Riverside Drive & West 87th St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M071b",
+        postalCode: "10024"
+      },
+      geometry: {
+        coordinates: [
+          -73.979889,
+          40.790619
+        ],
+        type: "Point"
+      },
+      id: "dd4cc60f5c6dce7ff8d08ff218a4a89b"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "Fresh Meadows",
+        name: "Cunningham Park Dog Run",
+        state: "NY",
+        address: "193rd St & Radnor Rd",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q021",
+        postalCode: "11366"
+      },
+      geometry: {
+        coordinates: [
+          -73.775547,
+          40.725959
+        ],
+        type: "Point"
+      },
+      id: "e0ec1705c569354e535acd35f68b5436"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Staten Island",
+        name: "Amundsen Trail Off-Leash Area",
+        state: "NY",
+        address: "Buffalo St & Hylan Boulevard",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S065",
+        postalCode: "10306"
+      },
+      geometry: {
+        coordinates: [
+          -74.128195,
+          40.556593
+        ],
+        type: "Point"
+      },
+      id: "e3ad419f43bd7aa44979b44c67c37f60"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Crotona Park Off-Leash Area",
+        state: "NY",
+        address: "1596-1672 Crotona Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X010",
+        postalCode: "10457"
+      },
+      geometry: {
+        coordinates: [
+          -73.897757,
+          40.83654
+        ],
+        type: "Point"
+      },
+      id: "e3c7f0416cc5c43659aab8312f1d0822"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Marcus Garvey Park Dog Run",
+        state: "NY",
+        address: "Madison Ave & East 120th St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M058",
+        postalCode: "10027"
+      },
+      geometry: {
+        coordinates: [
+          -73.943001,
+          40.802546
+        ],
+        type: "Point"
+      },
+      id: "e48fe92e10ced2a4a83ec2ee63c249ec"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        city: "Woodside",
+        name: "Windmuller Park Dog Run (Doughboy Plaza)",
+        state: "NY",
+        address: "Woodside Ave & 56th St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q031A",
+        postalCode: "11377"
+      },
+      geometry: {
+        coordinates: [
+          -73.908113,
+          40.746182
+        ],
+        type: "Point"
+      },
+      id: "e54efd3007588c918d05d3b2dd07d2ff"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "West 232nd Street & Independence Avenue",
+        boro: "Bronx",
+        name: "Seton Park Dog Run",
+        state: "NY",
+        address: "Independence Ave",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "X201",
+        postalCode: "10463"
+      },
+      geometry: {
+        coordinates: [
+          -73.911816,
+          40.895782
+        ],
+        type: "Point"
+      },
+      id: "ee0e5df679603d2deac44dcdcf5ee644"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at West 52nd Street & West 54th Street, between 10th &11th avenues",
+        boro: "Manhattan",
+        name: "De Witt Clinton Park Dog Run (2 runs)",
+        state: "NY",
+        address: "11th Ave & 53rd St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M022",
+        postalCode: "10019"
+      },
+      geometry: {
+        coordinates: [
+          -73.993274,
+          40.767752
+        ],
+        type: "Point"
+      },
+      id: "eeda7a4687b874d40edd96c0fef877a3"
+    },
+    {
       type: "Feature",
       properties: {
         name: "Fort Greene Park Off-Leash Area",
-        DogRuns_Type: "Off-Leash",
-        address: "Willoughby Ave & Washington Park",
-        city: "Brooklyn",
+        address: "Willoughby St & Washington Park",
+        boro: "Brooklyn",
+        Notes: "",
+        Prop_ID: "BBFG99",
         state: "NY",
-        Notes: "Off-leash before 9am and after 9pm",
-        Prop_ID: "BBFG99"
-      }
-    },
-    {
+        n: ""
+      },
       geometry: {
-        coordinates: [-73.988895, 40.703701],
+        coordinates: [
+          -73.974846,
+          40.691517
+        ],
         type: "Point"
       },
+      id: "f2d6e7843332c01918b831d391db3860"
+    },
+    {
       type: "Feature",
       properties: {
-        Prop_ID: "BB999",
-        name: "Brooklyn Bridge Dog Run",
-        address: "385 Plymouth St",
-        city: "Brooklyn",
-        state: "NY",
-        DogRuns_Type: "Off-Leash",
-        Notes: ""
-      }
-    },
-    {
-      geometry: {
-        coordinates: [-73.92876224130391, 40.868984133254116],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Dyckman Street & Hudson River",
-        city: "New York",
-        DogRuns_Type: "Off-Leash",
-        name: "Dyckman Fields",
-        Notes: "Located north of La Marina and docks",
-        Prop_ID: "M042",
-        state: "NY",
-        postalCode: "10452"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9472995, 40.7564396],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Vernon Blvd & 41st Ave",
-        city: "Long Island City",
-        DogRuns_Type: "Off-Leash",
-        name: "Queensbridge Park Off-Leash Area",
         Notes: "",
-        Prop_ID: "Q104",
+        boro: "Manhattan",
+        name: "Thomas Jefferson Park Dog Run",
         state: "NY",
-        postalCode: "11101"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.1635847, 40.6159957],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Lamberts Lane & Fahy Avenue",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Father Macris Park Off-Leash Area",
-        Notes: "Located on lawn area beyond ball field",
-        Prop_ID: "R075A",
-        state: "NY",
-        postalCode: "10314"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0348607, 40.6113471],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Shore Road & 4th Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Shore Road Park Off-Leash Area",
-        Notes: "Located at Shore Road, 4th Avenue to 69th Street ",
-        Prop_ID: "B082",
-        state: "NY",
-        postalCode: "11209"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.7408079, 40.7385913],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Grand Central Parkway & Kingsbury Ave",
-        city: "New York",
-        DogRuns_Type: "Off-Leash",
-        name: "Alley Pond Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q001",
-        state: "NY",
-        postalCode: "11364"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.86016289999999, 40.6964],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Park Lane South & 85th Street ",
-        city: "Queens",
+        address: "East 112th St & FDR  Dr",
         DogRuns_Type: "Run",
-        name: "Forest Park Dog Run",
+        Accessible: "N",
+        Prop_ID: "M047",
+        postalCode: "10029"
+      },
+      geometry: {
+        coordinates: [
+          -73.974269,
+          40.735494
+        ],
+        type: "Point"
+      },
+      id: "f2eb6b2255171c1de37bf2e6e9da2b9e"
+    },
+    {
+      type: "Feature",
+      properties: {
         Notes: "",
-        Prop_ID: "Q015",
+        boro: "Bronx",
+        name: "Claremont Park Off-Leash Area",
         state: "NY",
+        address: "Clay Ave & E. 170 St",
+        DogRuns_Type: "Off-Leash",
+        Country: "United states",
+        Accessible: "N",
+        Prop_ID: "X008",
+        postalCode: "10457"
+      },
+      geometry: {
+        coordinates: [
+          -73.907982,
+          40.83721
+        ],
+        type: "Point"
+      },
+      id: "f31669f069d6df92fc5b257f166c2a0b"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located at Columbia Place & State Street. Named in memory of Beastie Boys' founding member.",
+        boro: "Brooklyn",
+        name: "Adam Yauch Park Dog Run",
+        state: "NY",
+        address: "27 State St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "B223DA",
+        postalCode: "11201"
+      },
+      geometry: {
+        coordinates: [
+          -73.9986,
+          40.692299
+        ],
+        type: "Point"
+      },
+      id: "f5f566f2b8c4360de19d0519784262bd"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Manhattan",
+        name: "Morningside Park Dog Run",
+        state: "NY",
+        address: "Morningside Avenue & West 118th St",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M056",
+        postalCode: "10026"
+      },
+      geometry: {
+        coordinates: [
+          -73.957258,
+          40.806928
+        ],
+        type: "Point"
+      },
+      id: "f6629e99bc197b05f77ea2427b2da0e3"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Mainly zone #1",
+        boro: "Queens",
+        city: "College Point",
+        name: "MacNeil Park Off-Leash Area",
+        state: "NY",
+        address: "119th St & Poppenhusen Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "Q009",
+        postalCode: "11356"
+      },
+      geometry: {
+        coordinates: [
+          -73.850742,
+          40.791872
+        ],
+        type: "Point"
+      },
+      id: "f93cc3f453cb5ae4980f7ba67510c360"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Queens",
+        name: "Forest Park Dog Run",
+        state: "NY",
+        address: "Park Lane South & 85th St ",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "Q015",
         postalCode: ""
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.9737328, 40.6669344],
+        coordinates: [
+          -73.860162,
+          40.6964
+        ],
         type: "Point"
       },
+      id: "f9fb021add98b7683753caf019670351"
+    },
+    {
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "95 Prospect Park West",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Prospect Park Dog Beach",
         Notes: "",
-        Prop_ID: "B083",
+        boro: "Manhattan",
+        name: "Union Square Dog Run",
         state: "NY",
-        postalCode: "11215"
+        address: "15th Street & Union Square West",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M089",
+        postalCode: "10003"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.897835, 40.8652159],
+        coordinates: [
+          -73.991228,
+          40.735898
+        ],
         type: "Point"
       },
-      properties: {
-        Accessible: "N",
-        address: "2550 Jerome Ave",
-        city: "Bronx",
-        DogRuns_Type: "Off-Leash",
-        name: "St. James Park Off-Leash Area",
-        Notes:
-          "Located at 92nd & Jerome Avenue. St. James Park closes at 9pm and opens at 7am. Therefore, the off-leash policy only applies between 7am and 9am",
-        Prop_ID: "X044",
-        state: "NY",
-        postalCode: "10468"
-      },
-      type: "Feature"
+      id: "fbc11e8e67822111845cf9e6e50c58ae"
     },
     {
+      type: "Feature",
+      properties: {
+        Notes: "Cherry Street and Jackson Street (on the north side of the park building)",
+        boro: "Manhattan",
+        name: "Corlears Hook Park Dog Run",
+        state: "NY",
+        address: "397 FDR Drive",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M017",
+        postalCode: "10002"
+      },
       geometry: {
-        coordinates: [-73.92718169999999, 40.8653866],
+        coordinates: [
+          -73.979287,
+          40.711799
+        ],
         type: "Point"
       },
-      properties: {
-        Accessible: "N",
-        address: "Dyckman Street & Hudson River",
-        city: "New York",
-        DogRuns_Type: "Off-Leash",
-        name: "Dyckman Fields",
-        Notes: "",
-        Prop_ID: "M042",
-        state: "NY",
-        postalCode: "10452"
-      },
-      type: "Feature"
+      id: "fc46d10e93845301aa78e655aa785cdd"
     },
     {
-      geometry: {
-        coordinates: [-74.1635847, 40.6159957],
-        type: "Point"
-      },
+      type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "Lamberts Lane & Fahy Avenue",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "Father Macris Park Off-Leash Area",
-        Notes: "Located at lawn area beyond ball field",
-        Prop_ID: "R075A",
+        Notes: "Archery Range Field",
+        boro: "Staten Island",
+        name: "Willowbrook Park Off-Leash Area",
         state: "NY",
+        address: "1 Eton Place",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "S030",
         postalCode: "10314"
       },
-      type: "Feature"
-    },
-    {
       geometry: {
-        coordinates: [-73.98011699999999, 40.7705407],
+        coordinates: [
+          -74.162258,
+          40.604621
+        ],
         type: "Point"
       },
-      properties: {
-        Accessible: "N",
-        address: "63rd St & Central Park West",
-        city: "New York",
-        DogRuns_Type: "Off-Leash",
-        name: "Central Park Off-Leash Area",
-        Notes:
-          "Though there are no enclosed dog runs, there are 23 particularly dog-friendly areas scattered throughout the Park.",
-        Prop_ID: "M010",
-        state: "NY",
-        postalCode: "10023"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.94469529999999, 40.8410522],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "165th Street & Riverside Drive",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Ft. Washington Park Dog Run",
-        Notes: "",
-        Prop_ID: "M028",
-        state: "NY",
-        postalCode: "10032"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0348607, 40.6113471],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Shore Road & 4th Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Shore Road Park Off-Leash Area",
-        Notes: "Located at Shore Road, 4th Avenue to 69th Street ",
-        Prop_ID: "B082",
-        state: "NY",
-        postalCode: "11209"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9625216, 40.6713871],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Eastern Parkway & Mary Pinkett Ave",
-        city: "Brooklyn",
-        DogRuns_Type: "Off-Leash",
-        name: "Mount Prospect Park Off-Leash Area",
-        Notes:
-          "Located at Eastern Parkway between Washington and Underhill avenues",
-        Prop_ID: "B159",
-        state: "NY",
-        postalCode: "11238"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.98032959999999, 40.7262882],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "Y",
-        address: "Avenue B & East 9th St",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Tompkins Square Dog Run",
-        Notes: "",
-        Prop_ID: "M088",
-        state: "NY",
-        postalCode: "10009"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-74.0740052, 40.5900024],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Pearsall St",
-        city: "Staten Island",
-        DogRuns_Type: "Off-Leash",
-        name: "South Beach Park Off-Leash Area",
-        Notes: "On sand after Labor Day and before Memorial Day",
-        Prop_ID: "R046",
-        state: "NY",
-        postalCode: "10305"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8404521, 40.7432234],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Meridian Rd & Pacific Ave",
-        city: "Flushing",
-        DogRuns_Type: "Off-Leash",
-        name: "Flushing Meadows Corona Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q099",
-        state: "NY",
-        postalCode: "11355"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9208972, 40.8698936],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Seaman Avenue & Isham Street",
-        city: "New York",
-        DogRuns_Type: "Run",
-        name: "Inwood Hill Park Dog Run: Homer's Run",
-        Url: "http://www.inwoof.com/",
-        Notes: "",
-        Prop_ID: "M042",
-        state: "NY",
-        postalCode: "10452"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.8096415, 40.5901842],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "83-02 Beach Channel Dr",
-        city: "Far Rockaway",
-        DogRuns_Type: "Run",
-        name: "Rockaway Freeway Dog Park",
-        Notes: "Rockaway Freeway & Beach 84th Street",
-        Prop_ID: "Q219",
-        state: "NY",
-        postalCode: "11693"
-      },
-      type: "Feature"
-    },
-    {
-      geometry: {
-        coordinates: [-73.9472995, 40.7564396],
-        type: "Point"
-      },
-      properties: {
-        Accessible: "N",
-        address: "Vernon Blvd & 41st Ave",
-        city: "Long Island City",
-        DogRuns_Type: "Off-Leash",
-        name: "Queensbridge Park Off-Leash Area",
-        Notes: "",
-        Prop_ID: "Q104",
-        state: "NY",
-        postalCode: "11101"
-      },
-      type: "Feature"
+      id: "ff34358a41eae7a670c8141eadd266d8"
     }
-  ]
+  ],
+  type: "FeatureCollection"
 };
 
-mapboxgl.accessToken = "[YOUR_TOKEN]";
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiYnViYmFzZGFkIiwiYSI6ImNqODRzOHNhNjA0NjMycXVkZ2o4Z3ZkaXoifQ.QP47B3zvEuiEqYcSJDqoYA";
 
 // older browser fix as remove is newer method
 if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
-  Element.prototype.remove = function() {
+  Element.prototype.remove = function () {
     if (this.parentNode) {
       this.parentNode.removeChild(this);
     }
   };
 }
 
+<<<<<<< HEAD
+=======
+getBoroView('all');
+
+>>>>>>> 079402f18df54eb1720e492be7f7d9af5c70ff68
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o",
-  center: [-73.880179, 40.737409],
-  zoom: 10.5,
-  maxZoom: 18,
+  maxZoom: 15,
+  minZoom: 9,
+  center: [-73.996, 40.71],
+  zoom: 9.76,
   buffer: 256,
   scrollZoom: false,
-  "source-layer": "nycparks-ad16j1"
+  'source-layer': 'nycparks-ad16j1'
 });
 
-const runList = runs.features;
-
-map.on("load", e => {
-  buildLocationList(runs);
-
-  const foundHeaders = document.getElementsByClassName("heading");
-  if (foundHeaders[0]) {
-    foundHeaders[0].addEventListener("click", e => {
-      e.preventDefault();
-      map.zoomTo(10.5);
-    });
-  }
+map.on("load", function (e) {
 
   map.addControl(new mapboxgl.NavigationControl());
+  buildLocationList(runs);
+  prepNavPanel();
 
-  // set curser to pointer on mousehover
-  map.on("mousemove", e => {
-    var dogsUnderMouse = map.queryRenderedFeatures(e.point, {
+  let foundHeaders = document.getElementsByClassName('heading');
+  if (foundHeaders[0]) {
+    foundHeaders[0].addEventListener('click', function (e) {
+      e.preventDefault();
+      resetLocationList();
+      getBoroView('all');
+      map.flyTo({
+        center: boroView.coordinates, zoom: boroView.zoom, speed: 1.3,
+        curve: 1.1,
+      });
+    })
+  }
+
+  // set curser to pointer on icon mousehover
+  map.on('mousemove', function (e) {
+    var iconsUnderMouse = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
-    });
-    map.getCanvas().style.cursor = dogsUnderMouse.length ? "pointer" : "";
+    })
+    map.getCanvas().style.cursor = (iconsUnderMouse.length) ? 'pointer' : '';
   });
 
-  map.on("click", e => {
+  map.on('click', function (e) {
     var dogIconsClicked = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
     });
 
-    // if no click on icon, forget it
     if (!dogIconsClicked.length) return;
 
-    // start with resetting active UI shading on listing
+    // reset active UI shading on sidebar listing
     var activeItem = document.getElementsByClassName("active");
     if (activeItem[0]) {
       activeItem[0].classList.remove("active");
     }
-
-    //
-    var dogIcon = dogIconsClicked[0];
-    var listing = document.getElementById(
-      "listing-" + dogIcon.properties.Prop_ID
-    );
+    var location = dogIconsClicked[0];
+    var listing = document.getElementById("listing-" + location.properties.Prop_ID);
     listing.classList.add("active");
-    flyToRun(dogIcon);
-    createPopUp(dogIcon);
+
+    // camera flies to location and opens popup
+    flyToView(location);
+    createPopUp(location);
   });
 });
 
-const flyToRun = currentFeature => {
+
+function filterLocationList(boroCode) {
+  var bCodeFirstChar = boroCode.slice(0, 1).toUpperCase();
+  var listings = document.getElementsByClassName("item")
+
+  for (var listing of listings) {
+    listing.classList = ['item'];
+    var firstChar = listing.id.split('-')[1].slice(0, 1);
+    if (firstChar !== bCodeFirstChar) {
+      listing.classList = ['item'];
+      listing.classList.add('inactive')
+    }
+  }
+}
+
+function resetLocationList() {
+  var listings = document.getElementsByClassName("item")
+
+  for (var listing of listings) {
+    listing.classList = ['item'];
+  };
+};
+
+var boroView = {};
+function flyToRun(currentFeature) {
+
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    zoom: 14
+    speed: 1.3,
+    curve: 1.1,
+    zoom: 16
   });
 };
 
-const createPopUp = currentFeature => {
+
+function getBoroView(boroID) {
+
+  switch (boroID) {
+    case 'mh':
+      boroView = {
+        boro: 'Manhattan',
+        coordinates: [-73.952403, 40.793146],
+        zoom: 10.89
+      }
+      break;
+    case 'si':
+      boroView = {
+        boro: 'Staten Island',
+        coordinates: [-74.142089, 40.574220],
+        zoom: 11.25
+      }
+      break;
+    case 'xb':
+      boroView = {
+        boro: 'Bronx',
+        coordinates: [-73.898973, 40.852577],
+        zoom: 11.6
+      }
+      break;
+    case 'qs':
+      boroView = {
+        boro: 'Queens',
+        coordinates: [-73.816968, 40.685367],
+        zoom: 10.63,
+      }
+      break;
+    case 'bk':
+      boroView = {
+        boro: 'Brooklyn',
+        coordinates: [-73.963618, 40.654864],
+        zoom: 10.9,
+      }
+      break;
+    case 'all':
+      boroView = {
+        boro: 'All',
+        coordinates: [-73.996, 40.71],
+        zoom: 9.76,
+        pitch: 6,
+        bearing: 0
+      }
+      break;
+    default:
+      break;
+  };
+};
+
+function clearPopup() {
+  try {
+    if (popup) {
+      popup.remove();
+    }
+  } catch (e) {
+
+  }
+}
+
+function createPopUp(currentFeature) {
   let popUps = document.getElementsByClassName("mapboxgl-popup");
-  // Checks if there is already a popup on the map to remove it
+
   if (popUps[0]) popUps[0].remove();
 
-  let notesEl = currentFeature.properties.Notes.length
-    ? "<h4>" + currentFeature.properties.Notes + "</h4>"
-    : "";
+  let notesEl = currentFeature.properties.Notes ? "<h4>" + currentFeature.properties.Notes + "</h4>" : "";
+
+
+  // TODO: check interactive: true
+  // let linkEl = currentFeature.properties.Url ? "<a target=\"_blank\" href=" + "\"" + currentFeature.properties.Url + "\"" + "><i class=\"fa fa-external-link fa-lg\" aria-hidden=\"true\"></i></a>" : ""
+  //
+
+  let linkEl = "";
 
   let popup = new mapboxgl.Popup({
     closeOnClick: true,
@@ -2479,56 +2999,92 @@ const createPopUp = currentFeature => {
   })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
-      '<div id="popup" class="mapboxgl-popup"><h3>' +
-        currentFeature.properties.name +
-        "</h3><h4>" +
-        currentFeature.properties.address +
-        ", " +
-        currentFeature.properties.city +
-        "</h4>" +
-        notesEl +
-        "</div>"
+    '<div id="popup" class="mapboxgl-popup"><div><h3>' +
+    currentFeature.properties.name + linkEl +
+    "</h3>" + "<h4>" +
+    currentFeature.properties.address +
+    "</h4>" + notesEl + "</div>"
     )
     .addTo(map);
+
 };
 
-const buildLocationList = data => {
-  const runList = data.features;
+function prepNavPanel() {
+  var boroIDs = ['mh', 'bk', 'qs', 'xb', 'si', 'all']
+
+  boroIDs.forEach(function (boroID) {
+    let buttonEl = document.getElementById(boroID)
+    let id = buttonEl.id
+
+    buttonEl.onclick = id !== 'all' ? function (e) {
+      e.preventDefault();
+      filterLocationList(id);
+      clearPopup();
+      getBoroView(id);
+      map.flyTo({
+        center: boroView.coordinates,
+        zoom: boroView.zoom,
+        speed: 1.3,
+        curve: 1.1
+      });
+      map.setFilter('nycparks-ad16j1', ['==', 'boro', boroView.boro])
+    } :
+      function (e) {
+        e.preventDefault();
+        resetLocationList();
+        getBoroView('all');
+        map.flyTo({
+          center: boroView.coordinates,
+          zoom: boroView.zoom,
+          speed: 1.3,
+          curve: 1.1
+        });
+        map.setFilter('nycparks-ad16j1', ['has', 'boro'])
+        clearPopup();
+      }
+  });
+};
+
+var runList = runs.features;
+
+function buildLocationList(data) {
+  let runList = data.features;
   let counter = 0;
   // Iterate through the list of runs
-  for (let run of runList) {
-    let props = run.properties;
-    // Select the listing container to append a div
-    // with the class 'item' for each run
+  for (var run of runList) {
+    var props = run.properties;
+
+    // Select listing container to append new div
+    // with class 'item' for each run
     let listings = document.getElementById("listings");
     let listing = listings.appendChild(document.createElement("div"));
     listing.className = "item";
     listing.id = "listing-" + props.Prop_ID;
 
-    // Create a new link with the class 'title' for each run
-    // and fill it with the run address
-    let link = listing.appendChild(document.createElement("a"));
-    link.href = "#";
+    // New span with class 'title' for each run,
+    // fill it with run name/address
+    let link = listing.appendChild(document.createElement("span"));
     link.className = "title";
     link.dataPosition = counter;
     link.innerHTML = props.name;
 
-    // Create a new div with the class 'details' for each run
-    // and fill it with the city and phone number
-    let details = listing.appendChild(document.createElement("div"));
-    details.innerHTML = props.address + ", " + props.city;
 
-    link.addEventListener("click", e => {
+    // New div with class 'details' for each run,
+    // fill it with the address and boro
+    let details = listing.appendChild(document.createElement("div"));
+    details.innerHTML = props.address + ", " + props.boro;
+
+    listing.addEventListener("click", function (e) {
       e.preventDefault();
-      // Update the currentFeature to the run associated with the clicked link
-      var clickedListing = runList[link.dataPosition];
+      // Update bind clicked listing to its data
+      let clickedListing = runList[link.dataPosition];
+
       // 1. Open popup
       createPopUp(clickedListing);
-      // 1. Fly to the point
+      // 2. Fly to the point
       flyToRun(clickedListing);
-
-      // 3. Highlight sidebar listing (and remove for others)
-      var activeItem = document.getElementsByClassName("active");
+      // 3. Highlight sidebar listing (resetting previous)
+      let activeItem = document.getElementsByClassName("active");
       if (activeItem[0]) {
         activeItem[0].classList.remove("active");
       }
@@ -2537,4 +3093,6 @@ const buildLocationList = data => {
 
     counter++;
   }
+
+
 };
