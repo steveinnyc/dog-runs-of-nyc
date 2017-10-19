@@ -629,7 +629,7 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Notes: "Maguire Avenue behind athletic fields closer to Romona Avenue ",
+        Notes: "Maguire Avenue behind athvaric fields closer to Romona Avenue ",
         boro: "Staten Island",
         name: "Bloomingdale Park Dog Run",
         state: "NY",
@@ -2074,12 +2074,12 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Notes: "The dog run at Pelham Bay Park is close to Watt Avenue and Middletown Road.  Both streets merge at the entrance to the parking lot on Middletown Road. The dog run is about 100 yards east of that point.",
+        Notes: "The dog run at Pelham Bay Park is close to Watt Avenue and Middvarown Road.  Both streets merge at the entrance to the parking lot on Middvarown Road. The dog run is about 100 yards east of that point.",
         boro: "Bronx",
         name: "Pelham Bay Park Off-Leash Area",
         Url: "http://nycgovparks.org/parks/X039/map/pelhambay_dogonleasharea.pdf",
         state: "NY",
-        address: "Watt Ave & Middletown Rd",
+        address: "Watt Ave & Middvarown Rd",
         DogRuns_Type: "Off-Leash",
         Accessible: "N",
         Prop_ID: "X039",
@@ -2819,6 +2819,11 @@ if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
   };
 }
 
+<<<<<<< HEAD
+=======
+getBoroView('all');
+
+>>>>>>> 079402f18df54eb1720e492be7f7d9af5c70ff68
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o",
@@ -2875,15 +2880,16 @@ map.on("load", function (e) {
     listing.classList.add("active");
 
     // camera flies to location and opens popup
-    flyToRun(location);
+    flyToView(location);
     createPopUp(location);
   });
 });
 
 
 function filterLocationList(boroCode) {
-  let bCodeFirstChar = boroCode.slice(0, 1).toUpperCase();
-  let listings = document.getElementsByClassName("item")
+  var bCodeFirstChar = boroCode.slice(0, 1).toUpperCase();
+  var listings = document.getElementsByClassName("item")
+
   for (var listing of listings) {
     listing.classList = ['item'];
     var firstChar = listing.id.split('-')[1].slice(0, 1);
@@ -2895,7 +2901,7 @@ function filterLocationList(boroCode) {
 }
 
 function resetLocationList() {
-  let listings = document.getElementsByClassName("item")
+  var listings = document.getElementsByClassName("item")
 
   for (var listing of listings) {
     listing.classList = ['item'];
@@ -2921,27 +2927,21 @@ function getBoroView(boroID) {
       boroView = {
         boro: 'Manhattan',
         coordinates: [-73.952403, 40.793146],
-        zoom: 10.89,
-        pitch: 6,
-        bearing: 0
+        zoom: 10.89
       }
       break;
     case 'si':
       boroView = {
         boro: 'Staten Island',
         coordinates: [-74.142089, 40.574220],
-        zoom: 11.25,
-        pitch: 6,
-        bearing: 0
+        zoom: 11.25
       }
       break;
     case 'xb':
       boroView = {
         boro: 'Bronx',
-        coordinates: [-73.852973, 40.842577],
-        zoom: 11.25,
-        pitch: 6,
-        bearing: 0
+        coordinates: [-73.898973, 40.852577],
+        zoom: 11.6
       }
       break;
     case 'qs':
@@ -2949,8 +2949,6 @@ function getBoroView(boroID) {
         boro: 'Queens',
         coordinates: [-73.816968, 40.685367],
         zoom: 10.63,
-        pitch: 6,
-        bearing: 0
       }
       break;
     case 'bk':
@@ -2958,8 +2956,6 @@ function getBoroView(boroID) {
         boro: 'Brooklyn',
         coordinates: [-73.963618, 40.654864],
         zoom: 10.9,
-        pitch: 6,
-        bearing: 0
       }
       break;
     case 'all':
@@ -3018,7 +3014,7 @@ function createPopUp(currentFeature) {
 };
 
 function prepNavPanel() {
-  let boroIDs = ['mh', 'bk', 'qs', 'xb', 'si', 'all']
+  var boroIDs = ['mh', 'bk', 'qs', 'xb', 'si', 'all']
 
   boroIDs.forEach(function (boroID) {
     let buttonEl = document.getElementById(boroID)
@@ -3059,8 +3055,8 @@ function buildLocationList(data) {
   let runList = data.features;
   let counter = 0;
   // Iterate through the list of runs
-  for (let run of runList) {
-    let props = run.properties;
+  for (var run of runList) {
+    var props = run.properties;
 
     // Select listing container to append new div
     // with class 'item' for each run
