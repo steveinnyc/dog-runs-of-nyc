@@ -2829,7 +2829,7 @@ var map = new mapboxgl.Map({
   minZoom: 9,
   center: boroView.coordinates,
   zoom: boroView.zoom,
-  buffer: 56,
+  buffer: 256,
   scrollZoom: false,
   'source-layer': 'nycparks-ad16j1'
 });
