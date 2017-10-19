@@ -2819,80 +2819,49 @@ if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
   };
 }
 
-var boroView = {};
-getBoroView('all');
-
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o",
   maxZoom: 15,
   minZoom: 9,
-  center: boroView.coordinates,
-  zoom: boroView.zoom,
+  center: [-73.996, 40.71],
+  zoom: 9.76,
   buffer: 256,
   scrollZoom: false,
   'source-layer': 'nycparks-ad16j1'
 });
 
-const runList = runs.features;
-
-var colorReai = [
-  [1, '#263656'],
-  [2, '#314E7F'],
-  [3, '#59797C'],
-  [4, '#754B8E'],
-  [5, '#D49A6A'],
-];
-
-map.on("load", e => {
-
-  map.addSource('boroughs', {
-    type: 'vector',
-    url: 'mapbox://rsbaumann.6n6xib60'
-  });
-
-  // COUNTY SHADING
-  // map.addLayer({
-  //   'id': 'countyFill',
-  //   'type': 'fill',
-  //   'source': 'boroughs',
-  //   'source-layer': 'nyc-bouroughs-8e9odb',
-  //   'paint': {
-  //     'fill-color': {
-  //       property: 'BoroCode',
-  //       type: 'interval',
-  //       stops: colorReai
-  //     },
-  //     'fill-opacity': .25,
-  //   }
-  // }, 'water');
+map.on("load", function (e) {
 
   map.addControl(new mapboxgl.NavigationControl());
   buildLocationList(runs);
   prepNavPanel();
 
-  const foundHeaders = document.getElementsByClassName('heading');
+  let foundHeaders = document.getElementsByClassName('heading');
   if (foundHeaders[0]) {
-    foundHeaders[0].addEventListener('click', e => {
+    foundHeaders[0].addEventListener('click', function (e) {
       e.preventDefault();
       resetLocationList();
       getBoroView('all');
-      map.flyTo({ center: boroView.coordinates, zoom: boroView.zoom });
+      map.flyTo({
+        center: boroView.coordinates, zoom: boroView.zoom, speed: 1.3,
+        curve: 1.1,
+      });
     })
   }
 
-  // set curser to pointer on mousehover
-  map.on('mousemove', e => {
+  // set curser to pointer on icon mousehover
+  map.on('mousemove', function (e) {
     var iconsUnderMouse = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
     })
     map.getCanvas().style.cursor = (iconsUnderMouse.length) ? 'pointer' : '';
   });
 
-  map.on('click', e => {
+  map.on('click', function (e) {
     var dogIconsClicked = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
-    })
+    });
 
     if (!dogIconsClicked.length) return;
 
@@ -2908,49 +2877,9 @@ map.on("load", e => {
     // camera flies to location and opens popup
     flyToRun(location);
     createPopUp(location);
-
-  })
+  });
 });
 
-function flyToRun(currentFeature) {
-  map.flyTo({
-    center: currentFeature.geometry.coordinates,
-    speed: 1.3,
-    curve: 1.1,
-    zoom: 16
-  });
-};
-
-function createPopUp(currentFeature) {
-  let popUps = document.getElementsByClassName("mapboxgl-popup");
-  // Checks if there is already a popup on the map to remove it
-  if (popUps[0]) popUps[0].remove();
-
-  let notesEl = currentFeature.properties.Notes ? "<h4>" + currentFeature.properties.Notes + "</h4>" : "";
-
-
-  // TODO: check interactive: true
-  // let linkEl = currentFeature.properties.Url ? "<a target=\"_blank\" href=" + "\"" + currentFeature.properties.Url + "\"" + "><i class=\"fa fa-external-link fa-lg\" aria-hidden=\"true\"></i></a>" : ""
-  //
-
-  let linkEl = "";
-
-  let popup = new mapboxgl.Popup({
-    closeOnClick: true,
-    anchor: "top",
-    offset: [0, 20]
-  })
-    .setLngLat(currentFeature.geometry.coordinates)
-    .setHTML(
-    '<div id="popup" class="mapboxgl-popup"><div><h3>' +
-    currentFeature.properties.name + linkEl +
-    "</h3>" + "<h4>" +
-    currentFeature.properties.address +
-    "</h4>" + notesEl + "</div>"
-    )
-    .addTo(map);
-
-};
 
 function filterLocationList(boroCode) {
   let bCodeFirstChar = boroCode.slice(0, 1).toUpperCase();
@@ -2970,11 +2899,23 @@ function resetLocationList() {
 
   for (var listing of listings) {
     listing.classList = ['item'];
-  }
-}
+  };
+};
 
-// TODO: make flyTo part of getBoroView, DRY!
+var boroView = {};
+function flyToRun(currentFeature) {
+
+  map.flyTo({
+    center: currentFeature.geometry.coordinates,
+    speed: 1.3,
+    curve: 1.1,
+    zoom: 16
+  });
+};
+
+
 function getBoroView(boroID) {
+
   switch (boroID) {
     case 'mh':
       boroView = {
@@ -3032,9 +2973,8 @@ function getBoroView(boroID) {
       break;
     default:
       break;
-  }
-  //flyToRun here
-}
+  };
+};
 
 function clearPopup() {
   try {
@@ -3042,26 +2982,58 @@ function clearPopup() {
       popup.remove();
     }
   } catch (e) {
-    console.log(e.message);
+
   }
 }
 
+function createPopUp(currentFeature) {
+  let popUps = document.getElementsByClassName("mapboxgl-popup");
+
+  if (popUps[0]) popUps[0].remove();
+
+  let notesEl = currentFeature.properties.Notes ? "<h4>" + currentFeature.properties.Notes + "</h4>" : "";
+
+
+  // TODO: check interactive: true
+  // let linkEl = currentFeature.properties.Url ? "<a target=\"_blank\" href=" + "\"" + currentFeature.properties.Url + "\"" + "><i class=\"fa fa-external-link fa-lg\" aria-hidden=\"true\"></i></a>" : ""
+  //
+
+  let linkEl = "";
+
+  let popup = new mapboxgl.Popup({
+    closeOnClick: true,
+    anchor: "top",
+    offset: [0, 20]
+  })
+    .setLngLat(currentFeature.geometry.coordinates)
+    .setHTML(
+    '<div id="popup" class="mapboxgl-popup"><div><h3>' +
+    currentFeature.properties.name + linkEl +
+    "</h3>" + "<h4>" +
+    currentFeature.properties.address +
+    "</h4>" + notesEl + "</div>"
+    )
+    .addTo(map);
+
+};
 
 function prepNavPanel() {
   let boroIDs = ['mh', 'bk', 'qs', 'xb', 'si', 'all']
 
   boroIDs.forEach(function (boroID) {
-    var buttonEl = document.getElementById(boroID)
-    var id = buttonEl.id
+    let buttonEl = document.getElementById(boroID)
+    let id = buttonEl.id
 
     buttonEl.onclick = id !== 'all' ? function (e) {
       e.preventDefault();
       filterLocationList(id);
-      getBoroView(id);
       clearPopup();
+      getBoroView(id);
       map.flyTo({
         center: boroView.coordinates,
-        zoom: boroView.zoom
+        zoom: boroView.zoom,
+        speed: 1.3,
+        curve: 1.1
       });
       map.setFilter('nycparks-ad16j1', ['==', 'boro', boroView.boro])
     } :
@@ -3069,53 +3041,58 @@ function prepNavPanel() {
         e.preventDefault();
         resetLocationList();
         getBoroView('all');
-        map.flyTo({ center: boroView.coordinates, zoom: boroView.zoom });
+        map.flyTo({
+          center: boroView.coordinates,
+          zoom: boroView.zoom,
+          speed: 1.3,
+          curve: 1.1
+        });
         map.setFilter('nycparks-ad16j1', ['has', 'boro'])
         clearPopup();
       }
   });
 };
 
+var runList = runs.features;
+
 function buildLocationList(data) {
-  const runList = data.features;
+  let runList = data.features;
   let counter = 0;
   // Iterate through the list of runs
   for (let run of runList) {
     let props = run.properties;
 
-    // switch case on boro to assign id
-    // Select the listing container to append a div
-    // with the class 'item' for each run
+    // Select listing container to append new div
+    // with class 'item' for each run
     let listings = document.getElementById("listings");
     let listing = listings.appendChild(document.createElement("div"));
     listing.className = "item";
     listing.id = "listing-" + props.Prop_ID;
 
-    // Create a new link with the class 'title' for each run
-    // and fill it with the run address
+    // New span with class 'title' for each run,
+    // fill it with run name/address
     let link = listing.appendChild(document.createElement("span"));
     link.className = "title";
     link.dataPosition = counter;
     link.innerHTML = props.name;
 
 
-    // Create a new div with the class 'details' for each run
-    // and fill it with the boro and phone number
+    // New div with class 'details' for each run,
+    // fill it with the address and boro
     let details = listing.appendChild(document.createElement("div"));
     details.innerHTML = props.address + ", " + props.boro;
 
-    listing.addEventListener("click", e => {
+    listing.addEventListener("click", function (e) {
       e.preventDefault();
-      // Update the currentFeature to the run associated with the clicked link
-      var clickedListing = runList[link.dataPosition];
+      // Update bind clicked listing to its data
+      let clickedListing = runList[link.dataPosition];
 
       // 1. Open popup
       createPopUp(clickedListing);
-      // 1. Fly to the point
+      // 2. Fly to the point
       flyToRun(clickedListing);
-
-      // 3. Highlight sidebar listing (and remove for others)
-      var activeItem = document.getElementsByClassName("active");
+      // 3. Highlight sidebar listing (resetting previous)
+      let activeItem = document.getElementsByClassName("active");
       if (activeItem[0]) {
         activeItem[0].classList.remove("active");
       }
