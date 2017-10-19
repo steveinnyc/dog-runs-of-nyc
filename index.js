@@ -2826,9 +2826,8 @@ var map = new mapboxgl.Map({
   style: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o",
   center: boroView.coordinates,
   zoom: boroView.zoom,
-  maxZoom: 18,
   buffer: 56,
-  // scrollZoom: false,
+  scrollZoom: false,
   'source-layer': 'nycparks-ad16j1'
 });
 
