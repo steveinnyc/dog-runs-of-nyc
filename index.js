@@ -2821,9 +2821,12 @@ if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
 
 var boroView = {};
 getBoroView('all');
+
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o",
+  maxZoom: 15,
+  minZoom: 9,
   center: boroView.coordinates,
   zoom: boroView.zoom,
   buffer: 56,
@@ -2849,20 +2852,20 @@ map.on("load", e => {
   });
 
   // COUNTY SHADING
-  map.addLayer({
-    'id': 'countyFill',
-    'type': 'fill',
-    'source': 'boroughs',
-    'source-layer': 'nyc-bouroughs-8e9odb',
-    'paint': {
-      'fill-color': {
-        property: 'BoroCode',
-        type: 'interval',
-        stops: colorReai
-      },
-      'fill-opacity': .25,
-    }
-  }, 'water');
+  // map.addLayer({
+  //   'id': 'countyFill',
+  //   'type': 'fill',
+  //   'source': 'boroughs',
+  //   'source-layer': 'nyc-bouroughs-8e9odb',
+  //   'paint': {
+  //     'fill-color': {
+  //       property: 'BoroCode',
+  //       type: 'interval',
+  //       stops: colorReai
+  //     },
+  //     'fill-opacity': .25,
+  //   }
+  // }, 'water');
 
   map.addControl(new mapboxgl.NavigationControl());
   buildLocationList(runs);
@@ -2914,7 +2917,7 @@ function flyToRun(currentFeature) {
     center: currentFeature.geometry.coordinates,
     speed: 1.3,
     curve: 1.1,
-    zoom: 15
+    zoom: 16
   });
 };
 
