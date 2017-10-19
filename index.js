@@ -2865,6 +2865,7 @@ map.on("load", e => {
     }
   }, 'water');
 
+  map.addControl(new mapboxgl.NavigationControl());
   buildLocationList(runs);
   prepNavPanel();
 
@@ -2878,14 +2879,12 @@ map.on("load", e => {
     })
   }
 
-  map.addControl(new mapboxgl.NavigationControl());
-
   // set curser to pointer on mousehover
   map.on('mousemove', e => {
-    var dogsUnderMouse = map.queryRenderedFeatures(e.point, {
+    var iconsUnderMouse = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
     })
-    map.getCanvas().style.cursor = (dogsUnderMouse.length) ? 'pointer' : '';
+    map.getCanvas().style.cursor = (iconsUnderMouse.length) ? 'pointer' : '';
   });
 
   map.on('click', e => {
@@ -2902,11 +2901,13 @@ map.on("load", e => {
       activeItem[0].classList.remove("active");
     }
 
-    var dogIcon = dogIconsClicked[0];
-    var listing = document.getElementById("listing-" + dogIcon.properties.Prop_ID);
+    var location = dogIconsClicked[0];
+    var listing = document.getElementById("listing-" + location.properties.Prop_ID);
+
     listing.classList.add("active");
-    flyToRun(dogIcon);
-    createPopUp(dogIcon);
+    flyToRun(location);
+    createPopUp(location);
+
   })
 });
 
@@ -2952,9 +2953,7 @@ const createPopUp = currentFeature => {
 
 function filterLocationList(boroCode) {
   let bCodeFirstChar = boroCode.slice(0, 1).toUpperCase();
-
   let listings = document.getElementsByClassName("item")
-
   for (var listing of listings) {
     listing.classList = ['item'];
     var firstChar = listing.id.split('-')[1].slice(0, 1);
@@ -3033,6 +3032,7 @@ function getBoroView(boroID) {
     default:
       break;
   }
+  //flyToRun here
 }
 
 function clearPopup() {
