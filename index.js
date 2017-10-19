@@ -2872,7 +2872,7 @@ map.on("load", function (e) {
     listing.classList.add("active");
 
     // fly camera to location and spawn popup
-    flyToView(location);
+    flyToRun(location);
     createPopUp(location);
   });
 });
