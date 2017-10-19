@@ -2819,7 +2819,6 @@ if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
   };
 }
 
-var boroView = {};
 getBoroView('all');
 
 var map = new mapboxgl.Map({
@@ -2880,7 +2879,7 @@ map.on("load", function (e) {
     listing.classList.add("active");
 
     // camera flies to location and opens popup
-    flyToRun(location);
+    flyToView(location);
     createPopUp(location);
 
   })
@@ -2892,7 +2891,7 @@ function clearPopup() {
       popup.remove();
     }
   } catch (e) {
-    console.log(e.message);
+
   }
 }
 
@@ -2930,7 +2929,7 @@ function createPopUp(currentFeature) {
 function filterLocationList(boroCode) {
   var bCodeFirstChar = boroCode.slice(0, 1).toUpperCase();
   var listings = document.getElementsByClassName("item")
-  console.log('type of listings: ', typeof listings)
+
   for (var listing of listings) {
     listing.classList = ['item'];
     var firstChar = listing.id.split('-')[1].slice(0, 1);
@@ -2949,34 +2948,29 @@ function resetLocationList() {
   }
 }
 
-// TODO: make flyTo part of getBoroView, DRY!
+var boroView = {};
+
 function getBoroView(boroID) {
   switch (boroID) {
     case 'mh':
       boroView = {
         boro: 'Manhattan',
         coordinates: [-73.952403, 40.793146],
-        zoom: 10.89,
-        pitch: 6,
-        bearing: 0
+        zoom: 10.89
       }
       break;
     case 'si':
       boroView = {
         boro: 'Staten Island',
         coordinates: [-74.142089, 40.574220],
-        zoom: 11.25,
-        pitch: 6,
-        bearing: 0
+        zoom: 11.25
       }
       break;
     case 'xb':
       boroView = {
         boro: 'Bronx',
-        coordinates: [-73.852973, 40.842577],
-        zoom: 11.25,
-        pitch: 6,
-        bearing: 0
+        coordinates: [-73.898973, 40.852577],
+        zoom: 11.6
       }
       break;
     case 'qs':
@@ -2984,8 +2978,6 @@ function getBoroView(boroID) {
         boro: 'Queens',
         coordinates: [-73.816968, 40.685367],
         zoom: 10.63,
-        pitch: 6,
-        bearing: 0
       }
       break;
     case 'bk':
@@ -2993,8 +2985,6 @@ function getBoroView(boroID) {
         boro: 'Brooklyn',
         coordinates: [-73.963618, 40.654864],
         zoom: 10.9,
-        pitch: 6,
-        bearing: 0
       }
       break;
     case 'all':
@@ -3009,15 +2999,14 @@ function getBoroView(boroID) {
     default:
       break;
   }
+};
 
-}
-
-function flyToRun(currentFeature) {
+function flyToView(scene) {
   map.flyTo({
-    center: currentFeature.geometry.coordinates,
+    center: scene.geometry.coordinates || scene.coordinates,
     speed: 1.3,
     curve: 1.1,
-    zoom: 16
+    zoom: scene.zoom || 16
   });
 };
 
@@ -3043,6 +3032,7 @@ function prepNavPanel() {
         e.preventDefault();
         resetLocationList();
         getBoroView('all');
+
         map.flyTo({ center: boroView.coordinates, zoom: boroView.zoom });
         map.setFilter('nycparks-ad16j1', ['has', 'boro'])
         clearPopup();
@@ -3078,12 +3068,12 @@ function buildLocationList(data) {
     listing.addEventListener("click", function (e) {
       e.preventDefault();
       // Update the currentFeature to the run associated with the clicked link
-      var clickedListing = runList[link.dataPosition];
+      var clickedFeature = runList[link.dataPosition];
 
       // 1. Open popup
-      createPopUp(clickedListing);
+      createPopUp(clickedFeature);
       // 1. Fly to the point
-      flyToRun(clickedListing);
+      flyToView(clickedFeature);
 
       // 3. Highlight sidebar listing (and remove for others)
       var activeItem = document.getElementsByClassName("active");
