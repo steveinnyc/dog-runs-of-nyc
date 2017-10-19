@@ -2,10 +2,6 @@
 
 // raw data source: https://data.boroofnewyork.us/Recreation/Directory-of-Dog-Runs-and-Off-Leash-Areas/ipbu-mtcs/data
 
-// converted to geoJSON using Google GeoCoding API and Mapbox Studio
-// https://developers.google.com/maps/documentation/geocoding/start
-// https://www.mapbox.com/mapbox-studio/
-
 var runs = {
   features: [
     {
@@ -496,7 +492,7 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Notes: "",
+        Notes: "The only listed wheelchair-accessible location in NYC",
         boro: "Manhattan",
         name: "Tompkins Square Dog Run",
         state: "NY",
@@ -2819,11 +2815,6 @@ if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
   };
 }
 
-<<<<<<< HEAD
-=======
-getBoroView('all');
-
->>>>>>> 079402f18df54eb1720e492be7f7d9af5c70ff68
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/bubbasdad/cj8krq0rm57zw2sor4hhor04o",
@@ -2863,6 +2854,7 @@ map.on("load", function (e) {
     map.getCanvas().style.cursor = (iconsUnderMouse.length) ? 'pointer' : '';
   });
 
+  // select icon if clicked on
   map.on('click', function (e) {
     var dogIconsClicked = map.queryRenderedFeatures(e.point, {
       layers: ["nycparks-ad16j1"]
@@ -2879,7 +2871,7 @@ map.on("load", function (e) {
     var listing = document.getElementById("listing-" + location.properties.Prop_ID);
     listing.classList.add("active");
 
-    // camera flies to location and opens popup
+    // fly camera to location and spawn popup
     flyToView(location);
     createPopUp(location);
   });
@@ -2908,7 +2900,6 @@ function resetLocationList() {
   };
 };
 
-var boroView = {};
 function flyToRun(currentFeature) {
 
   map.flyTo({
@@ -2920,8 +2911,9 @@ function flyToRun(currentFeature) {
 };
 
 
-function getBoroView(boroID) {
+var boroView = {};
 
+function getBoroView(boroID) {
   switch (boroID) {
     case 'mh':
       boroView = {
@@ -2987,14 +2979,7 @@ function createPopUp(currentFeature) {
 
   if (popUps[0]) popUps[0].remove();
 
-  let notesEl = currentFeature.properties.Notes ? "<h4>" + currentFeature.properties.Notes + "</h4>" : "";
-
-
-  // TODO: check interactive: true
-  // let linkEl = currentFeature.properties.Url ? "<a target=\"_blank\" href=" + "\"" + currentFeature.properties.Url + "\"" + "><i class=\"fa fa-external-link fa-lg\" aria-hidden=\"true\"></i></a>" : ""
-  //
-
-  let linkEl = "";
+  let notesEl = currentFeature.properties.Notes ? "<h4>Type: " + currentFeature.properties.Notes + "</h4>" : "";
 
   let popup = new mapboxgl.Popup({
     closeOnClick: true,
@@ -3004,7 +2989,7 @@ function createPopUp(currentFeature) {
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
     '<div id="popup" class="mapboxgl-popup"><div><h3>' +
-    currentFeature.properties.name + linkEl +
+    currentFeature.properties.name +
     "</h3>" + "<h4>" +
     currentFeature.properties.address +
     "</h4>" + notesEl + "</div>"
