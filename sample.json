@@ -1,0 +1,21 @@
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brooklyn Bridge Dog Run",
+        "address": "385 Plymouth St",
+        "boro": "Brooklyn",
+        "state": "NY",
+        "DogRuns_Type": "Off-Leash",
+        "Notes": "Located under the Manhattan Bridge. Go Figure.",
+        "Prop_ID": "BB999",
+        "postalCode": 11201
+      },
+      "geometry": {
+        "coordinates": [
+          -73.98941,
+          40.704035
+        ],
+        "type": "Point"
+      },
+      "id": "c2fa21470cb8e4d2bef0c4ca60a4c0de"
+    },
