@@ -2988,7 +2988,7 @@ function createPopUp(currentFeature) {
   let extLink = currentFeature.properties.Url ? "<a target=\"_blank\" href=\"" + currentFeature.properties.Url + "\"><h3>" + linkIcon + "</h3></a>" : ""
 
   let popup = new mapboxgl.Popup({
-    closeOnClick: false,
+    closeOnClick: true,
     anchor: "top",
     offset: [0, 20]
   })
