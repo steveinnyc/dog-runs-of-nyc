@@ -1,6 +1,6 @@
 "use strict";
 
-// raw data source: https://data.boroofnewyork.us/Recreation/Directory-of-Dog-Runs-and-Off-Leash-Areas/ipbu-mtcs/data
+// raw data: https://data.boroofnewyork.us/Recreation/Directory-of-Dog-Runs-and-Off-Leash-Areas/ipbu-mtcs/data
 
 var runs = {
   features: [
@@ -11,7 +11,7 @@ var runs = {
         boro: "Staten Island",
         name: "Father Macris Park Off-Leash Area",
         state: "NY",
-        address: "Lamberts Lane & Fahy Aveanue",
+        address: "Lamberts Lane & Fahy Avenue",
         DogRuns_Type: "Off-Leash",
         Accessible: "N",
         Prop_ID: "S075A",
@@ -46,7 +46,7 @@ var runs = {
       type: "Feature",
       properties: {
         Notes:
-          "Off-leash hours for the island are before 9: 00am and after 9pm except for areas where dogs are expressly prohibited via signage.",
+          "Off-leash hours are before 9am and after 9pm except for areas where dogs are expressly prohibited via signage.",
         boro: "Manhattan",
         name: "Randalls Island Park Off-Leash Area",
         state: "NY",
@@ -296,9 +296,9 @@ var runs = {
       type: "Feature",
       properties: {
         Notes:
-          "East End Avenue to East River from Gracie Square (East84th Street) to89th Street",
+          "East End Avenue to East River from Gracie Square (East84th Street) to 89th Street. There are TWO dog runs, for large and small dogs.",
         boro: "Manhattan",
-        name: "Carl Schurz Park Dog Run",
+        name: "Carl Schurz Park Dog Runs",
         state: "NY",
         address: "East 86th Street & East End Ave",
         DogRuns_Type: "Run",
@@ -307,7 +307,7 @@ var runs = {
         postalCode: "10028"
       },
       geometry: {
-        coordinates: [-73.944782, 40.774946],
+        coordinates: [-73.9439, 40.774065],
         type: "Point"
       },
       id: "20e8644ae580ea2bfc67169d0c5eadeb"
@@ -354,7 +354,7 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Notes: "Ocean Ave & Mackenzie St",
+        Notes: "",
         boro: "Brooklyn",
         name: "Manhattan Beach Dog Run",
         state: "NY",
@@ -424,7 +424,7 @@ var runs = {
         postalCode: "11232"
       },
       geometry: {
-        coordinates: [-74.001832, 40.646368],
+        coordinates: [-74.0028, 40.647358],
         type: "Point"
       },
       id: "318cda10035f2f051a6d378fdb92b675"
@@ -432,7 +432,7 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Notes: "The only listed wheelchair-accessible location in NYC",
+        Notes: "",
         boro: "Manhattan",
         name: "Tompkins Square Dog Run",
         state: "NY",
@@ -474,7 +474,7 @@ var runs = {
         boro: "Bronx",
         name: "Wallenberg Forest Park Off-Leash Area",
         state: "NY",
-        address: "Douglas Avenue and West 235 Street",
+        address: "Douglas Avenue and West 235th Street",
         DogRuns_Type: "Off-Leash",
         Accessible: "N",
         Prop_ID: "X259",
@@ -547,7 +547,7 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Notes: "Maguire Avenue behind athvaric fields closer to Romona Avenue ",
+        Notes: "Maguire Avenue behind athletic fields closer to Romona Avenue ",
         boro: "Staten Island",
         name: "Bloomingdale Park Dog Run",
         state: "NY",
@@ -1671,19 +1671,19 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Notes: "Rockaway Freeway & Beach84th Street",
+        Notes: "",
         boro: "Queens",
         city: "Far Rockaway",
         name: "Rockaway Freeway Dog Park",
         state: "NY",
-        address: "83-02 Beach Channel Dr",
+        address: "Rockaway Freeway & Beach 84th St",
         DogRuns_Type: "Run",
         Accessible: "N",
         Prop_ID: "Q219",
         postalCode: "11693"
       },
       geometry: {
-        coordinates: [-73.809641, 40.590184],
+        coordinates: [-73.808621, 40.591275],
         type: "Point"
       },
       id: "b556dd69ec300a1b0fbb143135093f9b"
@@ -1693,7 +1693,7 @@ var runs = {
       properties: {
         Notes:
           "Located at St. Mark's Ave, Park Place between Brooklyn Ave and Kingston Ave. Off-leash areas include all of the park except for playgrounds and other areas where dogs are expressly prohibited via signage.",
-        boro: "Manhattan",
+        boro: "Brooklyn",
         name: "Brower Park",
         state: "NY",
         address: "725 St Marks Ave",
@@ -1810,13 +1810,13 @@ var runs = {
       type: "Feature",
       properties: {
         Notes:
-          "The dog run at Pelham Bay Park is close to Watt Avenue and Middvarown Road.  Both streets merge at the entrance to the parking lot on Middvarown Road. The dog run is about 100 yards east of that point.",
+          "The dog run at Pelham Bay Park is close to Watt Avenue and Middletown Road.  Both streets merge at the entrance to the parking lot on Middletown Road. The dog run is about 100 yards east of that point.",
         boro: "Bronx",
         name: "Pelham Bay Park Off-Leash Area",
         Url:
           "http://nycgovparks.org/parks/X039/map/pelhambay_dogonleasharea.pdf",
         state: "NY",
-        address: "Watt Ave & Middvarown Rd",
+        address: "Watt Ave & Middletown Rd",
         DogRuns_Type: "Off-Leash",
         Accessible: "N",
         Prop_ID: "X039",
@@ -2452,7 +2452,7 @@ var runs = {
   type: "FeatureCollection"
 };
 
-mapboxgl.accessToken = "[YOURTOKENHERE]";
+mapboxgl.accessToken = "[YOUR-MAPBOX-TOKEN";
 
 // older browser fix as remove is newer method
 if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
@@ -2486,12 +2486,6 @@ map.on("load", function(e) {
       e.preventDefault();
       resetLocationList();
       setBoroView("all");
-      // map.flyTo({
-      //   center: boroView.coordinates,
-      //   zoom: boroView.zoom,
-      //   speed: 1.3,
-      //   curve: 1.1
-      // });
     });
   }
 
@@ -2559,8 +2553,6 @@ function flyToRun(currentFeature) {
   });
 }
 
-var boroView = {};
-
 function flyToBoro(view) {
   map.flyTo({
     center: view.coordinates,
@@ -2569,6 +2561,8 @@ function flyToBoro(view) {
     zoom: view.zoom
   });
 }
+
+var boroView = {};
 
 function setBoroView(boroID) {
   clearPopup();
@@ -2633,11 +2627,23 @@ function createPopUp(currentFeature) {
   clearPopup();
 
   let notesEl = currentFeature.properties.Notes
-    ? "<h4>Type: " + currentFeature.properties.Notes + "</h4>"
+    ? "<h4>" + currentFeature.properties.Notes + "</h4>"
     : "";
 
+  let linkIcon = '<i class="fa fa-external-link" aria-hidden="true"></i>';
+
+  // console.log('currentFeature: ', currentFeature);
+  let extLink = currentFeature.properties.Url
+    ? '<a target="_blank" href="' +
+      currentFeature.properties.Url +
+      '"><h3>' +
+      linkIcon +
+      "</h3></a>"
+    : "";
+  console.log("extLink: ", extLink);
+
   let popup = new mapboxgl.Popup({
-    closeOnClick: true,
+    closeOnClick: false,
     anchor: "top",
     offset: [0, 20]
   })
@@ -2645,6 +2651,7 @@ function createPopUp(currentFeature) {
     .setHTML(
       '<div id="popup" class="mapboxgl-popup"><div><h3>' +
         currentFeature.properties.name +
+        extLink +
         "</h3>" +
         "<h4>" +
         currentFeature.properties.address +
@@ -2667,28 +2674,12 @@ function prepNavPanel() {
         ? function(e) {
             e.preventDefault();
             filterLocationList(id);
-            // clearPopup();
             setBoroView(id);
-            // map.flyTo({
-            //   center: boroView.coordinates,
-            //   zoom: boroView.zoom,
-            //   speed: 1.3,
-            //   curve: 1.1
-            // });
-            // map.setFilter("nycparks-ad16j1", ["==", "boro", boroView.boro]);
           }
         : function(e) {
             e.preventDefault();
             resetLocationList();
             setBoroView("all");
-            // map.flyTo({
-            //   center: boroView.coordinates,
-            //   zoom: boroView.zoom,
-            //   speed: 1.3,
-            //   curve: 1.1
-            // });
-            // map.setFilter("nycparks-ad16j1", ["has", "boro"]);
-            // clearPopup();
           };
   });
 }
