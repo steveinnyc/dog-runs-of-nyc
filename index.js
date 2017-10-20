@@ -2972,7 +2972,7 @@ function createPopUp(currentFeature) {
 
   clearPopup();
 
-  let notesEl = currentFeature.properties.Notes ? "<h4>Type: " + currentFeature.properties.Notes + "</h4>" : "";
+  let notesEl = currentFeature.properties.Notes ? "<h4>" + currentFeature.properties.Notes + "</h4>" : "";
 
   let popup = new mapboxgl.Popup({
     closeOnClick: true,
