@@ -2823,7 +2823,7 @@ var map = new mapboxgl.Map({
   center: [-73.996, 40.71],
   zoom: 9.76,
   buffer: 256,
-  scrollZoom: false,
+  scrollZoom: true,
   "source-layer": "nycparks-ad16j1"
 });
 
@@ -3051,7 +3051,7 @@ function buildLocationList(data) {
     link.dataPosition = counter;
 
     let linkIcon = "<i class=\"fa fa-external-link\" aria-hidden=\"true\"></i>"
-    let extLink = props.Url ? "<a class=\"z8\" target=\"_blank\" href=\"" + props.Url + "\"> " + linkIcon + "</a>" : ""
+    let extLink = props.Url ? "<a class=\"z8\" target=\"_blank\" href=\"" + props.Url + "\">" + linkIcon + "</a>" : ""
     link.innerHTML = props.name + extLink;
 
     // New div with class 'details' for each run,
