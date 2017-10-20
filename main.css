@@ -3596,7 +3596,7 @@ img.inline, .inline           { display:inline-block; }
   .pad2                         { padding:10px; }
   .pad2y                        { padding-top:10px; padding-bottom:10px; }
   .pad2x                        { padding-right:10px; padding-left:10px; }
-  .title                        { margin-bottom:2px; }
+  .title                        { margin-bottom:2px; margin-right: 2px;}
   .space-bottom2, .space-bottom { margin-bottom:10px; }
   .space-bottom4                { margin-bottom:20px; }
   .space-bottom8                { margin-bottom:40px;}
