@@ -2823,7 +2823,7 @@ var map = new mapboxgl.Map({
   center: [-73.996, 40.71],
   zoom: 9.76,
   buffer: 256,
-  scrollZoom: false,
+  scrollZoom: true,
   'source-layer': 'nycparks-ad16j1'
 });
 
