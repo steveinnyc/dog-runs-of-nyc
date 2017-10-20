@@ -992,7 +992,7 @@ var runs = {
         Notes: "Located at Amsterdam Ave & Fort George Ave",
         boro: "Manhattan",
         name: "Highbridge Park Dog Run",
-        Url: "http://www.highbridgek9club.org/",
+        Url: "", //"http://www.highbridgek9club.org/", inactive
         state: "NY",
         address: "2682-2698 Amsterdam Ave",
         DogRuns_Type: "Run",
@@ -1854,7 +1854,7 @@ var runs = {
           "Enter from Margaret Corbin Circle Eastern stairs, Broadway &196th, or Bennett Ave & Broadway",
         boro: "Manhattan",
         name: "Fort Tryon Park Dog Run",
-        Url: "http://www.ftdog.org/",
+        Url: "https://www.forttryonparktrust.org/sir-williams-dog-run/",
         state: "NY",
         address: "West 196th St & Broadway",
         DogRuns_Type: "Run",
@@ -2047,7 +2047,7 @@ var runs = {
         Notes: "Located at Leroy Street at the northeast corner of Pier40",
         boro: "Manhattan",
         name: "Leroy Street Dog Park",
-        Url: "http://www.hudsonriverpark.org/explore/dogrunleroyst.html",
+        Url: "", //"http://www.hudsonriverpark.org/explore/dogrunleroyst.html", inactive
         state: "Riverside Drive & West 72nd St",
         address: "353 West St",
         DogRuns_Type: "Run",
@@ -2452,7 +2452,7 @@ var runs = {
   type: "FeatureCollection"
 };
 
-mapboxgl.accessToken = "[YOUR-MAPBOX-TOKEN";
+mapboxgl.accessToken = { YOUR_MB_TOKEN_AS_STRING };
 
 // older browser fix as remove is newer method
 if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
@@ -2632,7 +2632,6 @@ function createPopUp(currentFeature) {
 
   let linkIcon = '<i class="fa fa-external-link" aria-hidden="true"></i>';
 
-  // console.log('currentFeature: ', currentFeature);
   let extLink = currentFeature.properties.Url
     ? '<a target="_blank" href="' +
       currentFeature.properties.Url +
@@ -2640,7 +2639,6 @@ function createPopUp(currentFeature) {
       linkIcon +
       "</h3></a>"
     : "";
-  console.log("extLink: ", extLink);
 
   let popup = new mapboxgl.Popup({
     closeOnClick: false,
@@ -2651,7 +2649,6 @@ function createPopUp(currentFeature) {
     .setHTML(
       '<div id="popup" class="mapboxgl-popup"><div><h3>' +
         currentFeature.properties.name +
-        extLink +
         "</h3>" +
         "<h4>" +
         currentFeature.properties.address +
@@ -2705,18 +2702,25 @@ function buildLocationList(data) {
     let link = listing.appendChild(document.createElement("span"));
     link.className = "title";
     link.dataPosition = counter;
-    link.innerHTML = props.name;
+
+    let linkIcon = '<i class="fa fa-external-link" aria-hidden="true"></i>';
+    let extLink = props.Url
+      ? '<a class="z8" target="_blank" href="' +
+        props.Url +
+        '"> ' +
+        linkIcon +
+        "</a>"
+      : "";
+    link.innerHTML = props.name + extLink;
 
     // New div with class 'details' for each run,
     // fill it with the address and boro
     let details = listing.appendChild(document.createElement("div"));
     details.innerHTML = props.address + ", " + props.boro;
 
-    listing.addEventListener("click", function(e) {
-      e.preventDefault();
+    link.addEventListener("click", function(e) {
       // Update bind clicked listing to its data
       let clickedListing = runList[link.dataPosition];
-
       // 1. Open popup
       createPopUp(clickedListing);
       // 2. Fly to the point
