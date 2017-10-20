@@ -2452,8 +2452,7 @@ var runs = {
   type: "FeatureCollection"
 };
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiYnViYmFzZGFkIiwiYSI6ImNqODRzOHNhNjA0NjMycXVkZ2o4Z3ZkaXoifQ.QP47B3zvEuiEqYcSJDqoYA";
+mapboxgl.accessToken = "[YOURTOKENHERE]";
 
 // older browser fix as remove is newer method
 if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
@@ -2486,13 +2485,13 @@ map.on("load", function(e) {
     foundHeaders[0].addEventListener("click", function(e) {
       e.preventDefault();
       resetLocationList();
-      getBoroView("all");
-      map.flyTo({
-        center: boroView.coordinates,
-        zoom: boroView.zoom,
-        speed: 1.3,
-        curve: 1.1
-      });
+      setBoroView("all");
+      // map.flyTo({
+      //   center: boroView.coordinates,
+      //   zoom: boroView.zoom,
+      //   speed: 1.3,
+      //   curve: 1.1
+      // });
     });
   }
 
@@ -2562,7 +2561,17 @@ function flyToRun(currentFeature) {
 
 var boroView = {};
 
-function getBoroView(boroID) {
+function flyToBoro(view) {
+  map.flyTo({
+    center: view.coordinates,
+    speed: 1.3,
+    curve: 1.1,
+    zoom: view.zoom
+  });
+}
+
+function setBoroView(boroID) {
+  clearPopup();
   switch (boroID) {
     case "mh":
       boroView = {
@@ -2611,6 +2620,8 @@ function getBoroView(boroID) {
     default:
       break;
   }
+  flyToBoro(boroView);
+  map.setFilter("nycparks-ad16j1", ["==", "boro", boroView.boro]);
 }
 
 function clearPopup() {
@@ -2656,28 +2667,28 @@ function prepNavPanel() {
         ? function(e) {
             e.preventDefault();
             filterLocationList(id);
-            clearPopup();
-            getBoroView(id);
-            map.flyTo({
-              center: boroView.coordinates,
-              zoom: boroView.zoom,
-              speed: 1.3,
-              curve: 1.1
-            });
-            map.setFilter("nycparks-ad16j1", ["==", "boro", boroView.boro]);
+            // clearPopup();
+            setBoroView(id);
+            // map.flyTo({
+            //   center: boroView.coordinates,
+            //   zoom: boroView.zoom,
+            //   speed: 1.3,
+            //   curve: 1.1
+            // });
+            // map.setFilter("nycparks-ad16j1", ["==", "boro", boroView.boro]);
           }
         : function(e) {
             e.preventDefault();
             resetLocationList();
-            getBoroView("all");
-            map.flyTo({
-              center: boroView.coordinates,
-              zoom: boroView.zoom,
-              speed: 1.3,
-              curve: 1.1
-            });
-            map.setFilter("nycparks-ad16j1", ["has", "boro"]);
-            clearPopup();
+            setBoroView("all");
+            // map.flyTo({
+            //   center: boroView.coordinates,
+            //   zoom: boroView.zoom,
+            //   speed: 1.3,
+            //   curve: 1.1
+            // });
+            // map.setFilter("nycparks-ad16j1", ["has", "boro"]);
+            // clearPopup();
           };
   });
 }
