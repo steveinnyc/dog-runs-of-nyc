@@ -2614,17 +2614,12 @@ function getBoroView(boroID) {
 }
 
 function clearPopup() {
-  try {
-    if (popup) {
-      popup.remove();
-    }
-  } catch (e) {}
+  let popUps = document.getElementsByClassName("mapboxgl-popup");
+  if (popUps[0]) popUps[0].remove();
 }
 
 function createPopUp(currentFeature) {
-  let popUps = document.getElementsByClassName("mapboxgl-popup");
-
-  if (popUps[0]) popUps[0].remove();
+  clearPopup();
 
   let notesEl = currentFeature.properties.Notes
     ? "<h4>Type: " + currentFeature.properties.Notes + "</h4>"
