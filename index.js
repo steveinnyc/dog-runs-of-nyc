@@ -1356,7 +1356,7 @@ var runs = {
         Notes: "Administered by the Hudson River Park Trust",
         boro: "Manhattan",
         name: "Chelsea Waterside Park Dog Run",
-        Url: "http://www.hudsonriverpark.org/explore/dogruncw.html",
+        Url: "", //"http://www.hudsonriverpark.org/explore/dogruncw.html",inactive
         state: "NY",
         address: "11th Ave & 22nd St",
         DogRuns_Type: "Run",
@@ -3051,7 +3051,7 @@ function buildLocationList(data) {
     link.dataPosition = counter;
 
     let linkIcon = "<i class=\"fa fa-external-link\" aria-hidden=\"true\"></i>"
-    let extLink = props.Url ? "<a class=\"z8\" target=\"_blank\" href=\"" + props.Url + "\">" + linkIcon + "</a>" : ""
+    let extLink = props.Url ? "<a class=\"z8 icon\" target=\"_blank\" href=\"" + props.Url + "\">" + linkIcon + "</a>" : ""
     link.innerHTML = props.name + extLink;
 
     // New div with class 'details' for each run,

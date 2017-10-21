@@ -1483,6 +1483,11 @@ h2 .dark > a[href^='#'] {
   font-style:normal;
   }
 
+.icon {
+  margin-left:2px;
+  margin-right:2px;
+}
+
 .rcon:after,
 .icon:before {
   font-family: 'icon';
