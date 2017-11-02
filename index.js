@@ -2901,7 +2901,7 @@ function flyToRun(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
     speed: .85,
-    curve: 1.5,
+    curve: 1,
     zoom: 16
   });
 }
@@ -2910,7 +2910,7 @@ function flyToBoro(view) {
   map.flyTo({
     center: view.coordinates,
     speed: .85,
-    curve: 1.6,
+    curve: 1.3,
     zoom: view.zoom
   });
 }
