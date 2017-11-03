@@ -206,6 +206,7 @@ a.quiet.dark { color:white; }
 .dark a.quiet:hover,
 a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
 
+<<<<<<< HEAD
 .heading {
   background: #C4C5D0;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
@@ -307,6 +308,18 @@ a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
   cursor: pointer;
   margin: .25vw;
 }
+=======
+.subway-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #C4C5D0;
+  width: 33.33333% vw;
+  padding: 10px 0px;
+}
+
+
+>>>>>>> d48e09ed69cd7ec94703698470ca4d5f13aa8723
 
 .button.short {
   height: 30px;
@@ -1574,11 +1587,14 @@ h2 .dark > a[href^='#'] {
   font-style:normal;
   }
 
+<<<<<<< HEAD
 .icon {
   margin-left:2px;
   margin-right:2px;
 }
 
+=======
+>>>>>>> d48e09ed69cd7ec94703698470ca4d5f13aa8723
 .rcon:after,
 .icon:before {
   font-family: 'icon';
@@ -3890,6 +3906,17 @@ h1 {
   text-align: center;
 }
 
+.boro {
+  background: rgb(183, 231, 176);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
 .listings {
   height: 100%;
   /* height: auto; */
@@ -4025,7 +4052,6 @@ h1 {
 }
 
 /* Buttons */
-
 
 
 
