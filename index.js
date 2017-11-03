@@ -2452,7 +2452,7 @@ var runs = {
   type: "FeatureCollection"
 };
 
-mapboxgl.accessToken = [YOUR_MAPBOX_TOKEN_AS_STRING];
+mapboxgl.accessToken = [YOUR_MAPBOX_TOKEN];
 
 // older browser fix as remove is newer method
 if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
@@ -2641,15 +2641,17 @@ function createPopUp(currentFeature) {
     : "";
 
   let popup = new mapboxgl.Popup({
-    closeOnClick: true,
+    closeOnClick: false,
     anchor: "top",
     offset: [0, 20]
   })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
-      '<div id="popup" class="mapboxgl-popup"><div><h3>' +
+      "<h3>" +
         currentFeature.properties.name +
         "</h3>" +
+        extLink +
+        "</div>" +
         "<h4>" +
         currentFeature.properties.address +
         "</h4>" +
@@ -2697,21 +2699,12 @@ function buildLocationList(data) {
     listing.className = "item";
     listing.id = "listing-" + props.Prop_ID;
 
-    // New span with class 'title' for each run,
-    // fill it with run name/address
+    // New span with class 'title' for each run, fill it with run name/address
     let link = listing.appendChild(document.createElement("span"));
     link.className = "title";
     link.dataPosition = counter;
 
-    let linkIcon = '<i class="fa fa-external-link" aria-hidden="true"></i>';
-    let extLink = props.Url
-      ? '<a class="z8 icon" target="_blank" href="' +
-        props.Url +
-        '">' +
-        linkIcon +
-        "</a>"
-      : "";
-    link.innerHTML = props.name + extLink;
+    link.innerHTML = props.name;
 
     // New div with class 'details' for each run,
     // fill it with the address and boro
