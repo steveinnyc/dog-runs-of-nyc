@@ -26,20 +26,21 @@ var runs = {
     {
       type: "Feature",
       properties: {
-        Accessible: "N",
-        address: "Fort Washington & West 173rd Street",
-        boro: "Manhattan",
-        DogRuns_Type: "Run",
-        name: "J. Hood Wright Park Dog Run",
-        Prop_ID: "M099",
+        Notes: "Eastern Parkway between Washington and Underhill avenues",
+        boro: "Brooklyn",
+        name: "Mount Prospect Park Off-Leash Area",
         state: "NY",
-        postalCode: "10033"
+        address: "Eastern Parkway & Mary Pinkett Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B159",
+        postalCode: "11238"
       },
       geometry: {
-        coordinates: [-73.941132, 40.846136],
+        coordinates: [-73.962521, 40.671387],
         type: "Point"
       },
-      id: "075b108429bf8d7a245f34b69c348c87"
+      id: "00c5e9c3c1e0e18859f6ad0c91cfb3c3"
     },
     {
       type: "Feature",
@@ -173,6 +174,84 @@ var runs = {
         type: "Point"
       },
       id: "123cfc3347bb494b7aa9bca9ec42c2b5"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "",
+        boro: "Bronx",
+        name: "Joseph Rodham Drake Park Off-Leash Area",
+        state: "NY",
+        address: "Drake Park S & Hunts Point Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "X015",
+        postalCode: "10474"
+      },
+      geometry: {
+        coordinates: [-73.881223, 40.810047],
+        type: "Point"
+      },
+      id: "14324427d0f31de6471c5f295645ef5a"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes:
+          "The closest entrance is on Seaman Avenue at Isham Street, and you'll find the run just behind the flag pole. You can reach Inwood Hill Park by Subway via the A train to 207th St, or the 1 train to 207th St, and walk west.",
+        boro: "Manhattan",
+        name: "Inwood Hill Park Dog Run: Homer's Run",
+        Url: "http://www.inwoof.com/",
+        state: "NY",
+        address: "Seaman Avenue & Isham Street",
+        DogRuns_Type: "Run",
+        Accessible: "N",
+        Prop_ID: "M042",
+        postalCode: "10452"
+      },
+      geometry: {
+        coordinates: [-73.921707, 40.871139],
+        type: "Point"
+      },
+      id: "149478e1201a8c7aafe14a8133077a91"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "Located along Shore Road, 4th Avenue to 69th Street ",
+        boro: "Brooklyn",
+        name: "Shore Road Park Off-Leash Area",
+        state: "NY",
+        address: "Shore Road & 4th Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B082",
+        postalCode: "11209"
+      },
+      geometry: {
+        coordinates: [-74.038722, 40.615516],
+        type: "Point"
+      },
+      id: "1ac5022e14c4c9c80d871bb9a15baf97"
+    },
+    {
+      type: "Feature",
+      properties: {
+        Notes: "All areas excluding the playground and ballfields",
+        boro: "Brooklyn",
+        name: "Breukelen Park Off-Leash Area",
+        state: "NY",
+        address: "Glenwood Rd & Louisiana Ave",
+        DogRuns_Type: "Off-Leash",
+        Accessible: "N",
+        Prop_ID: "B247",
+        postalCode: "12207"
+      },
+      geometry: {
+        coordinates: [-73.891382, 40.652375],
+        type: "Point"
+      },
+      id: "1c5a57828f634b852c5d21bdb5bf8fd1"
     },
     {
       type: "Feature",
@@ -1107,7 +1186,7 @@ var runs = {
         Notes: "Administered by the Hudson River Park Trust",
         boro: "Manhattan",
         name: "Chelsea Waterside Park Dog Run",
-        Url: "http://www.hudsonriverpark.org/explore/dogruncw.html",
+        Url: "", //"http://www.hudsonriverpark.org/explore/dogruncw.html",inactive
         state: "NY",
         address: "11th Ave & 22nd St",
         DogRuns_Type: "Run",
@@ -2373,7 +2452,7 @@ var runs = {
   type: "FeatureCollection"
 };
 
-mapboxgl.accessToken = { YOUR_MB_TOKEN_AS_STRING };
+mapboxgl.accessToken = [YOUR_MAPBOX_TOKEN_AS_STRING];
 
 // older browser fix as remove is newer method
 if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
@@ -2468,8 +2547,8 @@ function resetLocationList() {
 function flyToRun(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    speed: 1.3,
-    curve: 1.1,
+    speed: 0.8,
+    curve: 1,
     zoom: 16
   });
 }
@@ -2477,8 +2556,8 @@ function flyToRun(currentFeature) {
 function flyToBoro(view) {
   map.flyTo({
     center: view.coordinates,
-    speed: 1.3,
-    curve: 1.1,
+    speed: 0.65,
+    curve: 1.3,
     zoom: view.zoom
   });
 }
@@ -2562,7 +2641,7 @@ function createPopUp(currentFeature) {
     : "";
 
   let popup = new mapboxgl.Popup({
-    closeOnClick: false,
+    closeOnClick: true,
     anchor: "top",
     offset: [0, 20]
   })
@@ -2626,9 +2705,9 @@ function buildLocationList(data) {
 
     let linkIcon = '<i class="fa fa-external-link" aria-hidden="true"></i>';
     let extLink = props.Url
-      ? '<a class="z8" target="_blank" href="' +
+      ? '<a class="z8 icon" target="_blank" href="' +
         props.Url +
-        '"> ' +
+        '">' +
         linkIcon +
         "</a>"
       : "";
