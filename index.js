@@ -2900,7 +2900,7 @@ function resetLocationList() {
 function flyToRun(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    speed: .85,
+    speed: .8,
     curve: 1,
     zoom: 16
   });
@@ -2909,7 +2909,7 @@ function flyToRun(currentFeature) {
 function flyToBoro(view) {
   map.flyTo({
     center: view.coordinates,
-    speed: .85,
+    speed: .65,
     curve: 1.3,
     zoom: view.zoom
   });

@@ -206,16 +206,108 @@ a.quiet.dark { color:white; }
 .dark a.quiet:hover,
 a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
 
-.subway-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.heading {
   background: #C4C5D0;
-  width: 33.33333% vw;
-  padding: 10px 0px;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  line-height: 60px;
+  cursor: pointer;
 }
 
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
 
+}
+
+.subway-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
+  background: #C4C5D0;
+  padding-bottom: .75vw;
+}
+
+.button {
+  background-color:#3887be;
+  text-align:center;
+  vertical-align: middle;
+  color:#fff;
+  padding:.33vw;
+  position:relative;
+  border:none;
+  cursor:pointer;
+  white-space:nowrap;
+  width: 4.25vw;
+  height: 4.25vw;
+  /* text-overflow:ellipsis; */
+  /* Protects button metrics in .prose context */
+  font-family:'Helvetica', sans-serif;
+  font-weight: 900;
+  line-height:3.5vw;
+  font-size:1.65vw;
+  /* text-shadow: 1px 1px 1px rgb(22, 22, 22); */
+  -webkit-appearance:none;
+  -webkit-box-shadow: 2px 2px 2px 2px rgb(59, 59, 59);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    2px 2px 2px 2px rgb(59,59,59);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         2px 2px 2px 2px rgb(59,59,59);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+  /* The button element needs to be forced this */
+  -webkit-font-smoothing:antialiased;
+  }
+
+  /* official hex colors for NYC Subway subway lines and Staten Island Ferry */
+  #mh {
+    background-color:#00933c;
+  }
+
+    #bk {
+    background-color:#996633;
+  }
+
+    #bx {
+    background-color:#2850ad;
+  }
+
+    #qs {
+    background-color:#b933ad;
+  }
+
+    #si {
+    background-color:#FF7E00;
+  }
+
+    #all {
+    background-color: #646264;
+  }
+
+.button:hover,
+.button.active {
+  color:#fff;
+  }
+
+.boro {
+  background: rgb(183, 231, 176);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 10px;
+  cursor: pointer;
+  margin: .25vw;
+}
 
 .button.short {
   height: 30px;
@@ -3740,16 +3832,6 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  font: 700 18px/32px "Fjalla One", sans-serif;
-  font-size: 36px;
-  margin: 0;
-  font-weight: 400;
-  /* line-height: 5px; */
-  padding: 20px 2px;
-  text-align: center;
-}
-
 h2 {
   font-size: 18px;
   margin: 0;
@@ -3799,25 +3881,14 @@ a:hover {
   overflow: hidden;
 }
 
-.heading {
-  background: #C4C5D0;
-  /* border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-  border-right: 1px solid rgba(0, 0, 0, 0.25); */
-  height: 60px;
-  line-height: 60px;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-.boro {
-  background: rgb(183, 231, 176);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-  border-right: 1px solid rgba(0, 0, 0, 0.25);
-  height: 50px;
-  line-height: 50px;
+h1 {
+  font: 700 18px/32px "Fjalla One", sans-serif;
+  font-size: 3vw;
+  margin: 0;
+  font-weight: 400;
+  line-height: 3.75vw;
+  padding: 2px 2px;
   text-align: center;
-  padding: 0 10px;
-  cursor: pointer;
 }
 
 .listings {
@@ -3891,13 +3962,9 @@ a:hover {
   opacity: 0.9;
   box-shadow: 5px 5px 5px #0000001a;
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  display: -webkit-box;display: -ms-flexbox;display: flex;
+  -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
+
 }
 
 .mapboxgl-popup-close-button {
@@ -3959,63 +4026,7 @@ a:hover {
 }
 
 /* Buttons */
-.button {
-  background-color:#3887be;
-  text-align:center;
-  vertical-align: middle;
-  color:#fff;
-  padding:8px;
-  position:relative;
-  border:none;
-  cursor:pointer;
-  white-space:nowrap;
-  width: 54px;
-  height: 54px;
-  /* text-overflow:ellipsis; */
-  /* Protects button metrics in .prose context */
-  font-family:'Helvetica', sans-serif;
-  font-weight: 900;
-  line-height:42px;
-  font-size:20px;
-  /* text-shadow: 1px 1px 1px rgb(22, 22, 22); */
-  -webkit-appearance:none;
-  -webkit-box-shadow: 2px 2px 2px 2px rgb(59, 59, 59);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    2px 2px 2px 2px rgb(59,59,59);  /* Firefox 3.5 - 3.6 */
-  box-shadow:         2px 2px 2px 2px rgb(59,59,59);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 
-  /* The button element needs to be forced this */
-  -webkit-font-smoothing:antialiased;
-  }
-
-  /* official hex colors for NYC Subway subway lines and Staten Island Ferry */
-  #mh {
-    background-color:#00933c;
-  }
-
-    #bk {
-    background-color:#996633;
-  }
-
-    #bx {
-    background-color:#2850ad;
-  }
-
-    #qs {
-    background-color:#b933ad;
-  }
-
-    #si {
-    background-color:#FF7E00;
-  }
-
-    #all {
-    background-color: #646264;
-  }
-
-.button:hover,
-.button.active {
-  color:#fff;
-  }
 
 
 
