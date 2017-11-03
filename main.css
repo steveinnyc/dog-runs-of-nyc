@@ -257,7 +257,6 @@ a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
   font-weight: 900;
   line-height:3.77vw;
   font-size:1.65vw;
-  /* text-shadow: 1px 1px 1px rgb(22, 22, 22); */
   -webkit-appearance:none;
   -webkit-box-shadow: 2px 2px 2px 2px rgb(59, 59, 59);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    2px 2px 2px 2px rgb(59,59,59);  /* Firefox 3.5 - 3.6 */
