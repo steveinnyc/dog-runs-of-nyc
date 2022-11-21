@@ -2452,7 +2452,7 @@ var runs = {
   type: "FeatureCollection"
 };
 
-mapboxgl.accessToken = [YOUR_MAPBOX_TOKEN];
+mapboxgl.accessToken = pk.eyJ1Ijoic3RldmVpbm55YyIsImEiOiJjbGFxOWVld2oxZ2hjNDFvMmtxOXFlNWNlIn0.ZzUlZ1QTY_J1ZbSSOms9zA;
 
 // older browser fix as remove is newer method
 if (typeof Element !== "undefined" && !("remove" in Element.prototype)) {
